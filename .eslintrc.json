@@ -1,7 +1,21 @@
 {
   "root": true,
-  "extends": ["standard"],
+  "extends": ["standard", "standard-jsx"],
+  "plugins": ["react", "react-hooks"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "env": {
+    "browser": true
+  },
   "rules": {
-    "space-before-function-paren": "off"
+    "multiline-ternary": "warn",
+    "space-before-function-paren": "off",
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   }
 }
