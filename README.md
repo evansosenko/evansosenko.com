@@ -142,7 +142,7 @@ To submit a patch:
 
 ## License
 
-This npm package is licensed under the MIT license.
+The code and content for this site is is Copyright (c) 2021 Evan Sosenko.
 
 ## Warranty
 
