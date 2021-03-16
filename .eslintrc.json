@@ -1,14 +1,15 @@
 {
   "root": true,
   "extends": ["standard", "standard-jsx"],
-  "plugins": ["react", "react-hooks"],
+  "plugins": ["jest", "react", "react-hooks"],
   "settings": {
     "react": {
       "version": "detect"
     }
   },
   "env": {
-    "browser": true
+    "browser": true,
+    "jest/globals": true
   },
   "rules": {
     "multiline-ternary": "warn",

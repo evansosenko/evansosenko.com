@@ -2,13 +2,7 @@
   "name": "@evansosenko/evansosenko.com",
   "version": "0.0.0",
   "description": "Personal website for Evan Sosenko.",
-  "type": "module",
   "main": "index.js",
-  "exports": {
-    "import": "./index.js"
-  },
-  "module": "index.js",
-  "sideEffects": false,
   "keywords": [
     "node"
   ],
@@ -28,11 +22,11 @@
     "docs"
   ],
   "scripts": {
-    "test": "nyc ava",
+    "test": "jest",
     "pretest": "node index.js",
-    "test:update": "ava --update-snapshots",
-    "test:watch": "ava --watch",
-    "test:debug": "ava debug --break",
+    "test:update": "jest --updateSnapshot",
+    "test:watch": "jest --watch",
+    "test:debug": "node --inspect-brk node_modules/.bin/jest --runInBand",
     "lint": "npm-run-all --parallel lint:*",
     "lint:prettier": "prettier --check --ignore-path .gitignore '**/*.(js|json|yml|yaml|graphql)'",
     "lint:js": "eslint --ignore-path .gitignore --ext .js .",
@@ -47,8 +41,7 @@
     "example:inspect": "node --inspect examples",
     "format": "npm-run-all --parallel format:*",
     "preformat": "prettier --write --ignore-path .gitignore '**/*.(js|json|yml|yaml|graphql)'",
-    "format:js": "eslint --ignore-path .gitignore --fix --ext .js .",
-    "report": "nyc report"
+    "format:js": "eslint --ignore-path .gitignore --fix --ext .js ."
   },
   "engines": {
     "node": ">=14.15.0"
@@ -65,12 +58,14 @@
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "@meltwater/examplr": "^6.0.0",
-    "ava": "^3.3.0",
+    "babel-jest": "^26.6.3",
     "babel-plugin-styled-components": "^1.12.0",
+    "babel-preset-gatsby": "^1.1.0",
     "eslint": "^7.4.0",
     "eslint-config-standard": "^16.0.0",
     "eslint-config-standard-jsx": "^10.0.0",
     "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^24.3.2",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.14.3",
@@ -84,8 +79,10 @@
     "gatsby-plugin-styled-components": "^4.0.0",
     "gatsby-source-filesystem": "^3.0.0",
     "gatsby-transformer-sharp": "^3.0.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.6.3",
     "npm-run-all": "^4.1.2",
-    "nyc": "^15.0.0",
-    "prettier": "^2.0.2"
+    "prettier": "^2.0.2",
+    "react-test-renderer": "^17.0.1"
   }
 }
