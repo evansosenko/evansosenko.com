@@ -1,71 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NotFoundPage renders correctly 1`] = `
-<main
-  style={
-    Object {
-      "color": "#232129",
-      "fontFamily": "-apple-system, Roboto, sans-serif, serif",
-      "padding": "96px",
-    }
-  }
->
-  <title>
-    Not found
-  </title>
-  <h1
-    style={
-      Object {
-        "marginBottom": 64,
-        "marginTop": 0,
-        "maxWidth": 320,
-      }
-    }
-  >
-    Page not found
-  </h1>
-  <p
-    style={
-      Object {
-        "marginBottom": 48,
-      }
-    }
-  >
-    Sorry
-     
-    <span
-      aria-label="Pensive emoji"
-      role="img"
-    >
-      😔
-    </span>
-     
-    we couldn’t find what you were looking for.
-    <br />
-    <br />
-    Try creating a page in 
-    <code
-      style={
-        Object {
-          "backgroundColor": "#FFF4DB",
-          "borderRadius": 4,
-          "color": "#8A6534",
-          "fontSize": "1.25rem",
-          "padding": 4,
-        }
-      }
-    >
-      src/pages/
-    </code>
-    .
-    <br />
-    <br />
-    <a
-      href="/"
-    >
-      Go home
-    </a>
-    .
-  </p>
-</main>
+<p>
+  Not Found
+</p>
 `;
