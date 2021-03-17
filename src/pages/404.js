@@ -37,19 +37,22 @@ const NotFoundPage = () => {
         </span>{' '}
         we couldn’t find what you were looking for.
         <br />
-        {process.env.NODE_ENV === 'development'
-          ? (
-            <>
-              <br />
-              Try creating a page in <code style={codeStyles}>src/pages/</code>.
-              <br />
-            </>
-            )
-          : null}
+        <DevNote />
         <br />
         <Link to='/'>Go home</Link>.
       </p>
     </main>
+  )
+}
+
+const DevNote = () => {
+  if (!process.env.NODE_ENV === 'development') return null
+  return (
+    <>
+      <br />
+      Try creating a page in <code style={codeStyles}>src/pages/</code>.
+      <br />
+    </>
   )
 }
 

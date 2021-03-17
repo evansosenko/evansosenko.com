@@ -43,6 +43,23 @@ exports[`NotFoundPage renders correctly 1`] = `
     we couldn’t find what you were looking for.
     <br />
     <br />
+    Try creating a page in 
+    <code
+      style={
+        Object {
+          "backgroundColor": "#FFF4DB",
+          "borderRadius": 4,
+          "color": "#8A6534",
+          "fontSize": "1.25rem",
+          "padding": 4,
+        }
+      }
+    >
+      src/pages/
+    </code>
+    .
+    <br />
+    <br />
     <a
       href="/"
     >
