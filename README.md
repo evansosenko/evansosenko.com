@@ -1,7 +1,7 @@
 # evansosenko.com
 
-[![npm](https://img.shields.io/npm/v/@evansosenko/evansosenko.com.svg)](https://www.npmjs.com/package/@evansosenko/evansosenko.com)
 [![GitHub Actions](https://github.com/evansosenko/evansosenko.com/workflows/main/badge.svg)](https://github.com/evansosenko/evansosenko.com/actions)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c74ed524-0e27-49cd-90a4-fcad24880990/deploy-status)](https://app.netlify.com/sites/evansosenko/deploys)
 
 Personal website for Evan Sosenko.
 
