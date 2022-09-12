@@ -1,5 +1,7 @@
 # evansosenko.com
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/10283222-7d80-4346-94d0-f438483033d4/deploy-status)](https://app.netlify.com/sites/evansosenko/deploys)
+
 [Personal website][evansosenko.com] for Evan Sosenko.
 
 [evansosenko.com]: https://evansosenko.com
