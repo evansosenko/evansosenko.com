@@ -10,7 +10,7 @@ Install the latest version of [Hugo].
 Then clone from the [Git source] and serve locally with
 
 ```
-$ hugo serve
+$ hugo server
 ```
 
 [Hugo]: https://gohugo.io/
