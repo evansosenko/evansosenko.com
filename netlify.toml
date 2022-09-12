@@ -4,3 +4,9 @@
 
 [build.environment]
   HUGO_VERSION = "0.102.3"
+
+[[headers]]
+  for = "/*"
+
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'"
