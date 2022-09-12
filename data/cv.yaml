@@ -1,0 +1,132 @@
+---
+awards:
+  - title: Chancellor’s Distinguished Fellowship Award
+    startDate: 2011
+    endDate: 2016
+    location: University of California, Riverside, Riverside, CA, US
+
+  - title: CCS Summer Undergraduate Research Fellowship (SURF)
+    startDate: 2010
+    endDate: 2010
+    location: University of California, Santa Barbara, Santa Barbara, CA, US
+
+  - title: Regents Scholarship Award
+    startDate: 2006
+    endDate: 2010
+    location: University of California, Santa Barbara, Santa Barbara, CA, US
+
+  - title: Xi Nu Zeta of Beta Sigma Phi Scholarship
+    startDate: 2006
+    endDate: 2006
+    location: SCV Scholarship Foundation, Santa Clarita, CA, US
+
+educations:
+  - title: Ph.D. Physics in condensed matter theory
+    startDate: 2011
+    endDate: 2016
+    location: University of California, Riverside, Riverside, CA, US
+
+  - title: M.A. Physics
+    startDate: 2011
+    endDate: 2012
+    location: University of California, Riverside, Riverside, CA, US
+
+  - title: B.S. Physics with minor in mathematics
+    startDate: 2006
+    endDate: 2011
+    location: University of California, Santa Barbara, Santa Barbara, CA, US
+
+occupations:
+  - title: Chief Technology Officer (CTO)
+    startDate: '2019'
+    location: PureSkill.gg, San Francisco, CA, US
+    description: The only automated coach for CS:GO.
+    url: https://pureskill.gg/
+
+  - title: Senior Software Engineer
+    startDate: '2016'
+    endDate: '2021'
+    location: Meltwater, San Francisco, CA, US
+    description: Team lead and full stack developer for data driven reporting solutions.
+    url: https://www.meltwater.com/
+
+  - title: Owner &amp; Technical Administrator
+    startDate: '2001'
+    location: OurTownRentals.com, Valencia, CA, US
+    description: Commercial website for USA vacation rentals founded in 2001. Responsible for web design, development, server administration, and business management.
+    url: https://ourtownrentals.com/
+
+  - title: Graduate Research Assistant
+    startDate: '2011'
+    endDate: '2016'
+    location: Department of Physics and Astronomy, Riverside, CA, US
+    description: 'Condensed matter theory: spintronics and topological materials.'
+
+  - title: Undergraduate Research Assistant
+    startDate: '2009'
+    endDate: '2011'
+    location: UCSB Astronomy &amp; Astrophysics, Santa Barbara, CA, US
+    description: Pulsar radio astronomy and scattering in interstellar media. Applications and limits of the stationary phase approximation. Under the supervision of Dr. Carl R. Gwinn.
+
+  - title: Undergraduate Research Assistant
+    startDate: '2008'
+    endDate: '2009'
+    location: UCSB Center for Terahertz Science and Technology, Santa Barbara, CA, US
+    description: Experimental work on THz absorption of proteins in solution. Under the supervision of Dr. James Allen.
+
+  - title: Teaching Assistant
+    startDate: '2011'
+    endDate: '2016'
+    location: Department of Physics and Astronomy, Riverside, CA, US
+
+  - title: Grader
+    startDate: '2011'
+    endDate: '2011'
+    location: UCSB Physics Department, Santa Barbara, CA, US
+    description: 'Grader for PHYS 231B, graduate course in general relativity; instructor: Dr. Donald Marolf.'
+
+publications:
+  - title: 'Spin and Valley Physics in Two Dimensional Systems: Graphene and Superconducting Transition Metal Dichalcogenides'
+    date: '2016'
+    location: University of California, Riverside, Riverside, CA, US
+    description: Doctoral Thesis
+    url: https://escholarship.org/uc/item/4941w4t0
+
+  - title: Unconventional superconductivity and anomalous response in hole-doped transition metal dichalcogenides
+    date: 2017-04
+    location: University of California, Riverside, Riverside, CA, US
+    description: 8 pages, 3 figures, Phys. Rev. B 95, 144508
+    url: https://journals.aps.org/prb/abstract/10.1103/PhysRevB.95.144508
+
+  - title: Effect of contacts on spin lifetime measurements in graphene
+    date: 2014-06
+    location: University of California, Riverside, Riverside, CA, US
+    description: 9 pages, 3 figures, Phys. Rev. B 89, 245436
+    url: https://journals.aps.org/prb/abstract/10.1103/PhysRevB.89.245436
+
+talks:
+  - title: Doctoral Thesis Defense at UCR
+    date: 2016-08
+    location: Riverside, CA, US
+    description: >-
+      Spin and valley physics in two dimensional systems:
+      Graphene and superconducting transition metal dichalcogenides.
+    url: https://evansosenko.com/deck-doctoral-thesis/
+
+  - title: Contributed Talk, APS March Meeting
+    date: 2016-03
+    location: Baltimore, MD, US
+    description: Superconducting phases of monolayer transition-metal dichalcogenides.
+    url: https://evansosenko.com/deck-tmdsc/
+
+  - title: Contributed Talk, APS March Meeting
+    date: 2015-03
+    location: San Antonio, TX, US
+    description: Superconducting phases of monolayer transition-metal dichalcogenides.
+    url: https://evansosenko.com/deck-dichalcogenides-superconductivity/
+
+  - title: Contributed Talk, APS March Meeting
+    date: 2014-03
+    location: Denver, CO, US
+    description: Effect of contacts on spin lifetime measurements in graphene.
+    url: https://evansosenko.com/deck-spin-lifetime/
