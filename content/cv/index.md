@@ -1,7 +1,8 @@
 ---
 title: "CV"
 draft: false
-type: single
+type: cv
+layout: single
 ---
 
 CV
