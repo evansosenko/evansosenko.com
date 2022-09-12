@@ -1,3 +1,6 @@
 {{ define "main" }}
   {{ .Content }}
+  {{ range $.Site.Data.cv.occupations }}
+    <p>{{ .title }}</p>
+  {{ end }}
 {{ end }}
