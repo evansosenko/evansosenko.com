@@ -1,6 +1,5 @@
 ---
-title: "Home"
-date: 2022-09-12T14:51:26-07:00
+title: "Evan Sosenko"
 draft: false
 ---
 
