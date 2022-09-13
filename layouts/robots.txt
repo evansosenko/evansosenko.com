@@ -1,2 +1,8 @@
+{{ $production := eq (getenv "HUGO_ENV") "production" | or (eq site.Params.env "production") }}
+{{- if $production -}}
 User-agent: *
 Allow: /
+{{- else -}}
+User-agent: *
+Disallow: /
+{{- end -}}
