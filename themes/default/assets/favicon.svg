@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="639.97498" height="640"><svg viewBox="0 0 639.97498 640" version="1.1" id="SvgjsSvg1006" sodipodi:docname="code-duotone.svg" inkscape:version="1.2.1 (9c6d41e410, 2022-07-14, custom)" width="639.97498" height="640" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview id="SvgjsSodipodi:namedview1005" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" showgrid="false" inkscape:zoom="0.82953904" inkscape:cx="-376.71524" inkscape:cy="668.44352" inkscape:window-width="3000" inkscape:window-height="1955" inkscape:window-x="0" inkscape:window-y="27" inkscape:window-maximized="1" inkscape:current-layer="g1004"></sodipodi:namedview>
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <defs id="SvgjsDefs1004">
+    <style id="SvgjsStyle1003">.fa-secondary{opacity:.4}</style>
+  </defs>
+  <g id="SvgjsG1002" transform="translate(-1.2207031e-5,63.986757)">
+    <path class="fa-primary" d="m 518.6,121.40781 112,112 c 12.5,12.5 12.5,32.7 0,45.2 l -112,112 c -12.5,12.5 -32.7,12.5 -45.2,0 -12.5,-12.5 -12.5,-32.7 0,-45.2 l 89.3,-89.4 -89.3,-89.4 c -12.5,-12.5 -12.5,-32.7 0,-45.2 12.5,-12.5 32.7,-12.5 45.2,0 z m -352,45.2 -89.35,89.4 89.35,89.4 c 12.5,12.5 12.5,32.7 0,45.2 -12.5,12.5 -32.7,12.5 -45.2,0 l -112.028,-112 c -12.496,-12.5 -12.496,-32.7 0,-45.2 l 112.028,-112 c 12.5,-12.5 32.7,-12.5 45.2,0 12.5,12.5 12.5,32.7 0,45.2 z" id="SvgjsPath1001" style="fill:#5bcefa;fill-opacity:1"></path>
+    <path class="fa-secondary" d="m 414.8,40.797805 -128,448.010005 c -4.9,17 -22.6,26.8 -39.6,22 -17,-4.9 -26.8,-22.6 -22,-39.6 l 128,-447.990005 c 4.9,-16.9939999 22.6,-26.8339999 39.6,-21.9779999 17,4.855 26.8,22.5679999 22,39.5579999 z" id="SvgjsPath1000" inkscape:label="path59" style="fill:#f5a9b8;fill-opacity:1;opacity:1"></path>
+  </g>
+</svg><style>@media (prefers-color-scheme: light) { :root { filter: none; } }
+@media (prefers-color-scheme: dark) { :root { filter: none; } }
+</style></svg>

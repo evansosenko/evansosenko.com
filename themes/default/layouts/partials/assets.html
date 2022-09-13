@@ -1,3 +1,11 @@
+{{ $svgFavicon := resources.Get "favicon.svg" | resources.Fingerprint }}
+<link rel="icon" type="image/svg+xml" href="{{ $svgFavicon.RelPermalink }}">
+
+{{ $pngFavicon := resources.Get "favicon.svg" | resources.Fingerprint }}
+<link rel="icon" type="image/png" href="{{ $pngFavicon.RelPermalink }}">
+
+<meta name="theme-color" content="{{ $.Site.Params.themeColor }}">
+
 {{ $production := eq (getenv "HUGO_ENV") "production" | or (eq site.Params.env "production") }}
 {{ range $.Site.Params.remoteCss}}
   {{ $url := . }}
@@ -9,4 +17,3 @@
     href="{{ $asset.RelPermalink }}"
     integrity="{{ $asset.Data.Integrity }}">
 {{ end }}
-
