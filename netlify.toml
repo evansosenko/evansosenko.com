@@ -45,6 +45,36 @@ HUGO_ENV = "production"
     
 [[redirects]]
   from = "/deck-doctoral-thesis/*"
-  to = "https://evansosenko.com/deck-doctoral-thesis/:splat"
+  to = "https://evansosenko.github.io/deck-doctoral-thesis/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/deck-tmdsc/*"
+  to = "https://evansosenko.github.io/deck-tmdsc/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/deck-ucr-exam/*"
+  to = "https://evansosenko.github.io/deck-ucr-exam/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/deck-dichalcogenides-superconductivity/*"
+  to = "https://evansosenko.github.io/deck-dichalcogenides-superconductivity/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/deck-spin-lifetime/*"
+  to = "https://evansosenko.github.io/deck-spin-lifetime/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/curriculum-vitae/Evan Sosenko - Curriculum Vitae.pdf"
+  to = "https://evansosenko.github.io/curriculum-vitae/Evan Sosenko - Curriculum Vitae.pdf"
   status = 200
   force = true
