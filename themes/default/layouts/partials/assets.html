@@ -20,6 +20,9 @@
     integrity="{{ $asset.Data.Integrity }}">
 {{ end }}
 
-<link rel="stylesheet"
-  href="{{ $asset.RelPermalink }}"
-  integrity="{{ $asset.Data.Integrity }}">
+{{ range $.Site.Params.css}}
+  {{ $asset := resources.Get . | resources.Fingerprint }}
+  <link rel="stylesheet"
+    href="{{ $asset.RelPermalink }}"
+    integrity="{{ $asset.Data.Integrity }}">
+{{ end }}
