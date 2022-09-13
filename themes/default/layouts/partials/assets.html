@@ -1,2 +1,7 @@
-{{ $normalize := resources.GetRemote "https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css" | resources.Fingerprint | relURL }}
-<link rel="stylesheet" href="{{ $normalize.Permalink }}">
+{{ range $.Site.Params.remoteCss}}
+  {{ $asset := resources.GetRemote . | resources.Fingerprint }}
+  <link rel="stylesheet"
+    href="{{ $asset.RelPermalink }}"
+    integrity="{{ $asset.Data.Integrity }}">
+{{ end }}
+
