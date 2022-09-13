@@ -1,8 +1,12 @@
-{{ $svgFavicon := resources.Get "favicon.svg" | resources.Fingerprint }}
-<link rel="icon" type="image/svg+xml" href="{{ $svgFavicon.RelPermalink }}">
+{{ $asset := resources.Get "favicon.svg" | resources.Fingerprint }}
+<link rel="icon" type="image/svg+xml"
+  href="{{ $asset.RelPermalink }}"
+  integrity="{{ $asset.Data.Integrity }}">
 
-{{ $pngFavicon := resources.Get "favicon.svg" | resources.Fingerprint }}
-<link rel="icon" type="image/png" href="{{ $pngFavicon.RelPermalink }}">
+{{ $asset := resources.Get "favicon.png" | resources.Fingerprint }}
+<link rel="icon" type="image/png"
+  href="{{ $asset.RelPermalink }}"
+  integrity="{{ $asset.Data.Integrity }}">
 
 {{ $production := eq (getenv "HUGO_ENV") "production" | or (eq site.Params.env "production") }}
 {{ range $.Site.Params.remoteCss}}
@@ -15,3 +19,7 @@
     href="{{ $asset.RelPermalink }}"
     integrity="{{ $asset.Data.Integrity }}">
 {{ end }}
+
+<link rel="stylesheet"
+  href="{{ $asset.RelPermalink }}"
+  integrity="{{ $asset.Data.Integrity }}">
