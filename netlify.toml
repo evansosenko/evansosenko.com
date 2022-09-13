@@ -74,7 +74,7 @@ HUGO_ENV = "production"
   force = true
 
 [[redirects]]
-  from = "/curriculum-vitae/Evan Sosenko - Curriculum Vitae.pdf"
-  to = "https://evansosenko.github.io/curriculum-vitae/Evan Sosenko - Curriculum Vitae.pdf"
+  from = "/curriculum-vitae/*"
+  to = "https://evansosenko.github.io/curriculum-vitae/:splat"
   status = 200
   force = true
