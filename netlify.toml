@@ -8,11 +8,6 @@
 [context.production.environment]
 HUGO_ENV = "production"
 
-[[redirects]]
-from = "/npmjs/*"
-to = "/npmjs/"
-status = 200
-
 [[headers]]
   for = "/*"
 
