@@ -4,3 +4,5 @@ draft: false
 ---
 
 # Evan Sosenko.
+
+- [CV](./cv)
