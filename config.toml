@@ -2,3 +2,6 @@ baseURL = 'https://evansosenko.com/'
 languageCode = 'en-US'
 title = 'Evan Sosenko'
 theme = 'default'
+
+[params]
+languageDir = 'ltr'

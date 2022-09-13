@@ -1,6 +1,10 @@
-<!DOCTYPE html>
-<html>
-  {{- partial "head.html" . -}}
+<!doctype html>
+<html lang="{{ site.LanguageCode | default "en" }}"
+  dir="{{ site.Params.languageDir | default "ltr"}}">
+  <head>
+    {{- partial "head.html" . -}}
+    {{- partial "assets.html" . -}}
+  </head>
   <body>
     {{- partial "header.html" . -}}
     <div id="content">
