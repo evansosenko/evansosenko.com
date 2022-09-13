@@ -2,6 +2,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>
 {{- block "title" . -}}
-  {{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}
+{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}
 {{- end -}}
 </title>

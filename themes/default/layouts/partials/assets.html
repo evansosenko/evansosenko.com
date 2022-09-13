@@ -1,9 +1,9 @@
 {{ $production := eq (getenv "HUGO_ENV") "production" | or (eq site.Params.env "production") }}
 {{ range $.Site.Params.remoteCss}}
   {{ $url := . }}
-  {{- if not $production -}}
+  {{ if not $production }}
     {{ $url = replace $url ".min." "." }}
-  {{- end -}}
+  {{ end }}
   {{ $asset := resources.GetRemote $url | resources.Fingerprint }}
   <link rel="stylesheet"
     href="{{ $asset.RelPermalink }}"
