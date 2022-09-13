@@ -5,4 +5,5 @@ theme = 'default'
 enableRobotsTXT = true
 
 [params]
+production = false
 languageDir = 'ltr'
