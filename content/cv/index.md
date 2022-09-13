@@ -1,8 +1,8 @@
 ---
-title: "CV"
+title: Curriculum Vitae
 draft: false
 type: cv
 layout: single
 ---
 
-CV
+## Curriculum Vitae
