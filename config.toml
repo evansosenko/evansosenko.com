@@ -1,4 +1,4 @@
-baseURL = 'https://evansosenko.netlify.app/'
+baseURL = 'https://evansosenko.com/'
 languageCode = 'en-US'
 title = 'Evan Sosenko'
 theme = 'default'
