@@ -93,7 +93,9 @@ The full TeX source is hosted on GitHub at [evansosenko/aps-spin-lifetime][aps-s
 
 ## All related authored work
 
-{% bibliography -f spintronics --query @*[author ^= Sosenko] %}
+1. _Sosenko, E., & Aji, V. (2014, March). Effect of contacts on spin lifetime measurements in Graphene. Retrieved from http://io.evansosenko.com/deck-spin-lifetime/_
+1. _Sosenko, E., Wei, H., & Aji, V. (2014). Effect of contacts on spin lifetime measurements in graphene. Retrieved from https://arxiv.org/abs/1404.3211v1_
+1. _Sosenko, E., Wei, H., & Aji, V. (2014). Effect of contacts on spin lifetime measurements in graphene. Phys. Rev. B, 89(24), 245436. https://doi.org/10.1103/PhysRevB.89.245436_
 
 [aps-spin-lifetime]: https://github.com/evansosenko/aps-spin-lifetime
 [aps-spin-lifetime-plots]: https://github.com/evansosenko/aps-spin-lifetime-plots
