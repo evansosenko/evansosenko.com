@@ -1,4 +1,5 @@
 {{ define "main" }}
+  <h1>{{ .Title }}</h1>
   {{ .Content }}
   {{ range $.Site.Data.cv.occupations }}
     <p>{{ .title }}</p>
