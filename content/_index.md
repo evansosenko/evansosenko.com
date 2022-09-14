@@ -4,4 +4,6 @@ title: "Evan Sosenko"
 
 # Evan Sosenko.
 
-- [CV](./cv)
+- [Curriculum Vitae](./cv)
+- [Dichalcogenides](./dichalcogenides)
+- [Spin Lifetime](./spin-lifetime)
