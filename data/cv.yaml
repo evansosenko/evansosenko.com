@@ -1,4 +1,16 @@
 ---
+meta:
+  awards:
+    title: Awards
+  educations:
+    title: Employment
+  occupations:
+    title: Occupations
+  publications:
+    title: Publications
+  talks:
+    title: Talks
+
 awards:
   - title: Chancellor’s Distinguished Fellowship Award
     startDate: 2011
