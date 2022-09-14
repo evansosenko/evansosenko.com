@@ -1,7 +1,36 @@
 {{ define "main" }}
   <h1>{{ .Title }}</h1>
   {{ .Content }}
+
+  <h2>Employment</h2>
   {{ range $.Site.Data.cv.occupations }}
-    <p>{{ .title }}</p>
+    <h3>{{ .title }}</h3>
+    <p>{{ .location }}<br />{{ .startDate }} {{ .endDate }}</p>
+  {{ end }}
+
+  <h2>Awards</h2>
+  {{ range $.Site.Data.cv.awards }}
+    <h3>{{ .title }}</h3>
+    <p>{{ .location }}<br />{{ .startDate }} {{ .endDate }}</p>
+  {{ end }}
+
+  <h2>Education</h2>
+  {{ range $.Site.Data.cv.education }}
+    <h3>{{ .title }}</h3>
+    <p>{{ .location }}<br />{{ .startDate }} {{ .endDate }}</p>
+  {{ end }}
+
+  <h2>Publications</h2>
+  {{ range $.Site.Data.cv.publications }}
+    <h3><a href="{{ .url }}">{{ .title }}</a></h3>
+    <p>{{ .description }}</p>
+    <p>{{ .location }}<br />{{ .date }}</p>
+  {{ end }}
+
+  <h2>Talks</h2>
+  {{ range $.Site.Data.cv.talks }}
+    <h3><a href="{{ .url }}">{{ .title }}</a></h3>
+    <p>{{ .description }}</p>
+    <p>{{ .location }}<br />{{ .date }}</p>
   {{ end }}
 {{ end }}
