@@ -38,7 +38,7 @@ For details on how to use `scipy-data_fitting`, refer to the
 
 ## Effect of contacts on spin lifetime measurements in graphene
 
-Paper published in Physical Review B on 23 June 2014 as
+Paper published in Physical Review B on June 23, 2014 as
 [Phys. Rev. B 89, 245436][physrevb.89.245436]
 by Evan Sosenko, Huazhou Wei, and Vivek Aji;
 [e-Print available on arXiv.org](https://arxiv.org/abs/1404.3211).
