@@ -3,6 +3,7 @@ languageCode = 'en-US'
 title = 'Evan Sosenko'
 theme = 'default'
 enableRobotsTXT = true
+disableKinds = ["taxonomy", "term"]
 
 [params]
 production = false
