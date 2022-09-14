@@ -1,5 +1,5 @@
 ---
-title: Curriculum Vitae
 type: cv
 layout: single
+title: Curriculum Vitae
 ---
