@@ -1,9 +1,9 @@
-{{ $asset := resources.Get "favicon.svg" | resources.Fingerprint }}
+{{ $asset := resources.Get "img/favicon.svg" | resources.Fingerprint }}
 <link rel="icon" type="image/svg+xml"
   href="{{ $asset.RelPermalink }}"
   integrity="{{ $asset.Data.Integrity }}">
 
-{{ $asset := resources.Get "favicon.png" | resources.Fingerprint }}
+{{ $asset := resources.Get "img/favicon.png" | resources.Fingerprint }}
 <link rel="icon" type="image/png"
   href="{{ $asset.RelPermalink }}"
   integrity="{{ $asset.Data.Integrity }}">
