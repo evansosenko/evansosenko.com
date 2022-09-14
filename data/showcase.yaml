@@ -1,0 +1,29 @@
+---
+projects:
+  - title: PureSkill.gg
+    description: The only automated coach for CS:GO.
+    url: https://pureskill.gg/
+
+  - title: Config Curator
+    description: CLI tool for installing static configuration or dotfiles.
+    url: https://github.com/razor-x/config-curator
+
+  - title: Make New Project Skeletons
+    description: Tested project skeletons to instantly bootstrap and reliably maintain your next project.
+    url: https://makenew.github.io/
+
+  - title: EVE Online Overview Generator
+    description: Generate DRY modular overviews.
+    url: https://io.evansosenko.com/eve-overview/
+
+  - title: Blobpack
+    description: Packaging Benthos configs for AWS Lambda was too exciting, now it's acceptably boring.
+    url: https://github.com/razor-x/blobpack
+
+  - title: Lambda@Edge Immutable Web App
+    description: Deploys an immutable single page web app to AWS with Serverless.
+    url: https://github.com/ImmutableWebApps/aws-lambda-edge-example
+
+  - title: Examplr
+    description: Node.js example runner.
+    url: https://github.com/meltwater/node-examplr
