@@ -1,4 +1,5 @@
 ---
+draft: false
 title: Transition Metal Dichalcogenides (Superconductivity)
 description: "Research on transition metal dichalcogenides."
 ---

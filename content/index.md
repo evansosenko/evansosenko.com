@@ -1,6 +1,6 @@
 ---
-title: "Evan Sosenko"
 draft: false
+title: "Evan Sosenko"
 ---
 
 # Evan Sosenko.

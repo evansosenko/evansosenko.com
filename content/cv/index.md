@@ -1,6 +1,6 @@
 ---
-title: Curriculum Vitae
 draft: false
+title: Curriculum Vitae
 type: cv
 layout: single
 ---
