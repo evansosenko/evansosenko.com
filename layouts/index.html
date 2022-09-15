@@ -4,6 +4,9 @@
 <h1>{{ $.Site.Data.personal.firstName }} <span></span> {{ $.Site.Data.personal.lastName }}</h1>
 <nav>
   <ul class="personal-links">
+    {{ with $.Site.Data.personal.cv }}
+      <li><a href="{{ relURL "cv" }}" title="{{ .title }}" class="fa fa-{{ .icon }}"></a></li>
+    {{ end }}
     {{ range $.Site.Data.personal.links }}
       <li><a href="{{ .url }}" title="{{ .name }}" class="fa fa-{{ .icon }}"></a></li>
     {{ end }}

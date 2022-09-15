@@ -6,6 +6,10 @@ email:
   name: 'razorx {at} evansosenko.com'
   icon: envelope-solid
 
+cv:
+  title: Curriculum Vitae
+  icon: scroll-old-solid
+
 links:
   - name: GitHub
     url: https://github.com/razor-x
