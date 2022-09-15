@@ -30,8 +30,8 @@ projects:
 
   - title: Dichalcogenides
     description: Research on transition metal dichalcogenides.
-    url: https://evansosenko.com/dichalcogenides
+    url: /dichalcogenides
 
   - title: Spin Lifetime
     description: Research on spin lifetime measurements via Hanle curve fitting.
-    url: https://evansosenko.com/spin-lifetime
+    url: /spin-lifetime

@@ -5,11 +5,12 @@
 
 <nav>
   <ul class="personal-links">
-    {{ with $.Site.Data.personal.cv }}
-      <li><a href="{{ relURL "cv" }}" title="{{ .title }}" class="fa fa-{{ .icon }}"></a></li>
-    {{ end }}
     {{ range $.Site.Data.personal.links }}
-      <li><a href="{{ .url }}" title="{{ .name }}" class="fa fa-{{ .icon }}"></a></li>
+      {{ $url := .url }}
+      {{ if hasPrefix $url "/" }}
+        {{ $url = $url | relURL }}
+      {{ end }}
+      <li><a href="{{ $url }}" title="{{ .name }}" class="fa fa-{{ .icon }}"></a></li>
     {{ end }}
     {{ with $.Site.Data.personal.email }}
       <li><a data-target="modal-email" title="{{ .name }}" class="fa fa-{{ .icon }}"></a></li>
@@ -19,8 +20,12 @@
 
 <section class="projects">
   {{ range $.Site.Data.showcase.projects }}
+  {{ $url := .url }}
+  {{ if hasPrefix $url "/" }}
+    {{ $url = $url | relURL }}
+  {{ end }}
   <article>
-    <header><h3><a href="{{ .url }}">{{ .title }}</a></h3></header>
+    <header><h3><a href="{{ $url }}">{{ .title }}</a></h3></header>
     <p>{{ .description }}</p>
   </article>
   {{ end }}
