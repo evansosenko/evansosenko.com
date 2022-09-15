@@ -2,7 +2,7 @@
   <h1>{{ .Title }}</h1>
   {{ .Content }}
 
-  <h2>{{ .Site.Data.cv.meta.Employment.title }}</h2>
+  <h2>{{ .Site.Data.cv.meta.occupations.title }}</h2>
   {{ range $.Site.Data.cv.occupations }}
     <h3>{{ .title }}</h3>
     <p>{{ .location }}<br />{{ .startDate }} {{ .endDate }}</p>
