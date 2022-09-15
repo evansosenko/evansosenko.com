@@ -38,12 +38,27 @@
 }
 
 .fa {
-  background-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  background-color: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  .fa {
+    background-color: #ffffff;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .fa {
+    background-color: #000000;
+  }
 }
 
 {{ range resources.Match "img/fa/*.svg" }}
 .fa-{{ path.BaseName . }} {
   {{ $ico := resources.Fingerprint . }}
-  background-image: url('{{ .RelPermalink }}');
+  mask-image: url('{{ .RelPermalink }}');
+  -webkit-mask-image: url('{{ .RelPermalink }}');
 }
 {{ end }}
