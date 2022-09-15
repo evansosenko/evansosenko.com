@@ -1,6 +1,6 @@
 ---
 title: Transition Metal Dichalcogenides (Superconductivity)
-description: "Research on transition metal dichalcogenides."
+description: Research on transition metal dichalcogenides.
 ---
 
 This page is a permanent portal to all work and software
