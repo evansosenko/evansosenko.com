@@ -1,11 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="639.97498" height="640">
   <svg viewBox="0 0 639.97498 640" version="1.1" id="SvgjsSvg1006" width="639.97498" height="640" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
     <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc.-->
-    <defs id="SvgjsDefs1004">
-      <style id="SvgjsStyle1003">
-        @media (prefers-color-scheme:light){:root{filter:none}}
-      </style>
-    </defs>
     <g id="SvgjsG1002" transform="translate(-.0000122 63.986757)">
       <path class="fa-primary" d="m518.6 121.40781 112 112c12.5 12.5 12.5 32.7 0 45.2l-112 112c-12.5 12.5-32.7 12.5-45.2 0s-12.5-32.7 0-45.2l89.3-89.4-89.3-89.4c-12.5-12.5-12.5-32.7 0-45.2s32.7-12.5 45.2 0zm-352 45.2-89.35 89.4 89.35 89.4c12.5 12.5 12.5 32.7 0 45.2s-32.7 12.5-45.2 0l-112.028-112c-12.496-12.5-12.496-32.7 0-45.2l112.028-112c12.5-12.5 32.7-12.5 45.2 0s12.5 32.7 0 45.2z" id="SvgjsPath1001" style="fill:#00a2e8;fill-opacity:1"/>
       <path d="m414.8 40.797805-128 448.010005c-4.9 17-22.6 26.8-39.6 22-17-4.9-26.8-22.6-22-39.6l128-447.990005c4.9-16.9939999 22.6-26.8339999 39.6-21.9779999 17 4.855 26.8 22.5679999 22 39.5579999z" id="SvgjsPath1000" style="fill:#ffaec9;fill-opacity:1;opacity:1"/>
