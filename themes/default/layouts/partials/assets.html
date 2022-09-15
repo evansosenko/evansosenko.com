@@ -26,3 +26,12 @@
     href="{{ $asset.RelPermalink }}"
     integrity="{{ $asset.Data.Integrity }}">
 {{ end }}
+
+{{ range $.Site.Params.js}}
+  {{ $asset := resources.Get . | resources.Fingerprint }}
+  <script
+    src="{{ $asset.RelPermalink }}"
+    integrity="{{ $asset.Data.Integrity }}"
+    crossorigin="anonymous">
+  </script>
+{{ end }}

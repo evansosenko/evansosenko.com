@@ -12,3 +12,7 @@ css = [
   "css/theme.css",
   "css/main.css"
 ]
+
+js = [
+  "js/main.js"
+]
