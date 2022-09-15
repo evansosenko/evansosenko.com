@@ -1,5 +1,8 @@
 ---
-email: 'razorx {at} evansosenko.com'
+email:
+  title: Email
+  text: 'razorx {at} evansosenko.com'
+  icon: envelope-solid
 
 links:
   - name: GitHub

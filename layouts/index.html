@@ -1,11 +1,15 @@
 {{ define "main" }}
 {{ .Content }}
-<section class="personal-links">
-  {{ range $.Site.Data.personal.links }}
-    <p><a href="{{ .url }}" title="{{ .name }}" class="fa fa-{{ .icon }}"></a></p>
-  {{ end }}
-  <a data-target="modal-email" class="fa fa-paper-plane-duotone"></a>
-</section>
+<nav>
+  <ul class="personal-links">
+    {{ range $.Site.Data.personal.links }}
+      <li><a href="{{ .url }}" title="{{ .name }}" class="fa fa-{{ .icon }}"></a></li>
+    {{ end }}
+    {{ with $.Site.Data.personal.email }}
+      <li><a data-target="modal-email" title="{{ .title }}" class="fa fa-{{ .icon }}"></a></li>
+    {{ end }}
+  </ul>
+</nav>
 
 <section class="projects">
   {{ range $.Site.Data.showcase.projects }}
@@ -21,7 +25,7 @@
     <header>
       <a class="close"></a>
     </header>
-    <p>{{ $.Site.Data.personal.email }}</p>
+    <p>{{ $.Site.Data.personal.email.text }}</p>
   </article>
 </dialog>
 {{ end }}
