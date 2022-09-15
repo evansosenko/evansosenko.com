@@ -6,7 +6,7 @@
       <li><a href="{{ .url }}" title="{{ .name }}" class="fa fa-{{ .icon }}"></a></li>
     {{ end }}
     {{ with $.Site.Data.personal.email }}
-      <li><a data-target="modal-email" title="{{ .title }}" class="fa fa-{{ .icon }}"></a></li>
+      <li><a data-target="modal-email" title="{{ .name }}" class="fa fa-{{ .icon }}"></a></li>
     {{ end }}
   </ul>
 </nav>
@@ -25,7 +25,7 @@
     <header>
       <a class="close"></a>
     </header>
-    <p>{{ $.Site.Data.personal.email.text }}</p>
+    <p>{{ $.Site.Data.personal.email.name }}</p>
   </article>
 </dialog>
 {{ end }}

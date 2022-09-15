@@ -1,7 +1,6 @@
 ---
 email:
-  title: Email
-  text: 'razorx {at} evansosenko.com'
+  name: 'razorx {at} evansosenko.com'
   icon: envelope-solid
 
 links:
