@@ -1,9 +1,11 @@
 {{ define "main" }}
 {{ .Content }}
-{{ range $.Site.Data.personal.links }}
-  <p><a href="{{ .url }}">{{ .name }}</a></p>
-{{ end }}
-<a class="contrast" data-target="modal-email">@</a>
+<section class="personal-links">
+  {{ range $.Site.Data.personal.links }}
+    <p><a href="{{ .url }}" title="{{ .name }}" class="fa fa-{{ .icon }}"></a></p>
+  {{ end }}
+  <a data-target="modal-email" class="fa fa-paper-plane-duotone"></a>
+</section>
 
 <section class="projects">
   {{ range $.Site.Data.showcase.projects }}

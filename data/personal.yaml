@@ -4,9 +4,12 @@ email: 'razorx {at} evansosenko.com'
 links:
   - name: GitHub
     url: https://github.com/razor-x
+    icon: github
 
   - name: LinkedIn
     url: https://www.linkedin.com/in/evanasosenko
+    icon: linkedin-in
 
   - name: Twitter
     url: https://twitter.com/evansosenko
+    icon: twitter

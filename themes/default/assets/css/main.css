@@ -11,3 +11,20 @@
 .close {
   cursor: pointer;
 }
+
+.personal-links a {
+  display: block;
+  min-width: 10px;
+  min-height: 10px;
+}
+
+.fa {
+  background-repeat: no-repeat;
+}
+
+{{ range resources.Match "img/fa/*.svg" }}
+.fa-{{ path.BaseName . }} {
+  {{ $ico := resources.Fingerprint . }}
+  background-image: url('{{ .RelPermalink }}');
+}
+{{ end }}
