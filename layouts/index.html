@@ -1,6 +1,5 @@
 {{ define "main" }}
 {{ .Content }}
-
 <section class="projects">
   {{ range $.Site.Data.showcase.projects }}
   {{ $url := .url }}
@@ -13,13 +12,4 @@
   </article>
   {{ end }}
 </section>
-
-<dialog id="modal-email">
-  <article>
-    <header>
-      <a class="close"></a>
-    </header>
-    <p>{{ $.Site.Data.personal.email.name }}</p>
-  </article>
-</dialog>
 {{ end }}
