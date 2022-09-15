@@ -2,7 +2,7 @@
 projects:
   - title: PureSkill.gg
     description: The only automated coach for CS:GO.
-    url: https://pureskill.gg/
+    url: https://pureskill.gg
 
   - title: Config Curator
     description: CLI tool for installing static configuration or dotfiles.
@@ -10,11 +10,11 @@ projects:
 
   - title: Make New Project Skeletons
     description: Tested project skeletons to instantly bootstrap and reliably maintain your next project.
-    url: https://makenew.github.io/
+    url: https://github.com/makenew
 
   - title: EVE Online Overview Generator
     description: Generate DRY modular overviews.
-    url: https://io.evansosenko.com/eve-overview/
+    url: https://io.evansosenko.com/eve-overview
 
   - title: Blobpack
     description: Packaging Benthos configs for AWS Lambda was too exciting, now it's acceptably boring.
@@ -27,3 +27,11 @@ projects:
   - title: Examplr
     description: Node.js example runner.
     url: https://github.com/meltwater/node-examplr
+
+  - title: Dichalcogenides
+    description: Research on transition metal dichalcogenides.
+    url: https://evansosenko.com/dichalcogenides
+
+  - title: Spin Lifetime
+    description: Research on spin lifetime measurements via Hanle curve fitting.
+    url: https://evansosenko.com/spin-lifetime
