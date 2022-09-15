@@ -1,23 +1,6 @@
 {{ define "main" }}
 {{ .Content }}
 
-<h1 class="site-title">{{ $.Site.Data.personal.firstName }}<span></span> {{ $.Site.Data.personal.lastName }}</h1>
-
-<nav>
-  <ul class="personal-links">
-    {{ range $.Site.Data.personal.links }}
-      {{ $url := .url }}
-      {{ if hasPrefix $url "/" }}
-        {{ $url = $url | relURL }}
-      {{ end }}
-      <li><a href="{{ $url }}" title="{{ .name }}" class="fa fa-{{ .icon }}"></a></li>
-    {{ end }}
-    {{ with $.Site.Data.personal.email }}
-      <li><a data-target="modal-email" title="{{ .name }}" class="fa fa-{{ .icon }}"></a></li>
-    {{ end }}
-  </ul>
-</nav>
-
 <section class="projects">
   {{ range $.Site.Data.showcase.projects }}
   {{ $url := .url }}

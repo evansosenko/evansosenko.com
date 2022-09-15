@@ -6,10 +6,14 @@
     {{ partial "assets.html" . }}
   </head>
   <body>
-    {{ partial "header.html" . }}
+    <header class="site-header">
+      {{ partial "header.html" . }}
+    </header>
     <main class="container">
-    {{ block "main" . }}{{ end }}
+      {{ block "main" . }}{{ end }}
     </main>
-    {{ partial "footer.html" . }}
+    <footer class="site-footer">
+      {{ partial "footer.html" . }}
+    </footer>
   </body>
 </html>

@@ -10,9 +10,22 @@
   content: "}";
 }
 
-.site-title > span::after {
+.site-title span::after {
+  color: var(--color);
   margin-left: 1rem;
   content: "|";
+}
+
+.site-nav a {
+  cursor: pointer;
+  display: block;
+  margin: 1rem;
+  min-width: 2rem;
+  min-height: 2rem;
+}
+
+.close {
+  cursor: pointer;
 }
 
 .projects {
@@ -25,34 +38,10 @@
   margin: 0;
 }
 
-.close {
-  cursor: pointer;
-}
-
-.personal-links a {
-  cursor: pointer;
-  display: block;
-  margin: 1rem;
-  min-width: 2rem;
-  min-height: 2rem;
-}
-
 .fa {
   mask-repeat: no-repeat;
   -webkit-mask-repeat: no-repeat;
-  background-color: #ffffff;
-}
-
-@media (prefers-color-scheme: dark) {
-  .fa {
-    background-color: #ffffff;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  .fa {
-    background-color: #000000;
-  }
+  background-color: var(--color);
 }
 
 {{ range resources.Match "img/fa/*.svg" }}
