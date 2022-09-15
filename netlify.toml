@@ -72,3 +72,9 @@ HUGO_ENV = "production"
   to = "https://evansosenko.github.io/curriculum-vitae/:splat"
   status = 200
   force = true
+
+[[redirects]]
+  from = "/pico.css.map"
+  to = "https://unpkg.com/@picocss/pico@1.5.5/css/pico.css.map"
+  status = 200
+  force = true
