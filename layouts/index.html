@@ -1,0 +1,11 @@
+{{ define "main" }}
+{{ .Content }}
+<p>{{ $.Site.Data.personal.email }}</p>
+{{ range $.Site.Data.personal.links }}
+  <p><a href="{{ .url }}">{{ .name }}</a></p>
+{{ end }}
+{{ range $.Site.Data.showcase.projects }}
+  <p><a href="{{ .url }}">{{ .title }}</a></p>
+  <p>{{ .description }}</p>
+{{ end }}
+{{ end }}
