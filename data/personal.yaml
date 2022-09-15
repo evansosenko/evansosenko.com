@@ -1,4 +1,7 @@
 ---
+firstName: Evan
+lastName: Sosenko
+
 email:
   name: 'razorx {at} evansosenko.com'
   icon: envelope-solid

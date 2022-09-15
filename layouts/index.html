@@ -1,5 +1,7 @@
 {{ define "main" }}
 {{ .Content }}
+
+<h1>{{ $.Site.Data.personal.firstName }} <span></span> {{ $.Site.Data.personal.lastName }}</h1>
 <nav>
   <ul class="personal-links">
     {{ range $.Site.Data.personal.links }}
