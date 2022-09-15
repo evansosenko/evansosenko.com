@@ -27,10 +27,9 @@
 </nav>
 
 <dialog id="modal-email">
-  <article>
-    <header>
-      <a class="close"></a>
-    </header>
-    <p>{{ $.Site.Data.personal.email.name }}</p>
+  <article class="email-container">
+    <span class="fa fa-paper-plane-duotone" alt="email"></span>
+    <p class="email">{{ $.Site.Data.personal.email.name }}</p>
+    <a class="modal-close fa fa-xmark-duotone" alt="close"></a>
   </article>
 </dialog>

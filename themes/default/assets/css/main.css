@@ -30,7 +30,7 @@
   min-height: 2rem;
 }
 
-.close {
+.modal-close {
   cursor: pointer;
 }
 
@@ -48,6 +48,19 @@
   mask-repeat: no-repeat;
   -webkit-mask-repeat: no-repeat;
   background-color: var(--color);
+}
+
+.email-container {
+  display: flex;
+}
+
+.email-container .fa {
+  min-width: 1rem;
+  min-height: 1rem;
+}
+
+.email-container .email {
+  margin: 0 1rem;
 }
 
 {{ range resources.Match "img/fa/*.svg" }}

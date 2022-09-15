@@ -32,7 +32,7 @@ const initModal = (document, element) => {
   const open = () => {
     target.setAttribute('open', true)
 
-    const closeBtn = target.querySelector(`.close`)
+    const closeBtn = target.querySelector(`.modal-close`)
     if (closeBtn != null) {
       closeBtn.addEventListener('click', close)
     }
