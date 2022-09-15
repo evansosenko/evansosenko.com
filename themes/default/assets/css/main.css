@@ -1,3 +1,20 @@
+.site-title::before {
+  content: "{";
+}
+
+.site-title::after {
+  content: "}";
+}
+
+.site-title > span {
+  display: inline-block;
+}
+
+.site-title > span::after {
+  margin-left: 1rem;
+  content: "|";
+}
+
 .projects {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
