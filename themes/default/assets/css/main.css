@@ -1,13 +1,13 @@
+.site-title {
+  text-transform: lowercase;
+}
+
 .site-title::before {
   content: "{";
 }
 
 .site-title::after {
   content: "}";
-}
-
-.site-title > span {
-  display: inline-block;
 }
 
 .site-title > span::after {
