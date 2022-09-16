@@ -74,7 +74,7 @@ HUGO_ENV = "production"
   force = true
 
 [[redirects]]
-  from = "/pico.css.map"
-  to = "https://unpkg.com/@picocss/pico@1.5.5/css/pico.css.map"
+  from = "/pico.min.css.map"
+  to = "https://unpkg.com/@picocss/pico@1.5.5/css/pico.min.css.map"
   status = 200
   force = true
