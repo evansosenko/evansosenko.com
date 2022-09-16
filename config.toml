@@ -9,3 +9,4 @@ disableKinds = ["taxonomy", "term"]
 author = "Evan Sosenko"
 production = false
 languageDir = 'ltr'
+images = ["avatar.png"]

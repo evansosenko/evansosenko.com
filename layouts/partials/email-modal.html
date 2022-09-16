@@ -1,0 +1,9 @@
+{{ with  $.Site.Data.personal.email.name }}
+<dialog id="modal-email">
+  <article class="email-container">
+    <span class="fa fa-{{ .icon }}" alt="email"></span>
+    <p class="email">{{ .text }}</p>
+    <a class="modal-close fa fa-circle-xmark-duotone" alt="close"></a>
+  </article>
+</dialog>
+{{ end }}
