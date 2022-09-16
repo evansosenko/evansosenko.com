@@ -9,6 +9,7 @@
   integrity="{{ $asset.Data.Integrity }}">
 
 {{ $production := eq (getenv "HUGO_ENV") "production" | or (eq site.Params.env "production") }}
+
 {{ range $.Site.Params.remoteCss}}
   {{ $url := . }}
   {{ if not $production }}
@@ -25,6 +26,19 @@
   <link rel="stylesheet"
     href="{{ $asset.RelPermalink }}"
     integrity="{{ $asset.Data.Integrity }}">
+{{ end }}
+
+{{ range $.Site.Params.remoteJs}}
+  {{ $url := . }}
+  {{ if not $production }}
+    {{ $url = replace $url ".min." "." }}
+  {{ end }}
+  {{ $asset := resources.GetRemote $url | resources.Fingerprint }}
+  <script
+    src="{{ $asset.RelPermalink }}"
+    integrity="{{ $asset.Data.Integrity }}"
+    crossorigin="anonymous">
+  </script>
 {{ end }}
 
 {{ range $.Site.Params.js}}
