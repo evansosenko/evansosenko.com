@@ -5,6 +5,7 @@
 }
 
 .site-title {
+  --parent-color: var(--color);
   text-transform: lowercase;
 }
 
@@ -17,9 +18,13 @@
 }
 
 .site-title span::after {
-  color: var(--color);
+  color: var(--parent-color);
   margin-left: 1rem;
   content: '|';
+}
+
+.site-title a:hover {
+  text-decoration: none;
 }
 
 .site-nav a {

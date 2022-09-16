@@ -1,0 +1,10 @@
+[data-theme='light'],
+:root:not([data-theme='dark']) {
+  --background-color: #fff;
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --background-color: #000;
+  }
+}
