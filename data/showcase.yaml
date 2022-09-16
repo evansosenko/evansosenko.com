@@ -23,6 +23,18 @@ projects:
   - title: Lambda@Edge Immutable Web App
     description: Deploys an immutable single page web app to AWS with Serverless.
     url: https://github.com/ImmutableWebApps/aws-lambda-edge-example
+    
+  - title: Good Lambda Have Function (glhf)
+    description: Trivializes creating powerful AWS Lambda handler functions with minimal boilerplate.
+    url: https://github.com/pureskillgg/glhf
+
+  - title: AWS Node.js Toolkit (awsjs)
+    description: Clients and tools for building on AWS.
+    url: https://github.com/pureskillgg/awsjs
+    
+  - title: AWS Config Executor (ace)
+    description: Loads and caches configuration and secrets from AWS services.
+    url: https://github.com/pureskillgg/ace
 
   - title: Examplr
     description: Node.js example runner.
