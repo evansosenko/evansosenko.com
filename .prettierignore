@@ -8,6 +8,11 @@
 *.html
 themes/default/assets/css/fontawesome.css
 
+# Node.js
+node_modules
+package.json
+package-lock.json
+
 # Generated files by hugo
 /public/
 /resources/_gen/
