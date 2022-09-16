@@ -10,7 +10,7 @@ RUN hugo_url="https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION
       "${hugo_url}/${hugo_archive}" \
  && curl -fsSL --create-dirs -o "tmp/hugo/${hugo_checksums}" \
       "${hugo_url}/${hugo_checksums}" \
- && cd tmp/benthos \
+ && cd tmp/hugo \
  && sha256sum --strict --ignore-missing --check "${hugo_checksums}" \
  && tar -xzf "${hugo_archive}" \
  && mv hugo /usr/local/bin \
