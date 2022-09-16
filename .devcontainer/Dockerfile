@@ -18,8 +18,8 @@ RUN hugo_url="https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION
  && /usr/local/bin/hugo completion bash> /files/etc/bash_completion.d/01-hugo.sh \
  && rm -rf tmp/benthos
 
-USER vscode
-WORKDIR /home/vscode
+USER node
+WORKDIR /home/node
 
 RUN mkdir -p .config/git \
  && echo ".vscode/*" >> .config/git/ignore \
