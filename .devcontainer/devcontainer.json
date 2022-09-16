@@ -12,5 +12,9 @@
     "EditorConfig.EditorConfig",
     "esbenp.prettier-vscode"
   ],
+  "forwardPorts": [1313],
+  "portsAttributes": {
+    "1313": { "label": "App" }
+  },
   "remoteUser": "vscode"
 }
