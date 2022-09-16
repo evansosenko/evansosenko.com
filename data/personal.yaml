@@ -1,12 +1,23 @@
 ---
-tagline: hacker / gamer / tinkerer / ph.d.
+taglines:
+  - name: dev
+    icon: terminal-duotone
+
+  - name: gamer
+    icon: gamepad-duotone
+
+  - name: 魔法
+    icon: stars-duotone
+
+  - name: ph.d
+    icon: graduation-cap-duotone
 
 firstName: Evan
 lastName: Sosenko
 
 email:
   text: 'razorx {at} evansosenko.com'
-  icon: fa-paper-plane-duotone
+  icon: paper-plane-duotone
 
 links:
   - name: GitHub
