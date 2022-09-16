@@ -1,0 +1,5 @@
+<ul class="tagline">
+  {{ range $.Site.Data.personal.taglines }}
+    <li>{{ .name }}<span class="fa fa-{{ .icon }}"></span></li>
+  {{ end }}
+</ul>
