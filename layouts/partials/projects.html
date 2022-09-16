@@ -1,5 +1,5 @@
 <section class="projects">
-  {{ range $.Site.Data.showcase.projects }}
+{{ range $.Site.Data.showcase.projects }}
   {{ $url := .url }}
   {{ if hasPrefix $url "/" }}
     {{ $url = $url | relURL }}
@@ -8,5 +8,5 @@
     <header><h3><a href="{{ $url }}">{{ .title }}</a></h3></header>
     <p>{{ .description }}</p>
   </article>
-  {{ end }}
+{{ end }}
 </section>
