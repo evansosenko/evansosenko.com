@@ -9,5 +9,5 @@ Site: https://evansosenko.com
 Standards: HTML5, CSS3, ES6
 Components: Pico.css, Font Awesome, modern-normalize.
 Software: Hugo
-Source: https://github.com/evansosenko/evansosenko.com
 Hosting: Netlify
+Source: https://github.com/evansosenko/evansosenko.com
