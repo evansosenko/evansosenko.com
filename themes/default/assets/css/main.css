@@ -59,5 +59,7 @@
 }
 
 .email-container .email {
+  position: relative;
+  bottom: 2px;
   margin: 0 1rem;
 }
