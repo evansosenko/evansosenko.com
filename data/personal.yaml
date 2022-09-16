@@ -3,14 +3,10 @@ firstName: Evan
 lastName: Sosenko
 
 email:
-  name: 'razorx {at} evansosenko.com'
-  icon: envelope-solid
+  text: 'razorx {at} evansosenko.com'
+  icon: fa-paper-plane-duotone
 
 links:
-  - name: Curriculum Vitae
-    url: /cv
-    icon: scroll-old-solid
-
   - name: GitHub
     url: https://github.com/razor-x
     icon: github
@@ -22,3 +18,10 @@ links:
   - name: Twitter
     url: https://twitter.com/evansosenko
     icon: twitter
+
+  - name: 'razorx {at} evansosenko.com'
+    icon: envelope-solid
+
+  - name: Curriculum Vitae
+    url: /cv
+    icon: dragon-solid
