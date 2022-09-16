@@ -16,5 +16,5 @@
   "portsAttributes": {
     "1313": { "label": "App" }
   },
-  "remoteUser": "vscode"
+  "remoteUser": "node"
 }
