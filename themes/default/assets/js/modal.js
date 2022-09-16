@@ -1,7 +1,7 @@
 'use strict'
 
 const initModalHandlers = (document) => {
-  const elements = document.querySelectorAll(`[data-target]`)
+  const elements = document.querySelectorAll('[data-target]')
   for (const element of elements) initModal(document, element)
 }
 
@@ -32,7 +32,7 @@ const initModal = (document, element) => {
   const open = () => {
     target.setAttribute('open', true)
 
-    const closeBtn = target.querySelector(`.modal-close`)
+    const closeBtn = target.querySelector('.modal-close')
     if (closeBtn != null) {
       closeBtn.addEventListener('click', close)
     }
