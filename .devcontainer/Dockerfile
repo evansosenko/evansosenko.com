@@ -16,7 +16,7 @@ RUN hugo_url="https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION
  && mv hugo /usr/local/bin \
  && mkdir -p /files/etc/bash_completion.d \
  && /usr/local/bin/hugo completion bash> /files/etc/bash_completion.d/01-hugo.sh \
- && rm -rf tmp/benthos
+ && rm -rf tmp/hugo
 
 USER node
 WORKDIR /home/node
