@@ -1,0 +1,16 @@
+{
+  "name": "Hugo",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": {
+    "HUGO_VERSION": "0.103.0",
+    "HUGO_ARCH": "64bit"
+    }
+  },
+  "extensions": [
+    "ms-vsliveshare.vsliveshare",
+    "EditorConfig.EditorConfig",
+    "esbenp.prettier-vscode"
+  ],
+  "remoteUser": "vscode"
+}
