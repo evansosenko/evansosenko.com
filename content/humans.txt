@@ -1,0 +1,13 @@
+/* TEAM */
+
+Author: Evan Sosenko
+Location: San Francisco, California
+Site: https://evansosenko.com
+
+/* SITE */
+
+Standards: HTML5, CSS3, ES6
+Components: Pico.css, Font Awesome, modern-normalize.
+Software: Hugo
+Source: https://github.com/evansosenko/evansosenko.com
+Hosting: Netlify

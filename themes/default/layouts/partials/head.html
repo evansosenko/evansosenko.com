@@ -5,3 +5,7 @@
 <meta name="description" content="{{ .Description }}">
 {{ template "_internal/opengraph.html" . }}
 {{ template "_internal/twitter_cards.html" . }}
+<meta name="copyright"
+  content="Copyright (c) 2013-{{ now.Format "2006"}} {{ $.Site.Params.author }}.">
+<meta name="owner" content="{{ $.Site.Params.author }}">
+<link rel="author" href="humans.txt" type="text/plain">
