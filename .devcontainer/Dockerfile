@@ -25,3 +25,5 @@ RUN mkdir -p .config/git \
  && echo ".vscode/*" >> .config/git/ignore \
  && echo "*.code-workspace" >> .config/git/ignore \
  && echo ".history/" >> .config/git/ignore
+
+RUN npm i -g prettier standard stylelint
