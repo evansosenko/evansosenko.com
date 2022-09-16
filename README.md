@@ -15,8 +15,16 @@ Then clone from the [Git source] and serve locally with
 $ hugo server
 ```
 
-[Hugo]: https://gohugo.io/
-[Git source]: https://github.com/evansosenko/evansosenko.com
+[hugo]: https://gohugo.io/
+[git source]: https://github.com/evansosenko/evansosenko.com
+
+### Linting
+
+Linters are not required, but are supported and may be installed with
+
+```
+$ npm i -g prettier standard stylelint
+```
 
 ## License
 
