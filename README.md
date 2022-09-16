@@ -6,7 +6,7 @@
 
 [evansosenko.com]: https://evansosenko.com
 
-### Development
+## Development
 
 Install the latest version of [Hugo].
 Then clone from the [Git source] and serve locally with
