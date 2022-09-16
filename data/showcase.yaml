@@ -3,6 +3,10 @@ projects:
   - title: PureSkill.gg
     description: The only automated coach for CS:GO.
     url: https://pureskill.gg
+    
+  - title: PureSkill.gg Data Science
+    description: Public data set and open source SDK for CS:GO data science.
+    url: https://docs.pureskill.gg/datascience/
 
   - title: Config Curator
     description: CLI tool for installing static configuration or dotfiles.
