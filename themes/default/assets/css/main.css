@@ -9,17 +9,17 @@
 }
 
 .site-title::before {
-  content: "{";
+  content: '{';
 }
 
 .site-title::after {
-  content: "}";
+  content: '}';
 }
 
 .site-title span::after {
   color: var(--color);
   margin-left: 1rem;
-  content: "|";
+  content: '|';
 }
 
 .site-nav a {
@@ -44,12 +44,6 @@
   margin: 0;
 }
 
-.fa {
-  mask-repeat: no-repeat;
-  -webkit-mask-repeat: no-repeat;
-  background-color: var(--color);
-}
-
 .email-container {
   display: flex;
 }
@@ -62,11 +56,3 @@
 .email-container .email {
   margin: 0 1rem;
 }
-
-{{ range resources.Match "img/fa/*.svg" }}
-.fa-{{ path.BaseName . }} {
-  {{ $ico := resources.Fingerprint . }}
-  mask-image: url('{{ .RelPermalink }}');
-  -webkit-mask-image: url('{{ .RelPermalink }}');
-}
-{{ end }}

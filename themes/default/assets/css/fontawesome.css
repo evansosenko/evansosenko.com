@@ -1,0 +1,13 @@
+.fa {
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  background-color: var(--color);
+}
+
+{{ range resources.Match "img/fa/*.svg" }}
+.fa-{{ path.BaseName . }} {
+  {{ $ico := resources.Fingerprint . }}
+  mask-image: url('{{ .RelPermalink }}');
+  -webkit-mask-image: url('{{ .RelPermalink }}');
+}
+{{ end }}
