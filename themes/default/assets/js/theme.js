@@ -1,5 +1,3 @@
-'use strict'
-
 let activeColorScheme
 
 const initThemeHandlers = (document) => {

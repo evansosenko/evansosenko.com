@@ -1,5 +1,3 @@
-'use strict'
-
 const initModalHandlers = (document) => {
   const elements = document.querySelectorAll('[data-target]')
   for (const element of elements) initHandler(document, element)
