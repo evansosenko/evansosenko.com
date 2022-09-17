@@ -23,7 +23,7 @@ $ hugo server
 Linters are not required, but are supported and may be installed with
 
 ```
-$ npm i -g prettier standard stylelint
+$ npm i prettier standard stylelint
 ```
 
 ## License
