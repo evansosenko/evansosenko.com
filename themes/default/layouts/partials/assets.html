@@ -1,51 +1,33 @@
-{{ $asset := resources.Get "img/favicon.svg" | resources.Fingerprint }}
-<link rel="icon" type="image/svg+xml"
-  href="{{ $asset.RelPermalink }}"
-  integrity="{{ $asset.Data.Integrity }}">
-
-{{ $asset := resources.Get "img/favicon.png" | resources.Fingerprint }}
-<link rel="icon" type="image/png"
-  href="{{ $asset.RelPermalink }}"
-  integrity="{{ $asset.Data.Integrity }}">
-
 {{ $production := eq (getenv "HUGO_ENV") "production" | or (eq site.Params.env "production") }}
 
-{{ range $.Site.Params.remoteCss}}
-  {{ $url := . }}
-  {{ if not $production }}
-    {{ $url = replace $url ".min." "." }}
-  {{ end }}
-  {{ $asset := resources.GetRemote $url | resources.Fingerprint }}
-  <link rel="stylesheet"
-    href="{{ $asset.RelPermalink }}"
-    integrity="{{ $asset.Data.Integrity }}">
+{{ $asset := resources.Get "img/favicon.svg" }}
+{{ if $production }}
+  {{ $asset = resources.Fingerprint $asset }}
+{{ end }}
+<link rel="icon" type="image/svg+xml"
+  {{ if $production }}integrity="{{ $asset.Data.Integrity }}"{{ end }}
+  href="{{ $asset.RelPermalink }}">
+
+{{ $asset := resources.Get "img/favicon.png" }}
+{{ if $production }}
+  {{ $asset = resources.Fingerprint $asset }}
+{{ end }}
+<link rel="icon" type="image/png"
+  {{ if $production }}integrity="{{ $asset.Data.Integrity }}"{{ end }}
+  href="{{ $asset.RelPermalink }}">
+
+{{ range $.Site.Params.remoteCss }}
+  {{ partial "remote-asset.html" . }}
 {{ end }}
 
 {{ range $.Site.Params.css}}
-  {{ $asset := resources.Get . | resources.ExecuteAsTemplate . $ | resources.Fingerprint }}
-  <link rel="stylesheet"
-    href="{{ $asset.RelPermalink }}"
-    integrity="{{ $asset.Data.Integrity }}">
+  {{ partial "local-asset.html" . }}
 {{ end }}
 
-{{ range $.Site.Params.remoteJs}}
-  {{ $url := . }}
-  {{ if not $production }}
-    {{ $url = replace $url ".min." "." }}
-  {{ end }}
-  {{ $asset := resources.GetRemote $url | resources.Fingerprint }}
-  <script
-    src="{{ $asset.RelPermalink }}"
-    integrity="{{ $asset.Data.Integrity }}"
-    crossorigin="anonymous">
-  </script>
+{{ range $.Site.Params.remoteJs }}
+  {{ partial "remote-asset.html" . }}
 {{ end }}
 
-{{ range $.Site.Params.js}}
-  {{ $asset := resources.Get . | resources.ExecuteAsTemplate . $ | resources.Fingerprint }}
-  <script
-    src="{{ $asset.RelPermalink }}"
-    integrity="{{ $asset.Data.Integrity }}"
-    crossorigin="anonymous">
-  </script>
+{{ range $.Site.Params.js }}
+  {{ partial "local-asset.html" . }}
 {{ end }}

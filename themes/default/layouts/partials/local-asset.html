@@ -1,0 +1,20 @@
+{{ $production := eq (getenv "HUGO_ENV") "production" | or (eq site.Params.env "production") }}
+
+{{ $asset := resources.Get . | resources.ExecuteAsTemplate . $ }}
+{{ if $production }}
+  {{ $asset = resources.Fingerprint $asset }}
+{{ end }}
+
+{{ if strings.HasSuffix $asset.RelPermalink ".css" }}
+  <link rel="stylesheet"
+    {{ if $production }}integrity="{{ $asset.Data.Integrity }}"{{ end }}
+    href="{{ $asset.RelPermalink }}">
+{{ end }}
+
+{{ if strings.HasSuffix $asset.RelPermalink ".js" }}
+  <script
+    src="{{ $asset.RelPermalink }}"
+    {{ if $production }}integrity="{{ $asset.Data.Integrity }}"{{ end }}
+    crossorigin="anonymous">
+  </script>
+{{ end }}
