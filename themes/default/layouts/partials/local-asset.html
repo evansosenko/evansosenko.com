@@ -1,6 +1,6 @@
 {{ $production := eq (getenv "HUGO_ENV") "production" | or (eq site.Params.env "production") }}
 
-{{ $asset := resources.Get . | resources.ExecuteAsTemplate . $ }}
+{{ $asset := resources.Get . | resources.ExecuteAsTemplate (path.Base .) . }}
 {{ if $production }}
   {{ $asset = resources.Fingerprint $asset }}
 {{ end }}
