@@ -18,22 +18,39 @@
 }
 {{ end }}
 
-.fa-_theme {
-  {{ $asset := resources.Get "img/fa/moon-stars-duotone.svg" }}
-  {{ if $production }}
-    {{ $asset = resources.Fingerprint $asset }}
-  {{ end }}
-  mask-image: url('{{ $asset.RelPermalink }}');
-  -webkit-mask-image: url('{{ $asset.RelPermalink }}');
+{{ $darkIcon := "img/fa/moon-stars-duotone.svg" }}
+{{ $darkIcon = resources.Get $darkIcon }}
+{{ if $production }}
+  {{ $darkIcon = resources.Fingerprint $darkIcon }}
+{{ end }}
+
+{{ $lightIcon := "img/fa/eclipse-duotone.svg" }}
+{{ $lightIcon = resources.Get $lightIcon }}
+{{ if $production }}
+  {{ $lightIcon = resources.Fingerprint $lightIcon }}
+{{ end }}
+
+[data-theme='light'] .fa-_theme {
+  mask-image: url('{{ $lightIcon.RelPermalink }}');
+  -webkit-mask-image: url('{{ $lightIcon.RelPermalink }}');
+}
+
+[data-theme='dark'] .fa-_theme {
+  mask-image: url('{{ $darkIcon.RelPermalink }}');
+  -webkit-mask-image: url('{{ $darkIcon.RelPermalink }}');
 }
 
 @media only screen and (prefers-color-scheme: dark) {
-  .fa-_theme {
-    {{ $asset := resources.Get "img/fa/eclipse-duotone.svg" }}
-    {{ if $production }}
-      {{ $asset = resources.Fingerprint $asset }}
-    {{ end }}
-    mask-image: url('{{ $asset.RelPermalink }}');
-    -webkit-mask-image: url('{{ $asset.RelPermalink }}');
+  not([data-theme='light']) .fa-_theme {
+    mask-image: url('{{ $darkIcon.RelPermalink }}');
+    -webkit-mask-image: url('{{ $darkIcon.RelPermalink }}');
   }
 }
+
+@media only screen and (prefers-color-scheme: light) {
+  not([data-theme='dark']) .fa-_theme {
+    mask-image: url('{{ $lightIcon.RelPermalink }}');
+    -webkit-mask-image: url('{{ $lightIcon.RelPermalink }}');
+  }
+}
+

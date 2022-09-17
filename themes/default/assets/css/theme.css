@@ -7,8 +7,19 @@
   --background-color: #fff;
 }
 
+[data-theme='dark'],
+:root:not([data-theme='light']) {
+  --background-color: #000;
+}
+
 @media only screen and (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
     --background-color: #000;
+  }
+}
+
+@media only screen and (prefers-color-scheme: light) {
+  :root:not([data-theme='dark']) {
+    --background-color: #fff;
   }
 }
