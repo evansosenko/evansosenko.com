@@ -4,25 +4,5 @@
 </h1>
 {{ end }}
 
-<nav class="site-nav">
-  <ul>
-  {{ range $.Site.Data.personal.links }}
-    {{ $url := .url }}
-    {{ if hasPrefix $url "/" }}
-      {{ $url = $url | relURL }}
-    {{ end }}
-    <li>
-      <a title="{{ .name }}"
-        {{ if $url }}
-          href="{{ $url }}"
-        {{ end }}
-        {{ if .target }}
-          data-target="{{ .target }}"
-        {{ end }}
-        class="fa fa-{{ .icon }}"></a>
-    </li>
-  {{ end }}
-  </ul>
-</nav>
-
+{{ partial "nav.html" . }}
 {{ partial "email-modal.html" . }}
