@@ -7,7 +7,23 @@ html {
   transition: background-color var(--transition-speed);
 }
 
-.site-header {
+.main-nav {
+  justify-content: center;
+}
+
+.main-nav a {
+  cursor: pointer;
+}
+
+.main-nav span {
+  display: inline-block;
+  min-width: 1rem;
+  min-height: 1rem;
+  margin: 0 1rem;
+  margin-bottom: -2px;
+}
+
+.site-header, .site-footer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,7 +48,7 @@ html {
   content: '|';
 }
 
-.site-nav a {
+.social-nav a {
   cursor: pointer;
   display: block;
   margin: 1rem;
@@ -46,26 +62,6 @@ html {
 
 .modal-close {
   cursor: pointer;
-}
-
-.tagline {
-  margin: auto;
-  display: flex;
-  justify-content: center;
-}
-
-.tagline > li {
-  cursor: pointer;
-  display: inline-block;
-  margin: 0 1rem;
-}
-
-.tagline span {
-  display: inline-block;
-  min-width: 1rem;
-  min-height: 1rem;
-  margin: 0 1rem;
-  margin-bottom: -2px;
 }
 
 .projects {
