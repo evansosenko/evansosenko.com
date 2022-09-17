@@ -35,7 +35,7 @@ links:
 
   - name: 'razorx {at} evansosenko.com'
     icon: at-solid
-    target: email-modal
+    target: modal-email
 
   - name: Curriculum Vitae
     url: /cv

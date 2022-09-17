@@ -12,14 +12,21 @@ const initModal = (document, element) => {
 
   const handleKeydown = (event) => {
     if (['Escape', 'Esc'].includes(event?.key) || event?.keyCode === 27) {
+      event.preventDefault()
       close()
     }
+  }
+
+  const handleOpenClick = (event) => {
+    event.preventDefault()
+    open()
   }
 
   const handleOutsideClick = (event) => {
     const inner = target.querySelector('article')
     if (event.target === element) return
     if (inner.contains(event.target)) return
+    event.preventDefault()
     close()
   }
 
@@ -39,9 +46,10 @@ const initModal = (document, element) => {
 
     document.addEventListener('keydown', handleKeydown)
     document.addEventListener('click', handleOutsideClick)
+    document.removeEventListener('click', handleOpenClick)
   }
 
-  element.addEventListener('click', open)
+  element.addEventListener('click', handleOpenClick)
 }
 
 window.addEventListener('DOMContentLoaded', () => {
