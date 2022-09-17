@@ -1,7 +1,8 @@
 let activeColorScheme
 
 const initThemeHandlers = (document) => {
-  activeColorScheme = preferedColorScheme()
+  activeColorScheme = getActiveTheme()
+  setTheme(document, activeColorScheme)
   const elements = document.querySelectorAll('.toggle-theme')
   for (const element of elements) initHandler(document, element)
 }
@@ -20,10 +21,15 @@ const toggleTheme = (document) => {
 
 const setTheme = (document, colorScheme) => {
   activeColorScheme = colorScheme
+  globalThis?.localStorage?.setItem('activeColorScheme', colorScheme)
   document.querySelector('html').classList.add('theme-transistion')
   document.querySelector('html').setAttribute('data-theme', colorScheme)
   document.querySelector('html').classList.remove('theme-transistion')
 }
+
+const getActiveTheme = () =>
+  globalThis?.localStorage?.getItem('activeColorScheme') ??
+  preferedColorScheme()
 
 const preferedColorScheme = () => {
   const matchMedia = globalThis?.matchMedia
