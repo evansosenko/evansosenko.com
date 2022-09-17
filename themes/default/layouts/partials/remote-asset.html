@@ -21,6 +21,7 @@
 
 {{ if strings.HasSuffix $asset.RelPermalink ".js" }}
   <script
+    async
     src="{{ $asset.RelPermalink }}"
     {{ if $production }}integrity="{{ $asset.Data.Integrity }}"{{ end }}
     crossorigin="anonymous">

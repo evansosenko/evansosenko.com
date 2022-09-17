@@ -32,16 +32,16 @@ html {
   content: '|';
 }
 
-.site-title a:hover {
-  text-decoration: none;
-}
-
 .site-nav a {
   cursor: pointer;
   display: block;
   margin: 1rem;
   min-width: 2rem;
   min-height: 2rem;
+}
+
+.site-title a:hover {
+  text-decoration: none;
 }
 
 .modal-close {
@@ -55,6 +55,7 @@ html {
 }
 
 .tagline > li {
+  cursor: pointer;
   display: inline-block;
   margin: 0 1rem;
 }

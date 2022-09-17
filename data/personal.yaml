@@ -1,13 +1,17 @@
 ---
-taglines:
+tagline:
   - name: dev
+    url: /dev
     icon: terminal-duotone
 
-  - name: gamer
-    icon: game-console-handheld-duotone
-
   - name: ph.d
+    title: Curriculum Vitae
+    url: /cv
     icon: graduation-cap-duotone
+
+  - name: gamer
+    url: /discord
+    icon: game-console-handheld-duotone
 
   - name: 魔法
     icon: stars-duotone
@@ -36,7 +40,3 @@ links:
   - name: 'razorx {at} evansosenko.com'
     icon: at-solid
     target: modal-email
-
-  - name: Curriculum Vitae
-    url: /cv
-    icon: dragon-solid

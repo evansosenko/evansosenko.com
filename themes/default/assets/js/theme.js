@@ -9,16 +9,22 @@ const initThemeHandlers = (document) => {
 }
 
 const initHandler = (document, element) => {
-  element.addEventListener('click', toggleTheme)
+  element.addEventListener('click', (event) => {
+    event.preventDefault()
+    toggleTheme(document)
+  })
 }
 
-const toggleTheme = () => {
-  setTheme(activeColorScheme === 'dark' ? 'light' : 'dark')
+const toggleTheme = (document) => {
+  const colorScheme = activeColorScheme === 'dark' ? 'light' : 'dark'
+  setTheme(document, colorScheme)
 }
 
-const setTheme = (colorScheme) => {
+const setTheme = (document, colorScheme) => {
   activeColorScheme = colorScheme
+  document.querySelector('html').classList.add('theme-transistion')
   document.querySelector('html').setAttribute('data-theme', colorScheme)
+  document.querySelector('html').classList.remove('theme-transistion')
 }
 
 const preferedColorScheme = () => {
