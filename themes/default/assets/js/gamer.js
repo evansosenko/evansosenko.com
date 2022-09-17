@@ -4,18 +4,18 @@ const initHandlers = (document) => {
 }
 
 const initHandler = (document, element) => {
+  const Howl = globalThis?.Howl
+  if (Howl == null) return
+
+  const sound = new Howl({
+    preload: true,
+    src: [
+      '{{ (resources.Get "audio/shoot.wav" | resources.Fingerprint).RelPermalink }}'
+    ]
+  })
+
   element.addEventListener('click', (event) => {
     event.preventDefault()
-    const Howl = globalThis?.Howl
-    if (Howl == null) return
-
-    const sound = new Howl({
-      preload: true,
-      src: [
-        '{{ (resources.Get "audio/shoot.wav" | resources.Fingerprint).RelPermalink }}'
-      ]
-    })
-
     sound.play()
   })
 }
