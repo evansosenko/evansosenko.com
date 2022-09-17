@@ -20,10 +20,9 @@ mainNav:
     url: /discord
     icon: game-console-handheld-duotone
 
-  - name: 魔法
+  - name: wizzard
     icon: _theme
     class: toggle-theme
-
 
 socialNav:
   - name: GitHub

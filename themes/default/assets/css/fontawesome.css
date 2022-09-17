@@ -24,7 +24,7 @@
   {{ $darkIcon = resources.Fingerprint $darkIcon }}
 {{ end }}
 
-{{ $lightIcon := "img/fa/eclipse-duotone.svg" }}
+{{ $lightIcon := "img/fa/sparkles-duotone.svg" }}
 {{ $lightIcon = resources.Get $lightIcon }}
 {{ if $production }}
   {{ $lightIcon = resources.Fingerprint $lightIcon }}
