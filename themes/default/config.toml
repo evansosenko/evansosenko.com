@@ -9,9 +9,7 @@ remoteCss = [
   "https://unpkg.com/@picocss/pico@1.5.5/css/pico.min.css"
 ]
 
-remoteJs = [
-  "https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"
-]
+remoteJs = []
 
 css = [
   "css/theme.css",

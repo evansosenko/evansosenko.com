@@ -6,16 +6,6 @@ const initMagicHandlers = (document) => {
 }
 
 const initMagic = (document, element) => {
-  const confetti = globalThis?.confetti
-  if (!confetti) return
-  const canvas = document.createElement('canvas')
-  document.body.appendChild(canvas)
-  const con = confetti.create(canvas, {
-    resize: true,
-    useWorker: true
-  })
-  const magic = () => con()
-  element.addEventListener('click', magic)
 }
 
 window.addEventListener('DOMContentLoaded', () => {
