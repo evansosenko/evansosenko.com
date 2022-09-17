@@ -2,10 +2,10 @@
 
 const initModalHandlers = (document) => {
   const elements = document.querySelectorAll('[data-target]')
-  for (const element of elements) initModal(document, element)
+  for (const element of elements) initHandler(document, element)
 }
 
-const initModal = (document, element) => {
+const initHandler = (document, element) => {
   const targetId = element.getAttribute('data-target')
   const target = document.getElementById(targetId)
   if (target == null) return
@@ -53,7 +53,7 @@ const initModal = (document, element) => {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-  const document = globalThis.document
+  const document = globalThis?.document
   if (document == null) return
   initModalHandlers(document)
 })

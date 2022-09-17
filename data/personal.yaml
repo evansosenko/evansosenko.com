@@ -11,7 +11,7 @@ taglines:
 
   - name: 魔法
     icon: stars-duotone
-    class: magic
+    class: toggle-theme
 
 firstName: Evan
 lastName: Sosenko

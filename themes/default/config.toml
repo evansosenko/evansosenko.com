@@ -18,6 +18,6 @@ css = [
 ]
 
 js = [
-  "js/magic.js",
+  "js/theme.js",
   "js/modal.js"
 ]

@@ -13,6 +13,7 @@
 
 {{ if strings.HasSuffix $asset.RelPermalink ".js" }}
   <script
+    type="module"
     src="{{ $asset.RelPermalink }}"
     {{ if $production }}integrity="{{ $asset.Data.Integrity }}"{{ end }}
     crossorigin="anonymous">

@@ -1,3 +1,7 @@
+:root {
+  --transition-speed: 0.5s;
+}
+
 [data-theme='light'],
 :root:not([data-theme='dark']) {
   --background-color: #fff;
