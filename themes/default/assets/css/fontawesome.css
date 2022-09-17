@@ -6,6 +6,11 @@
   background-color: var(--color);
 }
 
+.toggle-theme .fa {
+  mask-image: var(--toggle-theme-icon);
+  -webkit-mask-image: var(--toggle-theme-icon);
+}
+
 {{ range resources.Match "img/fa/*.svg" }}
 .fa-{{ path.BaseName . }} {
   {{ $asset := . }}
@@ -30,27 +35,17 @@
   {{ $lightIcon = resources.Fingerprint $lightIcon }}
 {{ end }}
 
-[data-theme='light'] .fa-_theme {
-  mask-image: url('{{ $lightIcon.RelPermalink }}');
-  -webkit-mask-image: url('{{ $lightIcon.RelPermalink }}');
-}
-
-[data-theme='dark'] .fa-_theme {
-  mask-image: url('{{ $darkIcon.RelPermalink }}');
-  -webkit-mask-image: url('{{ $darkIcon.RelPermalink }}');
+[data-theme='light'],
+:root:not([data-theme='dark']) {
+  --toggle-theme-icon: url('{{ $lightIcon.RelPermalink }}');
 }
 
 @media only screen and (prefers-color-scheme: dark) {
-  not([data-theme='light']) .fa-_theme {
-    mask-image: url('{{ $darkIcon.RelPermalink }}');
-    -webkit-mask-image: url('{{ $darkIcon.RelPermalink }}');
+  :root:not([data-theme='light']) {
+    --toggle-theme-icon: url('{{ $darkIcon.RelPermalink }}');
   }
 }
 
-@media only screen and (prefers-color-scheme: light) {
-  not([data-theme='dark']) .fa-_theme {
-    mask-image: url('{{ $lightIcon.RelPermalink }}');
-    -webkit-mask-image: url('{{ $lightIcon.RelPermalink }}');
-  }
+[data-theme='dark'] {
+  --toggle-theme-icon: url('{{ $darkIcon.RelPermalink }}');
 }
-

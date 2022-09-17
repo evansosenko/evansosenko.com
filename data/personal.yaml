@@ -21,7 +21,6 @@ mainNav:
     icon: alien-8bit-solid
 
   - name: wizzard
-    icon: _theme
     class: toggle-theme
 
 socialNav:
