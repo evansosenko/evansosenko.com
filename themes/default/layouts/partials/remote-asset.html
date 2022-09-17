@@ -4,9 +4,11 @@
 {{ $asset := resources.GetRemote . }}
 
 {{ if not $production }}
-  {{ with replace $url ".min." "." | resources.GetRemote }}
+  {{ $u := replace $url ".min." "." }}
+  {{ with resources.GetRemote $u }}
     {{ with .Err }}
     {{ else }}
+      {{ $url = $u }}
       {{ $asset = . }}
     {{ end }}
   {{ end }}
@@ -14,6 +16,10 @@
 
 {{ if $production }}
   {{ $asset = resources.Fingerprint $asset }}
+{{ else }}
+  {{ $content := $asset.Content |  }}
+  {{ $target := path.Base $url }}
+  {{ $asset = $asset.Content | resources.FromString $target }}
 {{ end }}
 
 {{ if strings.HasSuffix $asset.RelPermalink ".css" }}
