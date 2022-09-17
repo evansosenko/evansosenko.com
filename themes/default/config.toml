@@ -21,7 +21,8 @@ css = [
 
 js = [
   "js/theme.js",
-  "js/modal.js"
+  "js/modal.js",
+  "js/gamer.js"
 ]
 
 lightIcon = "img/fa/moon-stars-duotone.svg"

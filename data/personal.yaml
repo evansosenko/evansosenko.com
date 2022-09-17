@@ -17,8 +17,8 @@ mainNav:
     icon: graduation-cap-duotone
 
   - name: gamer
-    url: /discord
     icon: alien-8bit-solid
+    class: gamer-button
 
   - name: wizzard
     class: toggle-theme
