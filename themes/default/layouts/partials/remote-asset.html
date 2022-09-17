@@ -14,10 +14,6 @@
 
 {{ if $production }}
   {{ $asset = resources.Fingerprint $asset }}
-{{ else }}
-  {{ $content := $asset.Content |  }}
-  {{ $target := path.Base $url }}
-  {{ $asset = $asset.Content | resources.FromString $target }}
 {{ end }}
 
 {{ if strings.HasSuffix $asset.RelPermalink ".css" }}
