@@ -1,4 +1,4 @@
-const initModalHandlers = (document) => {
+const initHandlers = (document) => {
   const elements = document.querySelectorAll('[data-target]')
   for (const element of elements) initHandler(document, element)
 }
@@ -53,5 +53,5 @@ const initHandler = (document, element) => {
 window.addEventListener('DOMContentLoaded', () => {
   const document = globalThis?.document
   if (document == null) return
-  initModalHandlers(document)
+  initHandlers(document)
 })
