@@ -1,3 +1,5 @@
+{{ $production := eq (getenv "HUGO_ENV") "production" | or (eq site.Params.env "production") }}
+
 .fa {
   mask-repeat: no-repeat;
   -webkit-mask-repeat: no-repeat;
@@ -6,8 +8,32 @@
 
 {{ range resources.Match "img/fa/*.svg" }}
 .fa-{{ path.BaseName . }} {
-  {{ $ico := resources.Fingerprint . }}
-  mask-image: url('{{ .RelPermalink }}');
-  -webkit-mask-image: url('{{ .RelPermalink }}');
+  {{ $asset := . }}
+  {{ $asset = resources.Fingerprint . }}
+  {{ if $production }}
+    {{ $asset = resources.Fingerprint $asset }}
+  {{ end }}
+  mask-image: url('{{ $asset.RelPermalink }}');
+  -webkit-mask-image: url('{{ $asset.RelPermalink }}');
 }
 {{ end }}
+
+.fa-_theme {
+  {{ $asset := resources.Get "img/fa/moon-stars-duotone.svg" }}
+  {{ if $production }}
+    {{ $asset = resources.Fingerprint $asset }}
+  {{ end }}
+  mask-image: url('{{ $asset.RelPermalink }}');
+  -webkit-mask-image: url('{{ $asset.RelPermalink }}');
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+  .fa-_theme {
+    {{ $asset := resources.Get "img/fa/eclipse-duotone.svg" }}
+    {{ if $production }}
+      {{ $asset = resources.Fingerprint $asset }}
+    {{ end }}
+    mask-image: url('{{ $asset.RelPermalink }}');
+    -webkit-mask-image: url('{{ $asset.RelPermalink }}');
+  }
+}

@@ -21,7 +21,7 @@ mainNav:
     icon: game-console-handheld-duotone
 
   - name: 魔法
-    icon: stars-duotone
+    icon: _theme
     class: toggle-theme
 
 

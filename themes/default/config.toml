@@ -21,3 +21,6 @@ js = [
   "js/theme.js",
   "js/modal.js"
 ]
+
+lightIcon = "img/fa/moon-stars-duotone.svg"
+darkIcon = "img/fa/eclipse-duotone.svg"
