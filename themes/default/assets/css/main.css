@@ -23,7 +23,8 @@ html {
   margin-bottom: -2px;
 }
 
-.site-header, .site-footer {
+.site-header,
+.site-footer {
   display: flex;
   flex-direction: column;
   align-items: center;
