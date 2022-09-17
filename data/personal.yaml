@@ -18,7 +18,7 @@ mainNav:
 
   - name: gamer
     url: /discord
-    icon: game-console-handheld-duotone
+    icon: puzzle-duotone
 
   - name: wizzard
     icon: _theme
