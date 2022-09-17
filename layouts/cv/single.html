@@ -1,36 +1,44 @@
 {{ define "main" }}
+{{ with  $.Site.Data.cv }}
   <h1>{{ .Title }}</h1>
   {{ .Content }}
 
-  <h2>{{ .Site.Data.cv.meta.occupations.title }}</h2>
-  {{ range $.Site.Data.cv.occupations }}
+  <h2>{{ .meta.occupations.title }}</h2>
+  {{ range .occupations }}
     <h3>{{ .title }}</h3>
-    <p>{{ .location }}<br />{{ .startDate }} {{ .endDate }}</p>
+    <p>{{ .location }}<br />
+      {{ .startDate }} - {{ .endDate | default "present" }}
+    </p>
   {{ end }}
 
-  <h2>{{ .Site.Data.cv.meta.awards.title }}</h2>
-  {{ range $.Site.Data.cv.awards }}
+  <h2>{{ .meta.awards.title }}</h2>
+  {{ range .awards }}
     <h3>{{ .title }}</h3>
-    <p>{{ .location }}<br />{{ .startDate }} {{ .endDate }}</p>
+    <p>{{ .location }}<br />
+      {{ .startDate }} - {{ .endDate | default "present" }}
+    </p>
   {{ end }}
 
-  <h2>{{ .Site.Data.cv.meta.educations.title }}</h2>
-  {{ range $.Site.Data.cv.educations }}
+  <h2>{{ .meta.educations.title }}</h2>
+  {{ range .educations }}
     <h3>{{ .title }}</h3>
-    <p>{{ .location }}<br />{{ .startDate }} {{ .endDate }}</p>
+    <p>{{ .location }}<br />
+      {{ .startDate }} - {{ .endDate | default "present" }}
+    </p>
   {{ end }}
 
-  <h2>{{ .Site.Data.cv.meta.publications.title }}</h2>
-  {{ range $.Site.Data.cv.publications }}
+  <h2>{{ .meta.publications.title }}</h2>
+  {{ range .publications }}
     <h3><a href="{{ .url }}">{{ .title }}</a></h3>
     <p>{{ .description }}</p>
     <p>{{ .location }}<br />{{ .date }}</p>
   {{ end }}
 
-  <h2>{{ .Site.Data.cv.meta.talks.title }}</h2>
-  {{ range $.Site.Data.cv.talks }}
+  <h2>{{ .meta.talks.title }}</h2>
+  {{ range .talks }}
     <h3><a href="{{ .url }}">{{ .title }}</a></h3>
     <p>{{ .description }}</p>
     <p>{{ .location }}<br />{{ .date }}</p>
   {{ end }}
+{{ end }}
 {{ end }}
