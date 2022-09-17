@@ -1,10 +1,17 @@
 {{ $production := eq (getenv "HUGO_ENV") "production" | or (eq site.Params.env "production") }}
 
 {{ $url := . }}
+{{ $asset := resources.GetRemote . }}
+
 {{ if not $production }}
-  {{ $url = replace $url ".min." "." }}
+  {{ with replace $url ".min." "." | resources.GetRemote }}
+    {{ with .Err }}
+    {{ else }}
+      {{ $asset = . }}
+    {{ end }}
+  {{ end }}
 {{ end }}
-{{ $asset := resources.GetRemote $url }}
+
 {{ if $production }}
   {{ $asset = resources.Fingerprint $asset }}
 {{ else }}
@@ -27,7 +34,6 @@
     crossorigin="anonymous">
   </script>
 {{ end }}
-
 
 {{ if not $production }}
   {{ if strings.HasSuffix $asset.RelPermalink ".map" }}
