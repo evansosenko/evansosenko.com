@@ -16,15 +16,19 @@ const initHandler = (document, element) => {
 
 const toggleTheme = (document) => {
   const colorScheme = activeColorScheme === 'dark' ? 'light' : 'dark'
-  setTheme(document, colorScheme)
+  document.querySelector('html').classList.add('theme-transistion')
+  setTimeout(() => {
+    setTheme(document, colorScheme)
+  }, 0)
+  setTimeout(() => {
+    document.querySelector('html').classList.remove('theme-transistion')
+  }, 2000)
 }
 
 const setTheme = (document, colorScheme) => {
   activeColorScheme = colorScheme
   globalThis?.localStorage?.setItem('activeColorScheme', colorScheme)
-  document.querySelector('html').classList.add('theme-transistion')
   document.querySelector('html').setAttribute('data-theme', colorScheme)
-  document.querySelector('html').classList.remove('theme-transistion')
 }
 
 const getActiveTheme = () =>

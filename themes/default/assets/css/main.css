@@ -2,7 +2,7 @@ html {
   overflow-y: scroll;
 }
 
-* {
+.theme-transistion {
   transition: color var(--transition-speed);
   transition: background-color var(--transition-speed);
 }
