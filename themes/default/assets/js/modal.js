@@ -50,7 +50,7 @@ const initHandler = (document, element) => {
   element.addEventListener('click', handleOpenClick)
 }
 
-window.addEventListener('DOMContentLoaded', () => {
+globalThis?.addEventListener('DOMContentLoaded', () => {
   const document = globalThis?.document
   if (document == null) return
   initHandlers(document)

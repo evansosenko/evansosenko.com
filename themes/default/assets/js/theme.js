@@ -42,7 +42,7 @@ const preferedColorScheme = () => {
   return isDark ? 'dark' : 'light'
 }
 
-window.addEventListener('DOMContentLoaded', () => {
+globalThis?.addEventListener('DOMContentLoaded', () => {
   const document = globalThis?.document
   if (document == null) return
   initHandlers(document)
