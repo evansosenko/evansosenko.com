@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="{{ $.Site.Params.themeColor }}">
-<title>{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}</title>
+<title>{{ with .Params.Title }}{{ . }} | {{ end }}{{ $.Site.Title }}</title>
 <meta name="description" content="{{ .Description }}">
 {{ template "_internal/opengraph.html" . }}
 {{ template "_internal/twitter_cards.html" . }}
