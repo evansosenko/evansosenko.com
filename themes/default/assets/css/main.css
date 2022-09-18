@@ -17,9 +17,13 @@ main {
   flex: 1 0 auto;
 }
 
+body > main.container {
+  padding: 0;
+}
+
 figure {
   border-radius: 1rem;
-  background-color: #ffffff;
+  background-color: #fff;
   padding: 1rem;
 }
 
@@ -105,6 +109,7 @@ figure {
   --color: var(--accent);
   --parent-color: var(--color);
 
+  font-weight: 200;
   text-transform: lowercase;
 }
 
@@ -113,17 +118,17 @@ figure {
 }
 
 .site-title::before {
-  content: '{';
+  content: "{";
 }
 
 .site-title::after {
-  content: '}';
+  content: "}";
 }
 
 .site-title span::after {
   color: var(--parent-color);
   margin-left: 1rem;
-  content: '|';
+  content: "|";
 }
 
 .modal-close {

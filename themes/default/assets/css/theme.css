@@ -5,6 +5,7 @@
   --accent: #ffaec9;
   --not-found-background-color: var(--primary);
   --not-found-background-opacity: 0.1;
+  --block-spacing-vertical: 1rem;
 }
 
 [data-theme="light"],
