@@ -21,6 +21,10 @@ body > main.container {
   padding: 0;
 }
 
+body > main > h1 {
+  text-align: center;
+}
+
 figure {
   border-radius: 1rem;
   background-color: #fff;
