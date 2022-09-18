@@ -16,7 +16,7 @@ main {
   flex: 1 0 auto;
 }
 
-.avatar-container {
+.site-avatar {
   display: flex;
   margin: auto;
   min-height: 150px;
