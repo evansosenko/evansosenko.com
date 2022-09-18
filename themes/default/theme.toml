@@ -1,6 +1,6 @@
 name = "default"
 license = "All rights reserved"
-licenselink = "https://github.com/evansosenko/evansosenko.com/blob/master/LICENSE.txt"
+licenselink = "https://github.com/evansosenko/evansosenko.com/blob/main/LICENSE.txt"
 description = "Theme for evansosenko.com"
 homepage = "https://github.com/evansosenko/evansosenko.com"
 min_version = "0.41.0"
