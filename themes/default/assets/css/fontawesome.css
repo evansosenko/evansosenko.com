@@ -1,30 +1,5 @@
 {{ $production := eq (getenv "HUGO_ENV") "production" | or (eq site.Params.env "production") }}
 
-.fa {
-  background-color: var(--color);
-  mask-repeat: no-repeat;
-  -webkit-mask-repeat: no-repeat;
-  mask-position-y: bottom;
-  -webkit-mask-position-y: bottom;
-}
-
-.toggle-theme .fa {
-  mask-image: var(--toggle-theme-icon);
-  -webkit-mask-image: var(--toggle-theme-icon);
-}
-
-{{ range resources.Match "img/fa/*.svg" }}
-.fa-{{ path.BaseName . }} {
-  {{ $asset := . }}
-  {{ $asset = resources.Fingerprint . }}
-  {{ if $production }}
-    {{ $asset = resources.Fingerprint $asset }}
-  {{ end }}
-  mask-image: url('{{ $asset.RelPermalink }}');
-  -webkit-mask-image: url('{{ $asset.RelPermalink }}');
-}
-{{ end }}
-
 {{ $darkIcon := "img/fa/moon-stars-duotone.svg" }}
 {{ $darkIcon = resources.Get $darkIcon }}
 {{ if $production }}
@@ -51,3 +26,28 @@
 [data-theme='dark'] {
   --toggle-theme-icon: url('{{ $darkIcon.RelPermalink }}');
 }
+
+.fa {
+  background-color: var(--color);
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position-y: bottom;
+  -webkit-mask-position-y: bottom;
+}
+
+.toggle-theme .fa {
+  mask-image: var(--toggle-theme-icon);
+  -webkit-mask-image: var(--toggle-theme-icon);
+}
+
+{{ range resources.Match "img/fa/*.svg" }}
+.fa-{{ path.BaseName . }} {
+  {{ $asset := . }}
+  {{ $asset = resources.Fingerprint . }}
+  {{ if $production }}
+    {{ $asset = resources.Fingerprint $asset }}
+  {{ end }}
+  mask-image: url('{{ $asset.RelPermalink }}');
+  -webkit-mask-image: url('{{ $asset.RelPermalink }}');
+}
+{{ end }}
