@@ -1,8 +1,6 @@
 [params]
 production = false
 
-themeColor = "#5bcefaff"
-
 remoteCss = [
   "https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css",
   "https://unpkg.com/@picocss/pico@1.5.5/css/pico.min.css.map",
@@ -25,5 +23,6 @@ js = [
   "js/gamer.js"
 ]
 
-lightIcon = "img/fa/moon-stars-duotone.svg"
-darkIcon = "img/fa/eclipse-duotone.svg"
+theme.color = "#5bcefaff"
+theme.lightIcon = "img/fa/sparkles-duotone.svg"
+theme.darkIcon = "img/fa/moon-stars-duotone.svg"
