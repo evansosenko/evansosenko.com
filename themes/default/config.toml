@@ -24,7 +24,7 @@ js = [
   "js/posthog.js"
 ]
 
-theme.color = "#ffffff"
+theme.color = "#00a2e8"
 theme.lightIcon = "img/fa/sparkles-duotone.svg"
 theme.darkIcon = "img/fa/moon-stars-duotone.svg"
 theme.notfoundIcon = "galaxy-duotone"
