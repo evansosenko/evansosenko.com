@@ -5,7 +5,7 @@ const gameData = [
       '{{ (resources.Get "audio/1up.wav" | resources.Fingerprint).RelPermalink }}'
   },
   {
-    icon: 'starship-freighter-light',
+    icon: 'starship-freighter-solid',
     sound:
       '{{ (resources.Get "audio/chewbacca.wav" | resources.Fingerprint).RelPermalink }}'
   },
@@ -96,10 +96,10 @@ const initHandler = (document, element, games) => {
 
 const createGame =
   (Howl) =>
-    ({ sound, ...rest }) => ({
-      sound: createSound(Howl, sound),
-      ...rest
-    })
+  ({ sound, ...rest }) => ({
+    sound: createSound(Howl, sound),
+    ...rest
+  })
 
 const createSound = (Howl, url) => {
   return new Howl({
