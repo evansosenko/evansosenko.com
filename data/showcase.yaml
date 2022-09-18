@@ -51,3 +51,7 @@ projects:
   - title: Spin Lifetime
     description: Research on spin lifetime measurements via Hanle curve fitting.
     url: /spin-lifetime
+
+  - title: '{evan|sosenko}'
+    description: This website.
+    url: https://github.com/evansosenko/evansosenko.com
