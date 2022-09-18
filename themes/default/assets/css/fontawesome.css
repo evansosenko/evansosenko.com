@@ -2,6 +2,7 @@
 
 .fa {
   mask-repeat: no-repeat;
+  mask-position-y: bottom;
   -webkit-mask-repeat: no-repeat;
   background-color: var(--color);
 }
