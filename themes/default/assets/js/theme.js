@@ -29,12 +29,12 @@ const toggleTheme = (document) => {
 
 const setTheme = (document, colorScheme) => {
   activeColorScheme = colorScheme
-  globalThis?.localStorage?.setItem('activeColorScheme', colorScheme)
+  globalThis?.sessionStorage?.setItem('activeColorScheme', colorScheme)
   document.querySelector('html').setAttribute('data-theme', colorScheme)
 }
 
 const getActiveTheme = () =>
-  globalThis?.localStorage?.getItem('activeColorScheme') ??
+  globalThis?.sessionStorage?.getItem('activeColorScheme') ??
   preferedColorScheme()
 
 const preferedColorScheme = () => {
