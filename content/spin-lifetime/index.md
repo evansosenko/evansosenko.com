@@ -9,7 +9,7 @@ images:
 This page is a permanent portal to all work and software
 related to my work on spin lifetime measurements through Hanle curve fitting.
 
-![Nonlocal Spin Valve.](spin-lifetime-device.svg)
+{{< figure src="spin-lifetime-device.svg" alt="Nonlocal Spin Valve." >}}
 
 ## Generating Hanle fits
 
@@ -17,9 +17,11 @@ This is the recommended procedure for creating your own Hanle fits
 using [evansosenko/spin-lifetime-analysis][spin-lifetime-analysis].
 
 1. Obtain a copy of the code.
-  - Fork or clone the [git repository][spin-lifetime-analysis] on GitHub.
-  - Alternatively, if you are uncomfortable with version control,
-    you can download a compressed archive of the code.
+
+- Fork or clone the [git repository][spin-lifetime-analysis] on GitHub.
+- Alternatively, if you are uncomfortable with version control,
+  you can download a compressed archive of the code.
+
 1. Add you own data under a subfolder in `data`.
    - Remove any existing data you will not be using,
      or do not have permission to use.
@@ -80,7 +82,7 @@ Creative Commons Attribution 4.0 International License
 on the GitHub repository
 [evansosenko/tikz-nonlocal_spin_valve][tikz-nonlocal_spin_valve].
 
-[![Nonlocal Spin Valve in TikZ.](tikz-nonlocal_spin_valve.png)][tikz-nonlocal_spin_valve]
+{{< figure src="tikz-nonlocal_spin_valve.png" alt="Nonlocal Spin Valve in TikZ." >}}
 
 ### BibTeX
 

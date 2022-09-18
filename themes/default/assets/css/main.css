@@ -17,6 +17,12 @@ main {
   flex: 1 0 auto;
 }
 
+figure {
+  border-radius: 1rem;
+  background-color: #ffffff;
+  padding: 1rem;
+}
+
 .theme-transistion {
   transition: color var(--transition-speed);
   transition: background-color var(--transition-speed);
@@ -107,17 +113,17 @@ main {
 }
 
 .site-title::before {
-  content: "{";
+  content: '{';
 }
 
 .site-title::after {
-  content: "}";
+  content: '}';
 }
 
 .site-title span::after {
   color: var(--parent-color);
   margin-left: 1rem;
-  content: "|";
+  content: '|';
 }
 
 .modal-close {
