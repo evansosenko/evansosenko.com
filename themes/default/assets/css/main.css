@@ -2,16 +2,36 @@ html {
   overflow-y: scroll;
 }
 
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.site-footer {
+  flex-shrink: 0;
+}
+
 .theme-transistion {
   transition: color var(--transition-speed);
   transition: background-color var(--transition-speed);
 }
 
 .main-nav {
+  --icon-size: 1.5rem;
   justify-content: center;
 }
 
 .main-nav a {
+  font-size: calc(1 * var(--icon-size));
   cursor: pointer;
   user-select: none;
 }
