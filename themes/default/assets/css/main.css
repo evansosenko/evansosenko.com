@@ -81,8 +81,11 @@ main {
 
 .site-nav span {
   cursor: pointer;
+}
+
+.site-nav span.fa {
   display: inline-block;
-  margin-left: calc(1 * var(--icon-size));
+  margin-left: calc(0.5 * var(--icon-size));
 }
 
 .site-header,
