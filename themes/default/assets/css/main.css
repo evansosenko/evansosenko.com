@@ -37,17 +37,17 @@ main {
   transition: background-color var(--transition-speed);
 }
 
-.main-nav {
+.site-nav {
   justify-content: center;
 }
 
-.main-nav a {
+.site-nav a {
   font-size: calc(1 * var(--icon-size));
   cursor: pointer;
   user-select: none;
 }
 
-.main-nav span {
+.site-nav span {
   display: inline-block;
   margin-left: calc(1 * var(--icon-size));
 }

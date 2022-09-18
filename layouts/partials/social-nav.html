@@ -1,6 +1,6 @@
 <nav class="social-nav">
   <ul>
-  {{ range $.Site.Data.personal.socialNav }}
+  {{ range $.Site.Data.personal.social }}
     {{ $url := .url }}
     {{ if hasPrefix $url "/" }}
       {{ $url = $url | relURL }}

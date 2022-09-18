@@ -6,7 +6,7 @@ email:
   text: 'razorx {at} evansosenko.com'
   icon: paper-plane-duotone
 
-mainNav:
+nav:
   - name: dev
     url: /dev
     icon: terminal-duotone
@@ -23,7 +23,7 @@ mainNav:
   - name: wizard
     class: toggle-theme
 
-socialNav:
+social:
   - name: GitHub
     url: https://github.com/razor-x
     icon: github
