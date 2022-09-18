@@ -93,6 +93,7 @@ main {
 }
 
 .site-title {
+  --color: pink;
   --parent-color: var(--color);
 
   text-transform: lowercase;

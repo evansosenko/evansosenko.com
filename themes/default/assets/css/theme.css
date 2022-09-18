@@ -2,6 +2,7 @@
   --transition-speed: 0.5s;
   --icon-size: 1.2rem;
   --avatar: url('{{ (resources.Get "img/avatar.png" | resources.Fingerprint).RelPermalink }}');
+  --accent: #ffaec9;
   --not-found-background-color: var(--primary);
   --not-found-background-opacity: 0.1;
 }
