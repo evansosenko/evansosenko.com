@@ -21,8 +21,8 @@ const initHandler = (document, element) => {
   }
 
   const handleOutsideClick = (event) => {
-    const inner = target.querySelector('article')
     if (event.target === element) return
+    const inner = target.querySelector('article')
     if (inner.contains(event.target)) return
     event.preventDefault()
     close()

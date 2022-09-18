@@ -13,6 +13,7 @@ html {
 
 .main-nav a {
   cursor: pointer;
+  user-select: none;
 }
 
 .main-nav span {
