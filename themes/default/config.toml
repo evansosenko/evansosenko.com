@@ -20,7 +20,8 @@ css = [
 js = [
   "js/theme.js",
   "js/modal.js",
-  "js/gamer.js"
+  "js/gamer.js",
+  "js/posthog.js"
 ]
 
 theme.color = "#5bcefaff"
