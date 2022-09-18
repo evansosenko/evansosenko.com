@@ -96,10 +96,10 @@ const initHandler = (document, element, games) => {
 
 const createGame =
   (Howl) =>
-  ({ sound, ...rest }) => ({
-    sound: createSound(Howl, sound),
-    ...rest
-  })
+    ({ sound, ...rest }) => ({
+      sound: createSound(Howl, sound),
+      ...rest
+    })
 
 const createSound = (Howl, url) => {
   return new Howl({
