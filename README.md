@@ -20,11 +20,27 @@ $ hugo server
 
 ### Linting
 
-Linters are not required, but are supported and may be installed with
+You will need [Node.js] with [npm].
+Install the linters with
 
 ```
-$ npm i prettier standard stylelint
+$ npm install
 ```
+
+Lint all files with
+
+```
+$ npm run lint
+```
+
+Format all files with
+
+```
+$ npm run format
+```
+
+[node.js]: https://nodejs.org/
+[npm]: https://www.npmjs.com/
 
 ## License
 

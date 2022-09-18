@@ -7,8 +7,6 @@
 
 # Node.js
 node_modules
-package.json
-package-lock.json
 
 # Generated files by hugo
 /public/

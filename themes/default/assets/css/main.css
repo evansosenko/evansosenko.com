@@ -32,21 +32,22 @@ html {
 
 .site-title {
   --parent-color: var(--color);
+
   text-transform: lowercase;
 }
 
 .site-title::before {
-  content: '{';
+  content: "{";
 }
 
 .site-title::after {
-  content: '}';
+  content: "}";
 }
 
 .site-title span::after {
   color: var(--parent-color);
   margin-left: 1rem;
-  content: '|';
+  content: "|";
 }
 
 .social-nav a {

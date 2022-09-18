@@ -1,4 +1,6 @@
-FROM mcr.microsoft.com/vscode/devcontainers/javascript-node
+ARG VARIANT="16"
+
+FROM mcr.microsoft.com/vscode/devcontainers/javascript-node:${VARIANT}
 
 ARG HUGO_VERSION="0.103.0"
 ARG HUGO_ARCH="64bit"
@@ -25,5 +27,3 @@ RUN mkdir -p .config/git \
  && echo ".vscode/*" >> .config/git/ignore \
  && echo "*.code-workspace" >> .config/git/ignore \
  && echo ".history/" >> .config/git/ignore
-
-RUN npm i -g prettier standard stylelint

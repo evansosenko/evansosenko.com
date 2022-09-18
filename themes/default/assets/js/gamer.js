@@ -76,7 +76,7 @@ const initHandlers = (document) => {
   if (Howl == null) return
   const elements = document.querySelectorAll('.gamer-button')
   if (elements.length === 0) return
-  const games = gameData.map(createGame)
+  const games = gameData.map(createGame(Howl))
   for (const element of elements) initHandler(document, element, games)
 }
 
@@ -94,10 +94,12 @@ const initHandler = (document, element, games) => {
   })
 }
 
-const createGame = ({ sound, ...rest }) => ({
-  sound: createSound(Howl, sound),
-  ...rest
-})
+const createGame =
+  (Howl) =>
+    ({ sound, ...rest }) => ({
+      sound: createSound(Howl, sound),
+      ...rest
+    })
 
 const createSound = (Howl, url) => {
   return new Howl({
