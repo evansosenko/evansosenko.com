@@ -14,7 +14,7 @@ nav:
   - name: ph.d
     title: Curriculum Vitae
     url: /cv
-    icon: graduation-cap-duotone
+    icon: lambda-solid
 
   - name: gamer
     icon: alien-8bit-solid
