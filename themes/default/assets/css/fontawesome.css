@@ -1,10 +1,11 @@
 {{ $production := eq (getenv "HUGO_ENV") "production" | or (eq site.Params.env "production") }}
 
 .fa {
-  mask-repeat: no-repeat;
-  mask-position-y: bottom;
-  -webkit-mask-repeat: no-repeat;
   background-color: var(--color);
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position-y: bottom;
+  -webkit-mask-position-y: bottom;
 }
 
 .toggle-theme .fa {
