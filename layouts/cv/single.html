@@ -1,11 +1,12 @@
 {{ define "main" }}
+{{ $linkIcon := "link-duotone" }}
+<article>
+<h1>{{ .Title }}</h1>
+{{ .Content }}
 {{ with  site.Data.cv }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-
   <h2>{{ .meta.occupations.title }}</h2>
   {{ range .occupations }}
-    <h3>{{ .title }}</h3>
+    <h5>{{ .title }}</h5>
     <p>{{ .location }}<br />
       {{ .startDate }} - {{ .endDate | default "present" }}
     </p>
@@ -13,7 +14,7 @@
 
   <h2>{{ .meta.awards.title }}</h2>
   {{ range .awards }}
-    <h3>{{ .title }}</h3>
+    <h5>{{ .title }}</h5>
     <p>{{ .location }}<br />
       {{ .startDate }} - {{ .endDate | default "present" }}
     </p>
@@ -21,7 +22,7 @@
 
   <h2>{{ .meta.educations.title }}</h2>
   {{ range .educations }}
-    <h3>{{ .title }}</h3>
+    <h5>{{ .title }}</h5>
     <p>{{ .location }}<br />
       {{ .startDate }} - {{ .endDate | default "present" }}
     </p>
@@ -29,16 +30,25 @@
 
   <h2>{{ .meta.publications.title }}</h2>
   {{ range .publications }}
-    <h3><a href="{{ .url }}">{{ .title }}</a></h3>
+    <h5>{{ .title }}
+    {{ if .url }}
+      <a alt="link" class="fa fa-{{ $linkIcon }}" href="{{ .url }}"></a>
+    {{ end }}
+    </h5>
     <p>{{ .description }}</p>
     <p>{{ .location }}<br />{{ .date }}</p>
   {{ end }}
 
   <h2>{{ .meta.talks.title }}</h2>
   {{ range .talks }}
-    <h3><a href="{{ .url }}">{{ .title }}</a></h3>
+    <h5>{{ .title }}
+    {{ if .url }}
+      <a alt="link" class="fa fa-{{ $linkIcon }}" href="{{ .url }}"></a>
+    {{ end }}
+    </h5>
     <p>{{ .description }}</p>
     <p>{{ .location }}<br />{{ .date }}</p>
   {{ end }}
 {{ end }}
+</article>
 {{ end }}

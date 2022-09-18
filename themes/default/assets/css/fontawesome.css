@@ -19,6 +19,7 @@
 }
 
 .fa {
+  display: inline-block;
   min-width: var(--icon-size);
   min-height: var(--icon-size);
   background-color: var(--color);
