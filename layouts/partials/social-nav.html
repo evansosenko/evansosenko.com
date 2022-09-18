@@ -6,7 +6,7 @@
       {{ $url = $url | relURL }}
     {{ end }}
     <li>
-      <a title="{{ .name }}"
+      <a title="{{ .name }}" alt="{{ .name }}"
         {{ if $url }}
           href="{{ $url }}"
         {{ end }}
