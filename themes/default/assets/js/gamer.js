@@ -105,8 +105,8 @@ const initHandler = (document, element) => {
 
 const preloadSounds = (n) => {
   initSound(n)
-  initSound(n + 1)
-  initSound(n + 2)
+  initSound((n + 1) % games.length)
+  initSound((n + 2) % games.length)
 }
 
 const initSound = (n) => {
