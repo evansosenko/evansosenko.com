@@ -1,7 +1,5 @@
 ---
 url: /404.html
-title: 404 Page not found
-description: 404 error page not found.
+title: Not Found
+description: This is not the page you're looking for.
 ---
-
-## Whoops
