@@ -20,7 +20,7 @@ mainNav:
     icon: alien-8bit-solid
     class: gamer-button
 
-  - name: wizzard
+  - name: wizard
     class: toggle-theme
 
 socialNav:

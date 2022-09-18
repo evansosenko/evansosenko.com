@@ -1,5 +1,5 @@
 ---
-title: Spin lifetime and Hanle curve fitting
+title: Spin Lifetime and Hanle Curve Fitting
 description: Software for spin lifetime measurements via Hanle curve fitting.
 images:
   - spin-lifetime-device.png

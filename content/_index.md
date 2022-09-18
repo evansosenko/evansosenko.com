@@ -1,3 +1,3 @@
 ---
-description: 'Evan Sosenko: Dev, Ph.D, Gamer, Wizzard.'
+description: 'Evan Sosenko: Dev, Ph.D, Gamer, Wizard.'
 ---
