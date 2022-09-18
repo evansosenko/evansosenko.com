@@ -8,17 +8,17 @@
   --block-spacing-vertical: 1rem;
 }
 
-[data-theme="light"],
-:root:not([data-theme="dark"]) {
+[data-theme='light'],
+:root:not([data-theme='dark']) {
   --primary: #00a2e8;
 }
 
 @media only screen and (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
+  :root:not([data-theme='light']) {
     --primary: #00a2e8;
   }
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
   --primary: #00a2e8;
 }

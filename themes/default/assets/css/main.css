@@ -118,17 +118,17 @@ figure {
 }
 
 .site-title::before {
-  content: "{";
+  content: '{';
 }
 
 .site-title::after {
-  content: "}";
+  content: '}';
 }
 
 .site-title span::after {
   color: var(--parent-color);
   margin-left: 1rem;
-  content: "|";
+  content: '|';
 }
 
 .modal-close {

@@ -2,6 +2,7 @@
   "ignoreFiles": ["themes/default/assets/css/fontawesome.css"],
   "extends": "stylelint-config-standard",
   "rules": {
+    "string-quotes": "single",
     "property-no-vendor-prefix": null
   }
 }
