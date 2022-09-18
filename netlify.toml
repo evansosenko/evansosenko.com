@@ -12,6 +12,7 @@ HUGO_ENV = "production"
   for = "/*"
 
   [headers.values]
+    Content-Language = "en-US"
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     Content-Security-Policy = "default-src 'self'"
