@@ -1,7 +1,7 @@
 <nav class="site-nav">
   <ul>
     {{ range site.Data.meta.nav }}
-      <li>
+      <li{{ if eq .url $.RelPermalink }} class="active"{{ end }}>
         <a title="{{ .title }}" alt="{{ .name }}"
           {{ if .url }}href="{{ relURL .url }}"{{ end }}
           {{ if .class }}class="{{ .class }}"{{ end }}>

@@ -93,6 +93,14 @@ figure {
   user-select: none;
 }
 
+.site-nav li.active a {
+  color: var(--accent);
+}
+
+.site-nav li.active span.fa {
+  background-color: var(--accent);
+}
+
 .site-nav span {
   cursor: pointer;
 }

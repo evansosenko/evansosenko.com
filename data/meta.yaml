@@ -8,12 +8,12 @@ email:
 
 nav:
   - name: dev
-    url: /dev
+    url: /dev/
     icon: terminal-duotone
 
   - name: ph.d
     title: Curriculum Vitae
-    url: /cv
+    url: /cv/
     icon: lambda-solid
 
   - name: gamer
