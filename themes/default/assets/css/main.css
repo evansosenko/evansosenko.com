@@ -18,8 +18,6 @@ html {
 
 .main-nav span {
   display: inline-block;
-  min-width: 1rem;
-  min-height: 1rem;
   margin-left: calc(2 * var(--nav-element-spacing-horizontal));
 }
 
@@ -37,25 +35,23 @@ html {
 }
 
 .site-title::before {
-  content: "{";
+  content: '{';
 }
 
 .site-title::after {
-  content: "}";
+  content: '}';
 }
 
 .site-title span::after {
   color: var(--parent-color);
   margin-left: 1rem;
-  content: "|";
+  content: '|';
 }
 
 .social-nav a {
   cursor: pointer;
   display: block;
   margin: 1rem;
-  min-width: 2rem;
-  min-height: 2rem;
 }
 
 .site-title a:hover {
@@ -78,11 +74,6 @@ html {
 
 .email-container {
   display: flex;
-}
-
-.email-container .fa {
-  min-width: 1rem;
-  min-height: 1rem;
 }
 
 .email-container .email {

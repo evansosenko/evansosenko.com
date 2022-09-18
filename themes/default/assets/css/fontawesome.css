@@ -28,6 +28,8 @@
 }
 
 .fa {
+  min-width: var(--icon-size);
+  min-height: var(--icon-size);
   background-color: var(--color);
   mask-repeat: no-repeat;
   -webkit-mask-repeat: no-repeat;

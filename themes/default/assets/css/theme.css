@@ -1,18 +1,19 @@
 :root {
   --transition-speed: 0.5s;
+  --icon-size: 1rem;
 }
 
-[data-theme="light"],
-:root:not([data-theme="dark"]) {
+[data-theme='light'],
+:root:not([data-theme='dark']) {
   --background-color: #fff;
 }
 
 @media only screen and (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
+  :root:not([data-theme='light']) {
     --background-color: #000;
   }
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
   --background-color: #000;
 }
