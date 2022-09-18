@@ -26,7 +26,7 @@ main {
   display: flex;
   margin: auto;
   min-height: 150px;
-  max-width: 250px;
+  max-width: 150px;
   height: 100%;
   background-image: var(--avatar);
   background-repeat: no-repeat;
