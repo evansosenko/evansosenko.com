@@ -1,6 +1,6 @@
 <nav class="site-nav">
   <ul>
-    {{ range site.Data.personal.nav }}
+    {{ range site.Data.meta.nav }}
       <li>
         <a title="{{ .title }}" alt="{{ .name }}"
           {{ if .url }}href="{{ relURL .url }}"{{ end }}
