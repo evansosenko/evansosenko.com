@@ -1,4 +1,4 @@
-const gameData = [
+const games = [
   {
     icon: 'alien-8bit-solid',
     sound:
@@ -71,47 +71,50 @@ const gameData = [
   }
 ]
 
+const sounds = {}
+
 const initHandlers = (document) => {
   const Howl = globalThis?.Howl
   if (Howl == null) return
   const elements = document.querySelectorAll('.gamer-button')
   if (elements.length === 0) return
-  const games = gameData.map(createGame(Howl))
-  for (const element of elements) initHandler(document, element, games)
+  for (const element of elements) initHandler(document, element)
 }
 
-const initHandler = (document, element, games) => {
+const initHandler = (document, element) => {
   const textEl = element.querySelector('span')
   const iconEl = element.querySelector('.fa')
 
   let n = games.findIndex(({ icon }) => iconEl.classList.contains(`fa-${icon}`))
+  preloadSounds(n)
 
   textEl.addEventListener('click', (event) => {
     event.preventDefault()
     iconEl.classList.remove(`fa-${games[n].icon}`)
     n = (n + 1) % games.length
+    preloadSounds(n)
     iconEl.classList.add(`fa-${games[n].icon}`)
-    games[n].sound.play()
+    sounds[n].play()
   })
 
   iconEl.addEventListener('click', (event) => {
     event.preventDefault()
-    games[n].sound.play()
+    sounds[n].play()
   })
 }
 
-const createGame =
-  (Howl) =>
-    ({ sound, ...rest }) => ({
-      sound: createSound(Howl, sound),
-      ...rest
-    })
+const preloadSounds = (n) => {
+  initSound(n)
+  initSound(n + 1)
+  initSound(n + 2)
+}
 
-const createSound = (Howl, url) => {
-  return new Howl({
+const initSound = (n) => {
+  if (sounds[n] != null) return
+  sounds[n] = new globalThis.Howl({
     html5: true,
     preload: true,
-    src: [url]
+    src: [games[n].sound]
   })
 }
 
