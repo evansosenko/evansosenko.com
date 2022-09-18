@@ -20,7 +20,7 @@ html {
   display: inline-block;
   min-width: 1rem;
   min-height: 1rem;
-  margin: 0 1rem;
+  margin-left: calc(2 * var(--nav-element-spacing-horizontal));
 }
 
 .site-header,
