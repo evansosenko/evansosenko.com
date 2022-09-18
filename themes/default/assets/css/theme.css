@@ -2,20 +2,21 @@
   --transition-speed: 0.5s;
   --icon-size: 1.2rem;
   --avatar: url('{{ (resources.Get "img/avatar.png" | resources.Fingerprint).RelPermalink }}');
-  --not-found-background-color: #0f2638;
+  --not-found-background-color: var(--primary);
+  --not-found-background-opacity: 0.1;
 }
 
 [data-theme="light"],
 :root:not([data-theme="dark"]) {
-  --background-color: #fff;
+  --primary: #00a2e8;
 }
 
 @media only screen and (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --background-color: #000;
+    --primary: #00a2e8;
   }
 }
 
 [data-theme="dark"] {
-  --background-color: #000;
+  --primary: #00a2e8;
 }

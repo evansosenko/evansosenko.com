@@ -36,6 +36,7 @@ main {
 
 .site-404-background {
   background-color: var(--not-found-background-color);
+  opacity: var(--not-found-background-opacity);
   position: relative;
   display: flex;
   margin: auto;
@@ -57,7 +58,6 @@ main {
 
 .site-404-content h1 {
   --font-size: 1.5rem;
-  --color: var(--muted-color);
 }
 
 .site-footer {
