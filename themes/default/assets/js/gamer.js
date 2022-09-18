@@ -81,15 +81,21 @@ const initHandlers = (document) => {
 }
 
 const initHandler = (document, element, games) => {
+  const textEl = element.querySelector('span')
   const iconEl = element.querySelector('.fa')
+
   let n = games.findIndex(({ icon }) => iconEl.classList.contains(`fa-${icon}`))
-  element.addEventListener('click', (event) => {
+
+  textEl.addEventListener('click', (event) => {
     event.preventDefault()
-    if (event.target === element) {
-      iconEl.classList.remove(`fa-${games[n].icon}`)
-      n = (n + 1) % games.length
-      iconEl.classList.add(`fa-${games[n].icon}`)
-    }
+    iconEl.classList.remove(`fa-${games[n].icon}`)
+    n = (n + 1) % games.length
+    iconEl.classList.add(`fa-${games[n].icon}`)
+    games[n].sound.play()
+  })
+
+  iconEl.addEventListener('click', (event) => {
+    event.preventDefault()
     games[n].sound.play()
   })
 }

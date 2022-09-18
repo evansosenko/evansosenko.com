@@ -5,7 +5,8 @@
         <a title="{{ .title }}" alt="{{ .name }}"
           {{ if .url }}href="{{ relURL .url }}"{{ end }}
           {{ if .class }}class="{{ .class }}"{{ end }}>
-          {{ .name }}<span class="fa fa-{{ .icon }}"></span>
+          <span>{{ .name }}</span>
+          <span class="fa fa-{{ .icon }}"></span>
         </a>
       </li>
     {{ end }}
