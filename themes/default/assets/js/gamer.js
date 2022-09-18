@@ -112,7 +112,6 @@ const preloadSounds = (n) => {
 const initSound = (n) => {
   if (sounds[n] != null) return
   sounds[n] = new globalThis.Howl({
-    html5: true,
     preload: true,
     src: [games[n].sound]
   })
