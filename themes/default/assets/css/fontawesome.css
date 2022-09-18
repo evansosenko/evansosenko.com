@@ -1,15 +1,15 @@
 {{ $production := eq (getenv "HUGO_ENV") "production" | or (eq site.Params.env "production") }}
 
-{{ $darkIcon := $.Site.Params.darkIcon }}
-{{ $darkIcon = resources.Get $darkIcon }}
-{{ if $production }}
-  {{ $darkIcon = resources.Fingerprint $darkIcon }}
-{{ end }}
-
-{{ $lightIcon := $.Site.Params.lightIcon }}
+{{ $lightIcon := site.Params.lightIcon }}
 {{ $lightIcon = resources.Get $lightIcon }}
 {{ if $production }}
   {{ $lightIcon = resources.Fingerprint $lightIcon }}
+{{ end }}
+
+{{ $darkIcon := site.Params.darkIcon }}
+{{ $darkIcon = resources.Get $darkIcon }}
+{{ if $production }}
+  {{ $darkIcon = resources.Fingerprint $darkIcon }}
 {{ end }}
 
 [data-theme='light'],
