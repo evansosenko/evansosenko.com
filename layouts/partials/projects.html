@@ -1,12 +1,12 @@
-<section class="projects">
+<div class="article-grid">
 {{ range site.Data.showcase.projects }}
   {{ $url := .url }}
   {{ if hasPrefix $url "/" }}
     {{ $url = $url | relURL }}
   {{ end }}
   <article>
-    <header><h3><a href="{{ $url }}">{{ .title }}</a></h3></header>
+    <header><h4><a href="{{ $url }}">{{ .title }}</a></h4></header>
     <p>{{ .description }}</p>
   </article>
 {{ end }}
-</section>
+</div>

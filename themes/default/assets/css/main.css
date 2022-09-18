@@ -124,14 +124,25 @@ main {
   cursor: pointer;
 }
 
-.projects {
+.article-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 1rem;
 }
 
-.projects > article {
-  margin: 0;
+.article-grid > article {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.article-grid > article > header {
+  min-height: 10rem;
+}
+
+.article-grid > article > footer {
+  margin-top: auto;
 }
 
 dialog article.email {
@@ -140,5 +151,6 @@ dialog article.email {
 
 dialog article.email > p {
   position: relative;
-  margin: 0 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
