@@ -93,8 +93,17 @@ figure {
   user-select: none;
 }
 
+.site-title a:hover {
+  text-decoration: none;
+}
+
 .site-nav li.active a {
   color: var(--accent);
+}
+
+.site-nav span.fa {
+  display: inline-block;
+  margin-left: calc(0.5 * var(--icon-size));
 }
 
 .site-nav li.active span.fa {
@@ -103,11 +112,6 @@ figure {
 
 .site-nav span {
   cursor: pointer;
-}
-
-.site-nav span.fa {
-  display: inline-block;
-  margin-left: calc(0.5 * var(--icon-size));
 }
 
 .site-header,
@@ -123,10 +127,6 @@ figure {
 
   font-weight: 200;
   text-transform: lowercase;
-}
-
-.site-title a:hover {
-  text-decoration: none;
 }
 
 .site-title::before {
