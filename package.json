@@ -4,7 +4,9 @@
     "postlint": "stylelint '**/*.css'",
     "format": "standard --fix",
     "preformat": "prettier --write '**/*.(js|json|css|yaml)'",
-    "postformat": "stylelint --fix '**/*.css'"
+    "postformat": "stylelint --fix '**/*.css'",
+    "standard": "standard",
+    "stylelint": "stylelint '**/*.css'"
   },
   "devDependencies": {
     "prettier": "^2.7.1",
