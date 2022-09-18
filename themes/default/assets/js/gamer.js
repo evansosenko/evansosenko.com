@@ -103,6 +103,7 @@ const createGame =
 
 const createSound = (Howl, url) => {
   return new Howl({
+    html5: true,
     preload: true,
     src: [url]
   })
