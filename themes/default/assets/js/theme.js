@@ -2,7 +2,9 @@ let activeColorScheme
 
 const initHandlers = (document) => {
   activeColorScheme = getActiveTheme()
-  setTheme(document, activeColorScheme)
+  if (activeColorScheme !== preferedColorScheme()) {
+    setTheme(document, activeColorScheme)
+  }
   const elements = document.querySelectorAll('.toggle-theme')
   for (const element of elements) initHandler(document, element)
 }
