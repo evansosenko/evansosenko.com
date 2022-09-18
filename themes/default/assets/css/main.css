@@ -16,6 +16,11 @@ main {
   flex: 1 0 auto;
 }
 
+.theme-transistion {
+  transition: color var(--transition-speed);
+  transition: background-color var(--transition-speed);
+}
+
 .site-avatar {
   display: flex;
   margin: auto;
@@ -32,9 +37,10 @@ main {
   flex-shrink: 0;
 }
 
-.theme-transistion {
-  transition: color var(--transition-speed);
-  transition: background-color var(--transition-speed);
+.social-nav a {
+  cursor: pointer;
+  display: block;
+  margin: 1rem;
 }
 
 .site-nav {
@@ -65,6 +71,10 @@ main {
   text-transform: lowercase;
 }
 
+.site-title a:hover {
+  text-decoration: none;
+}
+
 .site-title::before {
   content: "{";
 }
@@ -77,16 +87,6 @@ main {
   color: var(--parent-color);
   margin-left: 1rem;
   content: "|";
-}
-
-.social-nav a {
-  cursor: pointer;
-  display: block;
-  margin: 1rem;
-}
-
-.site-title a:hover {
-  text-decoration: none;
 }
 
 .modal-close {
@@ -103,11 +103,11 @@ main {
   margin: 0;
 }
 
-.email-container {
+dialog article.email {
   display: flex;
 }
 
-.email-container .email {
+dialog article.email > p {
   position: relative;
   margin: 0 1rem;
 }
