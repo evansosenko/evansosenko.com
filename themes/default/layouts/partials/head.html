@@ -4,6 +4,7 @@
 <link rel="canonical" href="{{ .Permalink }}" />
 <title>{{ with .Params.Title }}{{ . }} | {{ end }}{{ site.Title }}</title>
 <meta name="description" content="{{ .Description }}">
+<meta property="og:locale" content="{{ site.LanguageCode | default "en-US" />
 {{ template "_internal/opengraph.html" . }}
 {{ template "_internal/twitter_cards.html" . }}
 <meta name="copyright"
