@@ -16,6 +16,17 @@ main {
   flex: 1 0 auto;
 }
 
+.avatar-container {
+  margin: auto;
+  min-height: 150px;
+  max-width: 300px;
+  height: 100%;
+  background-image: var(--avatar);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
 .site-footer {
   flex-shrink: 0;
 }
@@ -26,7 +37,6 @@ main {
 }
 
 .main-nav {
-  --icon-size: 1.5rem;
   justify-content: center;
 }
 
@@ -38,7 +48,7 @@ main {
 
 .main-nav span {
   display: inline-block;
-  margin-left: calc(2 * var(--nav-element-spacing-horizontal));
+  margin: 0 calc(3 * var(--nav-element-spacing-horizontal));
 }
 
 .site-header,

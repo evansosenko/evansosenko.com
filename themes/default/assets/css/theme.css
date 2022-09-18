@@ -1,6 +1,7 @@
 :root {
   --transition-speed: 0.5s;
-  --icon-size: 1rem;
+  --icon-size: 2rem;
+  --avatar: url('{{ (resources.Get "img/avatar.png" | resources.Fingerprint).RelPermalink }}');
 }
 
 [data-theme='light'],
