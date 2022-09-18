@@ -2,6 +2,7 @@
   --transition-speed: 0.5s;
   --icon-size: 1.2rem;
   --avatar: url('{{ (resources.Get "img/avatar.png" | resources.Fingerprint).RelPermalink }}');
+  --not-found-background-color: #0f2638;
 }
 
 [data-theme="light"],

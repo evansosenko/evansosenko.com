@@ -27,3 +27,4 @@ js = [
 theme.color = "#5bcefaff"
 theme.lightIcon = "img/fa/sparkles-duotone.svg"
 theme.darkIcon = "img/fa/moon-stars-duotone.svg"
+theme.notfoundIcon = "galaxy-duotone"

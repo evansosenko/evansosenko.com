@@ -1,4 +1,7 @@
 {
   "ignoreFiles": ["themes/default/assets/css/fontawesome.css"],
-  "extends": "stylelint-config-standard"
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "property-no-vendor-prefix": null
+  }
 }

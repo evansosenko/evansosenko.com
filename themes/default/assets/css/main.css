@@ -13,6 +13,7 @@ body {
 }
 
 main {
+  position: relative;
   flex: 1 0 auto;
 }
 
@@ -31,6 +32,32 @@ main {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+}
+
+.site-404-background {
+  background-color: var(--not-found-background-color);
+  position: relative;
+  display: flex;
+  margin: auto;
+  min-height: 150px;
+  max-width: 250px;
+  height: 100%;
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  mask-position: center;
+  -webkit-mask-position: center;
+}
+
+.site-404-content {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
+
+.site-404-content h1 {
+  --font-size: 1.5rem;
+  --color: var(--muted-color);
 }
 
 .site-footer {
