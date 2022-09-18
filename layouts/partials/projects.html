@@ -1,5 +1,5 @@
 <section class="projects">
-{{ range $.Site.Data.showcase.projects }}
+{{ range site.Data.showcase.projects }}
   {{ $url := .url }}
   {{ if hasPrefix $url "/" }}
     {{ $url = $url | relURL }}

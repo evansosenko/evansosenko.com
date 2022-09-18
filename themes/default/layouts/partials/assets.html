@@ -16,18 +16,18 @@
   {{ if $production }}integrity="{{ $asset.Data.Integrity }}"{{ end }}
   href="{{ $asset.RelPermalink }}">
 
-{{ range $.Site.Params.remoteCss }}
+{{ range site.Params.remoteCss }}
   {{ partial "remote-asset.html" . }}
 {{ end }}
 
-{{ range $.Site.Params.css}}
+{{ range site.Params.css}}
   {{ partial "local-asset.html" . }}
 {{ end }}
 
-{{ range $.Site.Params.remoteJs }}
+{{ range site.Params.remoteJs }}
   {{ partial "remote-asset.html" . }}
 {{ end }}
 
-{{ range $.Site.Params.js }}
+{{ range site.Params.js }}
   {{ partial "local-asset.html" . }}
 {{ end }}

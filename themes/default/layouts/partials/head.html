@@ -1,12 +1,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="{{ $.Site.Params.theme.color }}">
+<meta name="theme-color" content="{{ site.Params.theme.color }}">
 <link rel="canonical" href="{{ .Permalink }}" />
-<title>{{ with .Params.Title }}{{ . }} | {{ end }}{{ $.Site.Title }}</title>
+<title>{{ with .Params.Title }}{{ . }} | {{ end }}{{ site.Title }}</title>
 <meta name="description" content="{{ .Description }}">
 {{ template "_internal/opengraph.html" . }}
 {{ template "_internal/twitter_cards.html" . }}
 <meta name="copyright"
-  content="Copyright (c) 2013-{{ now.Format "2006"}} {{ $.Site.Params.author }}.">
-<meta name="owner" content="{{ $.Site.Params.author }}">
+  content="Copyright (c) 2013-{{ now.Format "2006"}} {{ site.Params.author }}.">
+<meta name="owner" content="{{ site.Params.author }}">
 <link rel="author" href="humans.txt" type="text/plain">
