@@ -1,4 +1,9 @@
 {
+  "standard": {
+    "ignore": [
+      "themes/default/assets/js/posthog.js"
+    ]
+  },
   "scripts": {
     "lint": "standard",
     "postlint": "stylelint '**/*.css'",
