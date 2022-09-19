@@ -98,17 +98,23 @@ occupations:
     description: 'Grader for PHYS 231B, graduate course in general relativity; instructor: Dr. Donald Marolf.'
 
 publications:
-  - title: 'Spin and Valley Physics in Two Dimensional Systems: Graphene and Superconducting Transition Metal Dichalcogenides'
-    date: '2016'
-    location: University of California, Riverside, Riverside, CA, US
-    description: Doctoral Thesis
-    url: https://escholarship.org/uc/item/4941w4t0
+  - title: Unconventional superconductivity and anomalous response in hole-doped transition metal dichalcogenides
+    date: 2019-09
+    location: University of California, Santa Barbara, Santa Barbara, CA, US
+    description: Monthly Notices of the Royal Astronomical Society, Volume 489, Issue 3, November 2019, Pages 3692–3709
+    url: https://arxiv.org/abs/1908.00095
 
   - title: Unconventional superconductivity and anomalous response in hole-doped transition metal dichalcogenides
     date: 2017-04
     location: University of California, Riverside, Riverside, CA, US
     description: 8 pages, 3 figures, Phys. Rev. B 95, 144508
     url: https://journals.aps.org/prb/abstract/10.1103/PhysRevB.95.144508
+
+  - title: 'Spin and Valley Physics in Two Dimensional Systems: Graphene and Superconducting Transition Metal Dichalcogenides'
+    date: '2016'
+    location: University of California, Riverside, Riverside, CA, US
+    description: Doctoral Thesis
+    url: https://escholarship.org/uc/item/4941w4t0
 
   - title: Effect of contacts on spin lifetime measurements in graphene
     date: 2014-06
