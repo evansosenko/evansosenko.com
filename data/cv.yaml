@@ -1,4 +1,8 @@
 ---
+pdf:
+  icon: file-pdf-duotone
+  url: https://github.com/evansosenko/curriculum-vitae/releases/latest/download/evan-sosenko-cv.pdf
+
 meta:
   awards:
     title: Awards

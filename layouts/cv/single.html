@@ -1,8 +1,16 @@
 {{ define "main" }}
 {{ $linkIcon := "link-duotone" }}
-<h1>{{ .Title }}</h1>
+<h1>
+  {{ .Title }}
+  <sup>
+    <a href="{{ site.Data.cv.pdf.url }}"
+      title="Download CV as PDF" alt="PDF"
+      class="fa fa-{{ site.Data.cv.pdf.icon }}"></a>
+  </sup>
+</h1>
 {{ .Content }}
 {{ with  site.Data.cv }}
+
 <article>
   <h2>{{ .meta.educations.title }}</h2>
   {{ range .educations }}
