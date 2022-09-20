@@ -8,61 +8,35 @@
       class="fa fa-{{ site.Data.cv.pdf.icon }}"></a>
   </sup>
 </h1>
+
 {{ .Content }}
-{{ with  site.Data.cv }}
 
-<article>
-  <h2>{{ .meta.educations.title }}</h2>
-  {{ range .educations }}
-    <h5>{{ .title }}</h5>
-    <p>{{ .startDate }} - {{ .endDate | default "present" }}</p>
-    <p>{{ .location }}</p>
-  {{ end }}
-</article>
+{{ $sections := slice
+  "occupations"
+  "educations"
+  "publications"
+  "talks"
+  "awards"
+}}
 
-<article>
-  <h2>{{ .meta.occupations.title }}</h2>
-  {{ range .occupations }}
-    <h5>{{ .title }}</h5>
-    <p>{{ .startDate }} - {{ .endDate | default "present" }}</p>
-    <p>{{ .location }}</p>
-    </p>
-  {{ end }}
-</article>
-
-<article>
-  <h2>{{ .meta.publications.title }}</h2>
-  {{ range .publications }}
-    <h5>{{ .title }}
-    {{ if .url }}
-      <a alt="link" class="fa fa-{{ $linkIcon }}" href="{{ .url }}"></a>
+{{ range $sections }}
+  <article>
+    <h2>{{ (index site.Data.cv.meta .).title }}</h2>
+    {{ range (index site.Data.cv . ) }}
+      <h5>
+        {{ .title }}
+        {{ if .url }}
+          <a href="{{ .url }}"
+            alt="link" class="fa fa-{{ site.Params.theme.linkIcon }}"></a>
+        {{ end }}
+      </h5>
+      {{ if .date }}
+        <p>{{ .date }}</p>
+      {{ else }}
+        <p>{{ .startDate }}–{{ .endDate | default "present" }}</p>
+      {{ end }}
+      <p>{{ .location }}</p>
     {{ end }}
-    </h5>
-    <p>{{ .description }}</p>
-    <p>{{ .location }}<br />{{ .date }}</p>
-  {{ end }}
-</article>
-
-<article>
-  <h2>{{ .meta.talks.title }}</h2>
-  {{ range .talks }}
-    <h5>{{ .title }}
-    {{ if .url }}
-      <a alt="link" class="fa fa-{{ $linkIcon }}" href="{{ .url }}"></a>
-    {{ end }}
-    </h5>
-    <p>{{ .description }}</p>
-    <p>{{ .location }}<br />{{ .date }}</p>
-  {{ end }}
-</article>
-
-<article>
-  <h2>{{ .meta.awards.title }}</h2>
-  {{ range .awards }}
-    <h5>{{ .title }}</h5>
-    <p>{{ .startDate }} - {{ .endDate | default "present" }}</p>
-    <p>{{ .location }}</p>
-  {{ end }}
-</article>
+  </article>
 {{ end }}
 {{ end }}
