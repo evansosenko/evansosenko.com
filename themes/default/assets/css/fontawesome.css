@@ -29,13 +29,13 @@
   -webkit-mask-position-y: bottom;
 }
 
-.toggle-theme .fa {
+.toggle-theme .fa[data-icon] {
   mask-image: var(--toggle-theme-icon);
   -webkit-mask-image: var(--toggle-theme-icon);
 }
 
 {{ range resources.Match "img/fa/*.svg" }}
-[data-icon="{{ path.BaseName . }}"] {
+.fa[data-icon="{{ path.BaseName . }}"] {
   {{ $asset := . }}
   {{ $asset = resources.Fingerprint . }}
   {{ if $production }}
