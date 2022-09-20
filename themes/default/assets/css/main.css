@@ -17,10 +17,6 @@ main {
   flex: 1 0 auto;
 }
 
-body > main.container {
-  padding: 0;
-}
-
 body > main > h1 {
   text-align: center;
 }
