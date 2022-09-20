@@ -1,10 +1,8 @@
 {{ define "main" }}
 <div alt="black hole"
-  class="fa site-404-background"
+  class="fa"
   data-icon="{{ site.Params.theme.notfoundIcon }}">
 </div>
-<div class="site-404-content">
-  {{ .Content }}
-</div>
+{{ .Content }}
 {{ end }}
 

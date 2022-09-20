@@ -5,7 +5,11 @@
     {{ partial "head.html" . }}
     {{ partial "assets.html" . }}
   </head>
-  <body>
+  <body
+    {{ if .Page.Params.classes }}
+      class="{{ delimit .Page.Params.classes " " }}"
+    {{ end  }}
+  >
     <header class="site-header">
       {{ partial "header.html" . }}
     </header>

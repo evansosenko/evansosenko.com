@@ -32,7 +32,7 @@ figure {
   transition: background-color var(--transition-speed);
 }
 
-.site-avatar {
+.site-home > main > div {
   display: flex;
   margin: auto;
   min-height: 150px;
@@ -44,7 +44,7 @@ figure {
   background-position: center;
 }
 
-.site-404-background {
+.site-404 main > .fa {
   background-color: var(--not-found-background-color);
   opacity: var(--not-found-background-opacity);
   position: relative;
@@ -59,15 +59,13 @@ figure {
   -webkit-mask-position: center;
 }
 
-.site-404-content {
+.site-404 main > h1 {
+  --font-size: 1.5rem;
+
   position: absolute;
   top: 50%;
   width: 100%;
   text-align: center;
-}
-
-.site-404-content h1 {
-  --font-size: 1.5rem;
 }
 
 .site-footer {
