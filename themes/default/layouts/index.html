@@ -1,7 +1,4 @@
 {{ define "main" }}
 {{ .Content }}
-<div alt="avatar"
-     title="I know this it's a unix system: The FreeBSD Project (https://www.freebsd.org).">
-
-</div>
+<div alt="avatar" title="{{ .Page.Params.avatar.title }}"></div>
 {{ end }}
