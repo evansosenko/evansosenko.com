@@ -146,10 +146,6 @@ dialog article.email > a {
   content: '|';
 }
 
-.modal-close {
-  cursor: pointer;
-}
-
 .article-grid {
   /* https://css-tricks.com/an-auto-filling-css-grid-with-max-columns/ */
   --grid-layout-gap: 1rem;
