@@ -10,18 +10,22 @@ nav:
   - name: dev
     url: /dev/
     icon: terminal-duotone
+    alt: terminal
 
   - name: ph.d
     title: Curriculum Vitae
     url: /cv/
     icon: lambda-solid
+    alt: lambda
 
   - name: gamer
     icon: alien-8bit-solid
     class: gamer-button
+    alt: game
 
   - name: wizard
     class: toggle-theme
+    alt: day or night
 
 social:
   - name: GitHub

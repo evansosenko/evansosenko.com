@@ -37,7 +37,7 @@ const initHandler = (document, element) => {
   const open = () => {
     target.setAttribute('open', true)
 
-    const closeBtn = target.querySelector('.modal-close')
+    const closeBtn = target.querySelector('[data-action="close"]')
     if (closeBtn != null) {
       closeBtn.addEventListener('click', close)
     }

@@ -6,14 +6,16 @@
       {{ $url = $url | relURL }}
     {{ end }}
     <li>
-      <a title="{{ .name }}" alt="{{ .name }}"
+      <a title="{{ .name }}"
         {{ if $url }}
           href="{{ $url }}"
         {{ end }}
         {{ if .target }}
           data-target="{{ .target }}"
         {{ end }}
-        class="fa fa-{{ .icon }}"></a>
+        alt="{{ .name }}"
+        class="fa"
+        data-icon="{{ .icon }}"></a>
     </li>
   {{ end }}
   </ul>

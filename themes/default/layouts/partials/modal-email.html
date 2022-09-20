@@ -1,9 +1,14 @@
 {{ with  site.Data.meta.email }}
 <dialog id="modal-email">
   <article class="email">
-    <span class="fa fa-{{ .icon }}" alt="email"></span>
+    <span alt="email"
+      class="fa"
+      data-icon="{{ .icon }}"></span>
     <p>{{ .text }}</p>
-    <a class="modal-close fa fa-circle-xmark-duotone" alt="close"></a>
+    <a alt="close"
+       data-action="close"
+       class="fa"
+       data-icon="{{ site.Params.theme.modalCloseIcon }}"></a>
   </article>
 </dialog>
 {{ end }}

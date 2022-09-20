@@ -10,7 +10,9 @@
       <a href="{{ $url }}">
         {{ $host := (urls.Parse $url).Host | default  (urls.Parse site.BaseURL).Host }}
         {{ $host }}
-        <span class="fa fa-{{ site.Params.theme.extLinkIcon }}"></span>
+        <span alt="link"
+          class="fa"
+          data-icon="{{ site.Params.theme.extLinkIcon }}"></span>
       </a>
     </header>
     <p>{{ .description }}</p>

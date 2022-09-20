@@ -1,6 +1,7 @@
 {{ define "main" }}
 <div alt="black hole"
-  class="site-404-background fa fa-{{ site.Params.theme.notfoundIcon }}">
+  class="fa site-404-background"
+  data-icon="{{ site.Params.theme.notfoundIcon }}">
 </div>
 <div class="site-404-content">
   {{ .Content }}

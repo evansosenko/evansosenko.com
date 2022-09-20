@@ -4,8 +4,10 @@
   {{ .Title }}
   <sup>
     <a href="{{ site.Data.cv.pdf.url }}"
-      title="Download CV as PDF" alt="PDF"
-      class="fa fa-{{ site.Data.cv.pdf.icon }}"></a>
+      title="Download CV as PDF"
+      alt="pdf"
+      class="fa"
+      data-icon="{{ site.Data.cv.pdf.icon }}"></a>
   </sup>
 </h1>
 
@@ -27,7 +29,9 @@
         {{ .title }}
         {{ if .url }}
           <a href="{{ .url }}"
-            alt="link" class="fa fa-{{ site.Params.theme.linkIcon }}"></a>
+             alt="link"
+             class="fa"
+             data-icon="{{ site.Params.theme.linkIcon }}"></a>
         {{ end }}
       </h5>
       {{ if .date }}

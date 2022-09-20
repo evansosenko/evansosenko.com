@@ -83,17 +83,18 @@ const initHandlers = (document) => {
 
 const initHandler = (document, element) => {
   const textEl = element.querySelector('span')
-  const iconEl = element.querySelector('.fa')
+  const iconEl = element.querySelector('[data-icon]')
 
-  let n = games.findIndex(({ icon }) => iconEl.classList.contains(`fa-${icon}`))
+  if (textEl == null || iconEl == null) return
+
+  let n = games.findIndex(({ icon }) => iconEl.getAttribute('data-icon') === icon)
   preloadSounds(n)
 
   textEl.addEventListener('click', (event) => {
     event.preventDefault()
-    iconEl.classList.remove(`fa-${games[n].icon}`)
     n = (n + 1) % games.length
     preloadSounds(n)
-    iconEl.classList.add(`fa-${games[n].icon}`)
+    iconEl.setAttribute('data-icon', games[n].icon)
     sounds[n].play()
   })
 

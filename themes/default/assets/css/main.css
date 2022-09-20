@@ -89,6 +89,10 @@ figure {
   user-select: none;
 }
 
+dialog article.email > a {
+  cursor: pointer;
+}
+
 .article-grid > article > header > a {
   margin-top: auto;
   display: block;
