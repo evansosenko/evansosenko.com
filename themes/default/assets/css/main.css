@@ -148,9 +148,17 @@ figure {
 }
 
 .article-grid {
+  /* https://css-tricks.com/an-auto-filling-css-grid-with-max-columns/ */
+  --grid-layout-gap: 1rem;
+  --grid-column-count: 3;
+  --grid-item-min-width: 250px;
+  --gap-count: calc(var(--grid-column-count) - 1);
+  --total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
+  --grid-item-max-width: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
+
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(max(var(--grid-item-min-width), var(--grid-item-max-width)), 1fr));
+  grid-gap: var(--grid-layout-gap);
 }
 
 .article-grid > article {
