@@ -87,7 +87,9 @@ const initHandler = (document, element) => {
 
   if (textEl == null || iconEl == null) return
 
-  let n = games.findIndex(({ icon }) => iconEl.getAttribute('data-icon') === icon)
+  let n = games.findIndex(
+    ({ icon }) => iconEl.getAttribute('data-icon') === icon
+  )
   preloadSounds(n)
 
   textEl.addEventListener('click', (event) => {
