@@ -57,26 +57,37 @@ occupations:
     startDate: '2019'
     location: PureSkill.gg, San Francisco, CA, US
     description: The only automated coach for CS:GO.
-    url: https://pureskill.gg/
+    url: https://pureskill.gg
 
-  - title: Senior Software Engineer
+  - title: Senior Full Stack Software Engineer
     startDate: '2016'
     endDate: '2021'
     location: Meltwater, San Francisco, CA, US
-    description: Team lead and full stack developer for data driven reporting solutions.
-    url: https://www.meltwater.com/
+    description: Big-data applications for industry-leading PR reporting solutions.
+    url: https://www.meltwater.com
 
-  - title: Owner & Technical Administrator
+  - title: Owner & Developer
     startDate: '2001'
-    location: OurTownRentals.com, Valencia, CA, US
-    description: Commercial website for USA vacation rentals founded in 2001. Responsible for web design, development, server administration, and business management.
-    url: https://ourtownrentals.com/
+    location: OurTownRentals.com, Austin, TX, US
+    description: Online classified website for vacation rentals in New Jersey.
+    url: https://ourtownrentals.com
 
   - title: Graduate Research Assistant
     startDate: '2011'
     endDate: '2016'
     location: Department of Physics and Astronomy, Riverside, CA, US
     description: 'Condensed matter theory: spintronics and topological materials.'
+
+  - title: Teaching Assistant
+    startDate: '2011'
+    endDate: '2016'
+    location: Department of Physics and Astronomy, Riverside, CA, US
+
+  - title: Grader
+    startDate: '2011'
+    endDate: '2011'
+    location: UCSB Physics Department, Santa Barbara, CA, US
+    description: 'Grader for PHYS 231B, graduate course in general relativity; instructor: Dr. Donald Marolf.'
 
   - title: Undergraduate Research Assistant
     startDate: '2009'
@@ -90,40 +101,29 @@ occupations:
     location: UCSB Center for Terahertz Science and Technology, Santa Barbara, CA, US
     description: Experimental work on THz absorption of proteins in solution. Under the supervision of Dr. James Allen.
 
-  - title: Teaching Assistant
-    startDate: '2011'
-    endDate: '2016'
-    location: Department of Physics and Astronomy, Riverside, CA, US
-
-  - title: Grader
-    startDate: '2011'
-    endDate: '2011'
-    location: UCSB Physics Department, Santa Barbara, CA, US
-    description: 'Grader for PHYS 231B, graduate course in general relativity; instructor: Dr. Donald Marolf.'
-
 publications:
   - title: Scintillation arc brightness and electron density for an analytical noodle model
     date: 2019-09
     location: University of California, Santa Barbara, Santa Barbara, CA, US
-    description: Monthly Notices of the Royal Astronomical Society, Volume 489, Issue 3, November 2019, Pages 3692–3709
+    description: Monthly Notices of the Royal Astronomical Society, Volume 489, Issue 3, November 2019, Pages 3692–3709.
     url: https://arxiv.org/abs/1908.00095
 
   - title: Unconventional superconductivity and anomalous response in hole-doped transition metal dichalcogenides
     date: 2017-04
     location: University of California, Riverside, Riverside, CA, US
-    description: 8 pages, 3 figures, Phys. Rev. B 95, 144508
+    description: 8 pages, 3 figures, Phys. Rev. B 95, 144508.
     url: https://journals.aps.org/prb/abstract/10.1103/PhysRevB.95.144508
 
   - title: 'Spin and Valley Physics in Two Dimensional Systems: Graphene and Superconducting Transition Metal Dichalcogenides'
     date: '2016'
     location: University of California, Riverside, Riverside, CA, US
-    description: Doctoral Thesis
+    description: Doctoral Thesis.
     url: https://escholarship.org/uc/item/4941w4t0
 
   - title: Effect of contacts on spin lifetime measurements in graphene
     date: 2014-06
     location: University of California, Riverside, Riverside, CA, US
-    description: 9 pages, 3 figures, Phys. Rev. B 89, 245436
+    description: 9 pages, 3 figures, Phys. Rev. B 89, 245436.
     url: https://journals.aps.org/prb/abstract/10.1103/PhysRevB.89.245436
 
 talks:
