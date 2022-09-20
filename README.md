@@ -1,6 +1,7 @@
 # evansosenko.com
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/10283222-7d80-4346-94d0-f438483033d4/deploy-status)](https://app.netlify.com/sites/evansosenko/deploys)
+[![lint](https://github.com/evansosenko/evansosenko.com/actions/workflows/lint.yaml/badge.svg)](https://github.com/evansosenko/evansosenko.com/actions/workflows/lint.yaml)
 
 [Personal website][evansosenko.com] for Evan Sosenko.
 
