@@ -78,10 +78,10 @@ const initHandlers = (document) => {
   if (Howl == null) return
   const elements = document.querySelectorAll('.gamer-button')
   if (elements.length === 0) return
-  for (const element of elements) initHandler(document, element)
+  for (const element of elements) initHandler(element)
 }
 
-const initHandler = (document, element) => {
+const initHandler = (element) => {
   const textEl = element.querySelector('span')
   const iconEl = element.querySelector('[data-icon]')
 
