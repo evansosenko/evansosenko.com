@@ -7,7 +7,6 @@ disableKinds = ["taxonomy", "term"]
 
 [params]
 author = "Evan Sosenko"
-production = false
 languageDir = 'ltr'
 images = ["avatar.png"]
 posthog.api = "/_ph"

@@ -1,6 +1,4 @@
 [params]
-production = false
-
 remoteCss = [
   "https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css",
   "https://unpkg.com/@picocss/pico@1.5.5/css/pico.min.css.map",

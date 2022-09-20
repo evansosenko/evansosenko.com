@@ -1,4 +1,4 @@
-{{ $production := eq (getenv "HUGO_ENV") "production" | or (eq site.Params.env "production") }}
+{{ $production := not site.IsServer }}
 
 {{ $lightIcon := resources.Get site.Params.theme.lightIcon | resources.Fingerprint }}
 {{ $darkIcon := resources.Get site.Params.theme.darkIcon | resources.Fingerprint }}
