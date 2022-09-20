@@ -93,6 +93,11 @@ figure {
   user-select: none;
 }
 
+.article-grid > article > header > a {
+  margin-top: auto;
+  display: block;
+}
+
 .site-title a:hover {
   text-decoration: none;
 }
@@ -169,7 +174,11 @@ figure {
 }
 
 .article-grid > article > header {
-  min-height: 10rem;
+  --icon-size: 0.8rem;
+
+  min-height: 13rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .article-grid > article > footer {

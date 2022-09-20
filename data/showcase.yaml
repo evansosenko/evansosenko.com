@@ -6,7 +6,7 @@ projects:
 
   - title: PureSkill.gg Data Science
     description: Public data set and open source SDK for CS:GO data science.
-    url: https://docs.pureskill.gg/datascience/
+    url: https://docs.pureskill.gg/datascience
 
   - title: Config Curator
     description: CLI tool for installing static configuration or dotfiles.

@@ -5,7 +5,14 @@
     {{ $url = $url | relURL }}
   {{ end }}
   <article>
-    <header><h4><a href="{{ $url }}">{{ .title }}</a></h4></header>
+    <header>
+      <h4>{{ .title }}</h4>
+      <a href="{{ $url }}">
+        {{ $host := (urls.Parse $url).Host | default  (urls.Parse site.BaseURL).Host }}
+        {{ $host }}
+        <span class="fa fa-{{ site.Params.theme.extLinkIcon }}"></span>
+      </a>
+    </header>
     <p>{{ .description }}</p>
   </article>
 {{ end }}
