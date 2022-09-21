@@ -37,7 +37,6 @@
 {{ range resources.Match "img/fa/*.svg" }}
 .fa[data-icon="{{ path.BaseName . }}"] {
   {{ $asset := . }}
-  {{ $asset = resources.Fingerprint . }}
   {{ if $production }}
     {{ $asset = resources.Fingerprint $asset }}
   {{ end }}
