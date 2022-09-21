@@ -12,6 +12,10 @@ projects:
     description: CLI tool for installing static configuration or dotfiles.
     url: https://github.com/razor-x/config-curator
 
+  - title: Configuration as Code
+    description: Arch Linux, dotfiles, ZSH, Neovim, etc.
+    url: https://github.com/rxrc
+
   - title: Make New Project Skeletons
     description: Tested project skeletons to instantly bootstrap and reliably maintain your next project.
     url: https://github.com/makenew
