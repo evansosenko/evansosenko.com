@@ -5,6 +5,10 @@ theme = 'default'
 enableRobotsTXT = true
 disableKinds = ["taxonomy", "term"]
 
+[[module.mounts]]
+  source = 'content/dev'
+  target = 'assets'
+
 [params]
 author = "Evan Sosenko"
 languageDir = 'ltr'

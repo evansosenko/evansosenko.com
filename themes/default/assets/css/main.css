@@ -177,9 +177,20 @@ dialog article.email > a {
 .article-grid > article > header {
   --icon-size: 0.8rem;
 
-  min-height: 13rem;
   display: flex;
+  position: relative;
   flex-direction: column;
+  min-height: 13rem;
+}
+
+.article-grid > article > header > img {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  top: 10%;
+  left: 0;
+  opacity: 0.2;
+  padding: 2rem;
 }
 
 .article-grid > article > footer {

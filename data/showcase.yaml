@@ -3,10 +3,12 @@ projects:
   - title: PureSkill.gg
     description: The only automated coach for CS:GO.
     url: https://pureskill.gg
+    image: pureskillgg.svg
 
   - title: PureSkill.gg Data Science
     description: Public data set and open source SDK for CS:GO data science.
     url: https://docs.pureskill.gg/datascience
+    image: pureskillgg.svg
 
   - title: Config Curator
     description: CLI tool for installing static configuration or dotfiles.
@@ -35,14 +37,17 @@ projects:
   - title: AWS Node.js Toolkit (awsjs)
     description: Clients and tools for building on AWS.
     url: https://github.com/pureskillgg/awsjs
+    image: node.svg
 
   - title: AWS Config Executor (ace)
     description: Loads and caches configuration and secrets from AWS services.
     url: https://github.com/pureskillgg/ace
+    image: node.svg
 
   - title: Examplr
     description: Node.js example runner.
     url: https://github.com/meltwater/node-examplr
+    image: node.svg
 
   - title: Dichalcogenides
     description: Research on transition metal dichalcogenides.

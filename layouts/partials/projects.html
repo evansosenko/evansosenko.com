@@ -7,6 +7,10 @@
   <article>
     <header>
       <h4>{{ .title }}</h4>
+      {{ if .image }}
+        {{ $asset := resources.Get .image | resources.Fingerprint }}
+        <img alt="{{ .alt }}" src="{{ $asset.RelPermalink }}" />
+      {{ end }}
       <a href="{{ $url }}">
         {{ $host := (urls.Parse $url).Host | default  (urls.Parse site.BaseURL).Host }}
         {{ $host }}
