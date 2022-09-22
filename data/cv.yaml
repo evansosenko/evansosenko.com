@@ -68,6 +68,7 @@ occupations:
 
   - title: Owner & Developer
     startDate: '2001'
+    endDate: '2022'
     location: OurTownRentals.com, Austin, TX, US
     description: Online classified website for vacation rentals in New Jersey.
     url: https://ourtownrentals.com
@@ -103,13 +104,13 @@ occupations:
 
 publications:
   - title: Scintillation arc brightness and electron density for an analytical noodle model
-    date: 2019-09
+    date: September 2019
     location: University of California, Santa Barbara, Santa Barbara, CA, US
     description: Monthly Notices of the Royal Astronomical Society, Volume 489, Issue 3, November 2019, Pages 3692–3709.
     url: https://arxiv.org/abs/1908.00095
 
   - title: Unconventional superconductivity and anomalous response in hole-doped transition metal dichalcogenides
-    date: 2017-04
+    date: April 2017
     location: University of California, Riverside, Riverside, CA, US
     description: 8 pages, 3 figures, Phys. Rev. B 95, 144508.
     url: https://journals.aps.org/prb/abstract/10.1103/PhysRevB.95.144508
@@ -121,7 +122,7 @@ publications:
     url: https://escholarship.org/uc/item/4941w4t0
 
   - title: Effect of contacts on spin lifetime measurements in graphene
-    date: 2014-06
+    date: June 2014
     location: University of California, Riverside, Riverside, CA, US
     description: 9 pages, 3 figures, Phys. Rev. B 89, 245436.
     url: https://journals.aps.org/prb/abstract/10.1103/PhysRevB.89.245436
