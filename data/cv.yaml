@@ -53,13 +53,19 @@ educations:
     location: University of California, Santa Barbara, Santa Barbara, CA, US
 
 occupations:
+  - title: Senior Software Engineer
+    startDate: '2022'
+    location: Seam, San Francisco, CA, US
+    description: The API for the Physical World.
+    url: https://seam.co
+
   - title: Chief Technology Officer (CTO)
     startDate: '2019'
     location: PureSkill.gg, San Francisco, CA, US
     description: The only automated coach for CS:GO.
     url: https://pureskill.gg
 
-  - title: Senior Full Stack Software Engineer
+  - title: Senior Software Engineer
     startDate: '2016'
     endDate: '2021'
     location: Meltwater, San Francisco, CA, US
