@@ -23,7 +23,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Setup
+      - name: Setup Node.js
         uses: ./.github/actions/setup-node
       - name: Lint
         run: npm run ${{ matrix.linter }}
