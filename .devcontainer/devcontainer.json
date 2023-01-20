@@ -4,7 +4,7 @@
     "dockerfile": "Dockerfile",
     "args": {
       "VARIANT": "16",
-      "HUGO_VERSION": "0.103.0",
+      "HUGO_VERSION": "0.110.0",
       "HUGO_ARCH": "64bit"
     }
   },
