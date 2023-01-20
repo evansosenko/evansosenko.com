@@ -1,4 +1,4 @@
-{{ $production := not site.IsServer }}
+{{ $dev := site.IsServer }}
 
 {{ $lightIcon := resources.Get site.Params.theme.lightIcon | resources.Fingerprint }}
 {{ $darkIcon := resources.Get site.Params.theme.darkIcon | resources.Fingerprint }}
@@ -37,7 +37,7 @@
 {{ range resources.Match "img/fa/*.svg" }}
 .fa[data-icon="{{ path.BaseName . }}"] {
   {{ $asset := . }}
-  {{ if $production }}
+  {{ if not $dev }}
     {{ $asset = resources.Fingerprint $asset }}
   {{ end }}
   mask-image: url('{{ $asset.RelPermalink }}');

@@ -12,6 +12,10 @@ images = ["avatar.png"]
 posthog.api = "/_ph"
 posthog.key = "phc_6chuBqaboGyoUo5cEmK9j18371Yw99MFagIPj0Hoq3Y"
 
+[security]
+  [security.funcs]
+    getenv = ["CONTEXT"]
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.parser]

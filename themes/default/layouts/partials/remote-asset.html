@@ -1,9 +1,9 @@
-{{ $production := not site.IsServer }}
+{{ $dev := site.IsServer }}
 
 {{ $url := . }}
 {{ $asset := resources.GetRemote . }}
 
-{{ if not $production }}
+{{ if $dev }}
   {{ $u := replace $url ".min." "." }}
   {{ with resources.GetRemote $u }}
     {{ with .Err }}
@@ -14,7 +14,7 @@
   {{ end }}
 {{ end }}
 
-{{ if $production }}
+{{ if not $dev }}
   {{ $asset = resources.Fingerprint $asset }}
 {{ else }}
   {{ $content := $asset.Content |  }}
@@ -24,7 +24,7 @@
 
 {{ if strings.HasSuffix $asset.RelPermalink ".css" }}
   <link rel="stylesheet"
-    {{ if $production }}integrity="{{ $asset.Data.Integrity }}"{{ end }}
+    {{ if not $dev }}integrity="{{ $asset.Data.Integrity }}"{{ end }}
     href="{{ $asset.RelPermalink }}">
 {{ end }}
 
@@ -32,12 +32,12 @@
   <script
     defer
     src="{{ $asset.RelPermalink }}"
-    {{ if $production }}integrity="{{ $asset.Data.Integrity }}"{{ end }}
+    {{ if not $dev }}integrity="{{ $asset.Data.Integrity }}"{{ end }}
     crossorigin="anonymous">
   </script>
 {{ end }}
 
-{{ if not $production }}
+{{ if $dev }}
   {{ if strings.HasSuffix $asset.RelPermalink ".map" }}
     {{ $asset.Publish }}
   {{ end }}

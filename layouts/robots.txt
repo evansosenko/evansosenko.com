@@ -1,4 +1,4 @@
-{{ $production := not site.IsServer }}
+{{ $production := (os.Getenv "CONTEXT") | eq "production" }}
 {{- if $production -}}
 User-agent: *
 Allow: /

@@ -1,19 +1,19 @@
-{{ $production := not site.IsServer }}
+{{ $dev := site.IsServer }}
 
 {{ $asset := resources.Get "img/favicon.svg" }}
-{{ if $production }}
+{{ if not $dev }}
   {{ $asset = resources.Fingerprint $asset }}
 {{ end }}
 <link rel="icon" type="image/svg+xml"
-  {{ if $production }}integrity="{{ $asset.Data.Integrity }}"{{ end }}
+  {{ if not $dev }}integrity="{{ $asset.Data.Integrity }}"{{ end }}
   href="{{ $asset.RelPermalink }}">
 
 {{ $asset := resources.Get "img/favicon.png" }}
-{{ if $production }}
+{{ if not $dev }}
   {{ $asset = resources.Fingerprint $asset }}
 {{ end }}
 <link rel="icon" type="image/png"
-  {{ if $production }}integrity="{{ $asset.Data.Integrity }}"{{ end }}
+  {{ if not $dev }}integrity="{{ $asset.Data.Integrity }}"{{ end }}
   href="{{ $asset.RelPermalink }}">
 
 {{ range site.Params.remoteCss }}
