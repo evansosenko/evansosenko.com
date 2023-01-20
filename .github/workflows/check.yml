@@ -1,0 +1,28 @@
+---
+name: Check
+
+on:
+  - push
+
+jobs:
+  lint:
+    name: Lint with ${{ matrix.linter_name }}
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        linter:
+          - standard
+          - stylelint
+        include:
+          - linter: standard
+            linter_name: JavaScript Standard Style
+          - linter: stylelint
+            linter_name: Stylelint
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup
+        uses: ./.github/actions/setup-node
+      - name: Lint
+        run: npm run ${{ matrix.linter }}
