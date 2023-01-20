@@ -45,7 +45,7 @@ $ npm run format
 
 ## License
 
-The code and content for this site is is Copyright (c) 2022 Evan Sosenko.
+The code and content for this site is is Copyright (c) 2013-2023 Evan Sosenko.
 
 ## Warranty
 
