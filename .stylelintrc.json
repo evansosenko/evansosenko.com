@@ -1,5 +1,5 @@
 {
-  "ignoreFiles": ["themes/default/assets/css/fontawesome.css"],
+  "ignoreFiles": ["public/**/*", "themes/default/assets/css/fontawesome.css"],
   "extends": "stylelint-config-standard",
   "rules": {
     "string-quotes": "single",
