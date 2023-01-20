@@ -1,13 +1,13 @@
-{{ $production := not site.IsServer }}
+{{ $dev := site.IsServer }}
 
 {{ $asset := resources.Get . | resources.ExecuteAsTemplate (path.Base .) . }}
-{{ if $production }}
+{{ if not $dev }}
   {{ $asset = resources.Fingerprint $asset }}
 {{ end }}
 
 {{ if strings.HasSuffix $asset.RelPermalink ".css" }}
   <link rel="stylesheet"
-    {{ if $production }}integrity="{{ $asset.Data.Integrity }}"{{ end }}
+    {{ if not $dev }}integrity="{{ $asset.Data.Integrity }}"{{ end }}
     href="{{ $asset.RelPermalink }}">
 {{ end }}
 
@@ -15,7 +15,7 @@
   <script
     type="module"
     src="{{ $asset.RelPermalink }}"
-    {{ if $production }}integrity="{{ $asset.Data.Integrity }}"{{ end }}
+    {{ if not $dev }}integrity="{{ $asset.Data.Integrity }}"{{ end }}
     crossorigin="anonymous">
   </script>
 {{ end }}
