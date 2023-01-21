@@ -71,11 +71,7 @@ const games = [
   }
 ]
 
-const sounds = {}
-
 const initHandlers = (document) => {
-  const Howl = globalThis?.Howl
-  if (Howl == null) return
   const elements = document.querySelectorAll('.gamer-button')
   if (elements.length === 0) return
   for (const element of elements) initHandler(element)
@@ -112,12 +108,31 @@ const preloadSounds = (n) => {
   initSound((n + 2) % games.length)
 }
 
+const sounds = {}
 const initSound = (n) => {
   if (sounds[n] != null) return
-  sounds[n] = new globalThis.Howl({
-    preload: true,
-    src: [games[n].sound]
-  })
+  sounds[n] = createSound(games[n].sound)
+}
+
+const createSound = (src) => {
+  const fetch = globalThis?.fetch
+  const preloaded = fetch(src)
+    .then((res) => res.arrayBuffer())
+    .catch(console.error)
+
+  return {
+    play: () => preloaded.then(playAudioBuffer).catch(console.error)
+  }
+}
+
+let audioContext
+const playAudioBuffer = async (arrayBuffer) => {
+  const AudioContext = globalThis?.AudioContext
+  const context = audioContext ?? new AudioContext()
+  const source = context.createBufferSource()
+  source.buffer = await context.decodeAudioData(arrayBuffer)
+  source.connect(context.destination)
+  source.start()
 }
 
 globalThis?.addEventListener('DOMContentLoaded', () => {
