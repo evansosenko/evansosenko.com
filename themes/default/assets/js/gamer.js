@@ -1,3 +1,73 @@
+globalThis?.addEventListener('DOMContentLoaded', () => {
+  const document = globalThis?.document
+  if (document == null) return
+  initHandlers(document)
+})
+
+const initHandlers = (document) => {
+  const elements = document.querySelectorAll('.gamer-button')
+  if (elements.length === 0) return
+  for (const element of elements) initHandler(element)
+}
+
+const initHandler = (element) => {
+  const textEl = element.querySelector('span')
+  const iconEl = element.querySelector('[data-icon]')
+
+  if (textEl == null || iconEl == null) return
+
+  let n = games.findIndex(
+    ({ icon }) => iconEl.getAttribute('data-icon') === icon
+  )
+  preloadSounds(n)
+
+  textEl.addEventListener('click', (event) => {
+    event.preventDefault()
+    n = (n + 1) % games.length
+    preloadSounds(n)
+    iconEl.setAttribute('data-icon', games[n].icon)
+    sounds[n].play()
+  })
+
+  iconEl.addEventListener('click', (event) => {
+    event.preventDefault()
+    sounds[n].play()
+  })
+}
+
+const preloadSounds = (n) => {
+  initSound(n)
+  initSound((n + 1) % games.length)
+  initSound((n + 2) % games.length)
+}
+
+const sounds = {}
+const initSound = (n) => {
+  if (sounds[n] != null) return
+  sounds[n] = createSound(games[n].sound)
+}
+
+const createSound = (src) => {
+  const fetch = globalThis?.fetch
+  const preloaded = fetch(src)
+    .then((res) => res.arrayBuffer())
+    .catch(console.error)
+
+  return {
+    play: () => preloaded.then(playAudioBuffer).catch(console.error)
+  }
+}
+
+let audioContext
+const playAudioBuffer = async (arrayBuffer) => {
+  const AudioContext = globalThis?.AudioContext
+  const context = audioContext ?? new AudioContext()
+  const source = context.createBufferSource()
+  source.buffer = await context.decodeAudioData(arrayBuffer)
+  source.connect(context.destination)
+  source.start()
+}
+
 const games = [
   {
     icon: 'alien-8bit-solid',
@@ -70,73 +140,3 @@ const games = [
       '{{ (resources.Get "audio/death.mp3" | resources.Fingerprint).RelPermalink }}'
   }
 ]
-
-const initHandlers = (document) => {
-  const elements = document.querySelectorAll('.gamer-button')
-  if (elements.length === 0) return
-  for (const element of elements) initHandler(element)
-}
-
-const initHandler = (element) => {
-  const textEl = element.querySelector('span')
-  const iconEl = element.querySelector('[data-icon]')
-
-  if (textEl == null || iconEl == null) return
-
-  let n = games.findIndex(
-    ({ icon }) => iconEl.getAttribute('data-icon') === icon
-  )
-  preloadSounds(n)
-
-  textEl.addEventListener('click', (event) => {
-    event.preventDefault()
-    n = (n + 1) % games.length
-    preloadSounds(n)
-    iconEl.setAttribute('data-icon', games[n].icon)
-    sounds[n].play()
-  })
-
-  iconEl.addEventListener('click', (event) => {
-    event.preventDefault()
-    sounds[n].play()
-  })
-}
-
-const preloadSounds = (n) => {
-  initSound(n)
-  initSound((n + 1) % games.length)
-  initSound((n + 2) % games.length)
-}
-
-const sounds = {}
-const initSound = (n) => {
-  if (sounds[n] != null) return
-  sounds[n] = createSound(games[n].sound)
-}
-
-const createSound = (src) => {
-  const fetch = globalThis?.fetch
-  const preloaded = fetch(src)
-    .then((res) => res.arrayBuffer())
-    .catch(console.error)
-
-  return {
-    play: () => preloaded.then(playAudioBuffer).catch(console.error)
-  }
-}
-
-let audioContext
-const playAudioBuffer = async (arrayBuffer) => {
-  const AudioContext = globalThis?.AudioContext
-  const context = audioContext ?? new AudioContext()
-  const source = context.createBufferSource()
-  source.buffer = await context.decodeAudioData(arrayBuffer)
-  source.connect(context.destination)
-  source.start()
-}
-
-globalThis?.addEventListener('DOMContentLoaded', () => {
-  const document = globalThis?.document
-  if (document == null) return
-  initHandlers(document)
-})

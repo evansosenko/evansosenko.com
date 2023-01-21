@@ -1,3 +1,9 @@
+globalThis?.addEventListener('DOMContentLoaded', () => {
+  const document = globalThis?.document
+  if (document == null) return
+  initHandlers(document)
+})
+
 const initHandlers = (document) => {
   const elements = document.querySelectorAll('[data-target]')
   for (const element of elements) initHandler(document, element)
@@ -49,9 +55,3 @@ const initHandler = (document, element) => {
 
   element.addEventListener('click', handleOpenClick)
 }
-
-globalThis?.addEventListener('DOMContentLoaded', () => {
-  const document = globalThis?.document
-  if (document == null) return
-  initHandlers(document)
-})

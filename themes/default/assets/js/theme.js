@@ -1,5 +1,10 @@
-let activeColorScheme
+globalThis?.addEventListener('DOMContentLoaded', () => {
+  const document = globalThis?.document
+  if (document == null) return
+  initHandlers(document)
+})
 
+let activeColorScheme
 const initHandlers = (document) => {
   activeColorScheme = getActiveTheme()
   if (activeColorScheme !== preferedColorScheme()) {
@@ -43,9 +48,3 @@ const preferedColorScheme = () => {
   const isDark = matchMedia('(prefers-color-scheme: dark)').matches
   return isDark ? 'dark' : 'light'
 }
-
-globalThis?.addEventListener('DOMContentLoaded', () => {
-  const document = globalThis?.document
-  if (document == null) return
-  initHandlers(document)
-})
