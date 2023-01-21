@@ -5,6 +5,7 @@
 # For more details, visit the project page:
 # https://github.com/github/gitignore
 
+# Prettier overrides
 *.html
 themes/default/assets/css/fontawesome.css
 themes/default/assets/js/posthog.js
