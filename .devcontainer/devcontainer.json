@@ -12,7 +12,7 @@
     "ms-vsliveshare.vsliveshare",
     "EditorConfig.EditorConfig",
     "stylelint.vscode-stylelint",
-    "standard.vscode-standard",
+    "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode"
   ],
   "forwardPorts": [1313],

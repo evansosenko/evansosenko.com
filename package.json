@@ -3,23 +3,22 @@
     "node": ">=18.12.0",
     "npm": ">= 8.1.0"
   },
-  "standard": {
-    "ignore": [
-      "themes/default/assets/js/posthog.js"
-    ]
-  },
   "scripts": {
-    "lint": "standard",
-    "postlint": "stylelint '**/*.css'",
-    "format": "standard --fix",
-    "preformat": "prettier --write '**/*.(js|json|css|yaml)'",
+    "lint": "npm run eslint",
+    "prelint": "npm run prettier",
+    "postlint": "npm run stylelint",
+    "format": "eslint --ignore-path .gitignore --fix --ext .js .",
+    "preformat": "prettier --write '**/*.(js|json|css|yml|yaml)'",
     "postformat": "stylelint --fix '**/*.css'",
-    "standard": "standard",
-    "stylelint": "stylelint '**/*.css'"
+    "eslint": "eslint --ignore-path .gitignore --ext .js .",
+    "stylelint": "stylelint '**/*.css'",
+    "prettier": "prettier --check '**/*.(js|json|css|yml|yaml)'"
   },
   "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-config-standard": "^17.0.0",
     "prettier": "^2.7.1",
-    "standard": "^17.0.0",
     "stylelint": "^14.11.0",
     "stylelint-config-prettier": "^9.0.4",
     "stylelint-config-standard": "^29.0.0"

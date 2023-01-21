@@ -13,13 +13,16 @@ jobs:
       fail-fast: false
       matrix:
         linter:
-          - standard
+          - eslint
           - stylelint
+          - prettier
         include:
-          - linter: standard
-            linter_name: JavaScript Standard Style
+          - linter: eslint
+            linter_name: ESLint
           - linter: stylelint
             linter_name: Stylelint
+          - linter: prettier
+            linter_name: Prettier
     steps:
       - name: Checkout
         uses: actions/checkout@v3
