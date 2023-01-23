@@ -63,7 +63,7 @@ const playAudioBuffer = async (arrayBuffer) => {
   const AudioContext = globalThis?.AudioContext
   const context = audioContext ?? new AudioContext()
   const source = context.createBufferSource()
-  source.buffer = await context.decodeAudioData(arrayBuffer)
+  source.buffer = await context.decodeAudioData(arrayBuffer.slice(0))
   source.connect(context.destination)
   source.start()
 }
