@@ -36,10 +36,6 @@ social:
     url: https://www.linkedin.com/in/evansosenko
     icon: linkedin-in
 
-  - name: Twitter
-    url: https://twitter.com/evansosenko
-    icon: twitter
-
   - name: 'razorx {at} evansosenko.com'
     icon: at-solid
     target: modal-email
