@@ -25,7 +25,7 @@ jobs:
             linter_name: Prettier
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Setup Node.js
         uses: ./.github/actions/setup-node
       - name: Lint
