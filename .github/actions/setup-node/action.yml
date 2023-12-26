@@ -6,13 +6,13 @@ inputs:
   node_version:
     description: The Node.js version.
     required: false
-    default: '18'
+    default: '20'
 
 runs:
   using: composite
   steps:
     - name: Setup Node.js
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         cache: npm
         node-version: ${{ inputs.node_version }}
