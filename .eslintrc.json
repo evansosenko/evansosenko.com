@@ -1,5 +1,4 @@
 {
   "root": true,
-  "extends": ["standard", "prettier"],
-  "ignorePatterns": ["themes/default/assets/js/posthog.js"]
+  "extends": ["standard", "prettier"]
 }
