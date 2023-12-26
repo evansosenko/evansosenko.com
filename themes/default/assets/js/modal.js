@@ -1,5 +1,5 @@
-globalThis?.addEventListener('DOMContentLoaded', () => {
-  const document = globalThis?.document
+globalThis.addEventListener('DOMContentLoaded', () => {
+  const document = globalThis.document
   if (document == null) return
   initHandlers(document)
 })

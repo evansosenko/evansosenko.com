@@ -1,5 +1,5 @@
-globalThis?.addEventListener('DOMContentLoaded', () => {
-  const document = globalThis?.document
+globalThis.addEventListener('DOMContentLoaded', () => {
+  const document = globalThis.document
   if (document == null) return
   initHandlers(document)
 })
@@ -34,16 +34,16 @@ const toggleTheme = (document) => {
 
 const setTheme = (document, colorScheme) => {
   activeColorScheme = colorScheme
-  globalThis?.sessionStorage?.setItem('activeColorScheme', colorScheme)
+  globalThis.sessionStorage?.setItem('activeColorScheme', colorScheme)
   document.querySelector('html').setAttribute('data-theme', colorScheme)
 }
 
 const getActiveTheme = () =>
-  globalThis?.sessionStorage?.getItem('activeColorScheme') ??
+  globalThis.sessionStorage?.getItem('activeColorScheme') ??
   preferedColorScheme()
 
 const preferedColorScheme = () => {
-  const matchMedia = globalThis?.matchMedia
+  const matchMedia = globalThis.matchMedia
   if (matchMedia == null) return
   const isDark = matchMedia('(prefers-color-scheme: dark)').matches
   return isDark ? 'dark' : 'light'

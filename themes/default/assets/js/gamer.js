@@ -1,5 +1,5 @@
-globalThis?.addEventListener('DOMContentLoaded', () => {
-  const document = globalThis?.document
+globalThis.addEventListener('DOMContentLoaded', () => {
+  const document = globalThis.document
   if (document == null) return
   initHandlers(document)
 })
@@ -48,7 +48,7 @@ const initSound = (n) => {
 }
 
 const createSound = (src) => {
-  const fetch = globalThis?.fetch
+  const fetch = globalThis.fetch
   const preloaded = fetch(src)
     .then((res) => res.arrayBuffer())
     .catch(console.error)
@@ -60,7 +60,7 @@ const createSound = (src) => {
 
 let audioContext
 const playAudioBuffer = async (arrayBuffer) => {
-  const AudioContext = globalThis?.AudioContext
+  const AudioContext = globalThis.AudioContext
   if (AudioContext == null) return
   audioContext = audioContext ?? new AudioContext()
   const source = audioContext.createBufferSource()
