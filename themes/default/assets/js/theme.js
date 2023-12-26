@@ -1,5 +1,5 @@
-globalThis?.addEventListener('DOMContentLoaded', () => {
-  const document = globalThis?.document
+globalThis.addEventListener('DOMContentLoaded', () => {
+  const document = globalThis.document
   if (document == null) return
   initHandlers(document)
 })
@@ -24,26 +24,26 @@ const initHandler = (document, element) => {
 const toggleTheme = (document) => {
   const colorScheme = activeColorScheme === 'dark' ? 'light' : 'dark'
   document.querySelector('html').classList.add('theme-transistion')
-  setTimeout(() => {
+  globalThis.setTimeout(() => {
     setTheme(document, colorScheme)
   }, 0)
-  setTimeout(() => {
+  globalThis.setTimeout(() => {
     document.querySelector('html').classList.remove('theme-transistion')
   }, 2000)
 }
 
 const setTheme = (document, colorScheme) => {
   activeColorScheme = colorScheme
-  globalThis?.sessionStorage?.setItem('activeColorScheme', colorScheme)
+  globalThis.sessionStorage?.setItem('activeColorScheme', colorScheme)
   document.querySelector('html').setAttribute('data-theme', colorScheme)
 }
 
 const getActiveTheme = () =>
-  globalThis?.sessionStorage?.getItem('activeColorScheme') ??
+  globalThis.sessionStorage?.getItem('activeColorScheme') ??
   preferedColorScheme()
 
 const preferedColorScheme = () => {
-  const matchMedia = globalThis?.matchMedia
+  const matchMedia = globalThis.matchMedia
   if (matchMedia == null) return
   const isDark = matchMedia('(prefers-color-scheme: dark)').matches
   return isDark ? 'dark' : 'light'
