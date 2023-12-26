@@ -24,10 +24,10 @@ const initHandler = (document, element) => {
 const toggleTheme = (document) => {
   const colorScheme = activeColorScheme === 'dark' ? 'light' : 'dark'
   document.querySelector('html').classList.add('theme-transistion')
-  setTimeout(() => {
+  globalThis.setTimeout(() => {
     setTheme(document, colorScheme)
   }, 0)
-  setTimeout(() => {
+  globalThis.setTimeout(() => {
     document.querySelector('html').classList.remove('theme-transistion')
   }, 2000)
 }
