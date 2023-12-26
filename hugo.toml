@@ -3,7 +3,7 @@ languageCode = 'en-US'
 title = 'Evan Sosenko'
 theme = 'default'
 enableRobotsTXT = true
-disableKinds = ["taxonomy", "term"]
+disableKinds = ["rss", "taxonomy", "term"]
 
 [params]
 author = "Evan Sosenko"
