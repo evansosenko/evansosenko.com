@@ -17,7 +17,7 @@ const initHandler = (element) => {
   if (textEl == null || iconEl == null) return
 
   let n = games.findIndex(
-    ({ icon }) => iconEl.getAttribute('data-icon') === icon
+    ({ icon }) => iconEl.getAttribute('data-icon') === icon,
   )
   preloadSounds(n)
 
@@ -54,7 +54,7 @@ const createSound = (src) => {
     .catch(console.error)
 
   return {
-    play: () => preloaded.then(playAudioBuffer).catch(console.error)
+    play: () => preloaded.then(playAudioBuffer).catch(console.error),
   }
 }
 
@@ -73,71 +73,71 @@ const games = [
   {
     icon: 'alien-8bit-solid',
     sound:
-      '{{ (resources.Get "audio/shoot.wav" | resources.Fingerprint).RelPermalink }}'
+      '{{ (resources.Get "audio/shoot.wav" | resources.Fingerprint).RelPermalink }}',
   },
   {
     icon: 'block-question-solid',
     sound:
-      '{{ (resources.Get "audio/coin.wav" | resources.Fingerprint).RelPermalink }}'
+      '{{ (resources.Get "audio/coin.wav" | resources.Fingerprint).RelPermalink }}',
   },
   {
     icon: 'mushroom-duotone',
     sound:
-      '{{ (resources.Get "audio/1up.wav" | resources.Fingerprint).RelPermalink }}'
+      '{{ (resources.Get "audio/1up.wav" | resources.Fingerprint).RelPermalink }}',
   },
   {
     icon: 'dungeon-duotone',
     sound:
-      '{{ (resources.Get "audio/secret.wav" | resources.Fingerprint).RelPermalink }}'
+      '{{ (resources.Get "audio/secret.wav" | resources.Fingerprint).RelPermalink }}',
   },
   {
     icon: 'treasure-chest-solid',
     sound:
-      '{{ (resources.Get "audio/item.wav" | resources.Fingerprint).RelPermalink }}'
+      '{{ (resources.Get "audio/item.wav" | resources.Fingerprint).RelPermalink }}',
   },
   {
     icon: 'skull-duotone',
     sound:
-      '{{ (resources.Get "audio/eekum-bokum.mp3" | resources.Fingerprint).RelPermalink }}'
+      '{{ (resources.Get "audio/eekum-bokum.mp3" | resources.Fingerprint).RelPermalink }}',
   },
   {
     icon: 'music-regular',
     sound:
-      '{{ (resources.Get "audio/note.ogg" | resources.Fingerprint).RelPermalink }}'
+      '{{ (resources.Get "audio/note.ogg" | resources.Fingerprint).RelPermalink }}',
   },
   {
     icon: 'puzzle-piece-duotone',
     sound:
-      '{{ (resources.Get "audio/jiggy.ogg" | resources.Fingerprint).RelPermalink }}'
+      '{{ (resources.Get "audio/jiggy.ogg" | resources.Fingerprint).RelPermalink }}',
   },
   {
     icon: 'starfighter-twin-ion-engine-solid',
     sound:
-      '{{ (resources.Get "audio/tie-fighter.wav" | resources.Fingerprint).RelPermalink }}'
+      '{{ (resources.Get "audio/tie-fighter.wav" | resources.Fingerprint).RelPermalink }}',
   },
   {
     icon: 'starfighter-solid',
     sound:
-      '{{ (resources.Get "audio/laser.wav" | resources.Fingerprint).RelPermalink }}'
+      '{{ (resources.Get "audio/laser.wav" | resources.Fingerprint).RelPermalink }}',
   },
   {
     icon: 'starship-freighter-solid',
     sound:
-      '{{ (resources.Get "audio/chewbacca.wav" | resources.Fingerprint).RelPermalink }}'
+      '{{ (resources.Get "audio/chewbacca.wav" | resources.Fingerprint).RelPermalink }}',
   },
   {
     icon: 'starship-solid',
     sound:
-      '{{ (resources.Get "audio/intercom.wav" | resources.Fingerprint).RelPermalink }}'
+      '{{ (resources.Get "audio/intercom.wav" | resources.Fingerprint).RelPermalink }}',
   },
   {
     icon: 'ring-duotone',
     sound:
-      '{{ (resources.Get "audio/ring.wav" | resources.Fingerprint).RelPermalink }}'
+      '{{ (resources.Get "audio/ring.wav" | resources.Fingerprint).RelPermalink }}',
   },
   {
     icon: 'ghost-duotone',
     sound:
-      '{{ (resources.Get "audio/death.mp3" | resources.Fingerprint).RelPermalink }}'
-  }
+      '{{ (resources.Get "audio/death.mp3" | resources.Fingerprint).RelPermalink }}',
+  },
 ]
