@@ -76,9 +76,3 @@
   to = "https://unpkg.com/@picocss/pico@1.5.5/css/pico.min.css.map"
   status = 200
   force = true
-
-[[redirects]]
-  from = "/_ph/*"
-  to = "https://app.posthog.com/:splat"
-  status = 200
-  force = true

@@ -8,7 +8,6 @@
 # Prettier overrides
 *.html
 themes/default/assets/css/fontawesome.css
-themes/default/assets/js/posthog.js
 
 # Node.js
 node_modules
