@@ -2,7 +2,7 @@ ARG VARIANT="20"
 
 FROM mcr.microsoft.com/vscode/devcontainers/javascript-node:${VARIANT}
 
-ARG HUGO_VERSION="0.110.0"
+ARG HUGO_VERSION="0.121.1"
 ARG HUGO_ARCH="64bit"
 
 RUN hugo_url="https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}" \
