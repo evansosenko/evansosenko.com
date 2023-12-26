@@ -62,7 +62,7 @@ let audioContext
 const playAudioBuffer = async (arrayBuffer) => {
   const AudioContext = globalThis.AudioContext
   if (AudioContext == null) return
-  audioContext = audioContext ?? new AudioContext()
+  audioContext ??= new AudioContext()
   const source = audioContext.createBufferSource()
   source.buffer = await audioContext.decodeAudioData(arrayBuffer.slice(0))
   source.connect(audioContext.destination)
