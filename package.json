@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "engines": {
     "node": ">=22.11.0",
     "npm": ">= 10.9.0"
@@ -7,17 +8,16 @@
     "lint": "npm run eslint",
     "prelint": "npm run prettier",
     "postlint": "npm run stylelint",
-    "format": "eslint --ignore-path .gitignore --fix --ext .js .",
+    "format": "eslint --fix",
     "preformat": "prettier --write '**/*.(js|json|css|yml|yaml)'",
     "postformat": "stylelint --fix '**/*.css'",
-    "eslint": "eslint --ignore-path .gitignore --ext .js .",
+    "eslint": "eslint",
     "stylelint": "stylelint '**/*.css'",
     "prettier": "prettier --check '**/*.(js|json|css|yml|yaml)'"
   },
   "devDependencies": {
-    "eslint": "^8.9.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-config-standard": "^17.0.0",
+    "eslint": "^9.17.0",
+    "neostandard": "^0.12.0",
     "prettier": "^3.4.2",
     "stylelint": "^16.12.0",
     "stylelint-config-standard": "^36.0.1"
