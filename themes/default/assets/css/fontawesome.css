@@ -1,4 +1,4 @@
-{{ $dev := site.IsServer }}
+{{ $dev := hugo.IsServer }}
 
 {{ $lightIcon := resources.Get site.Params.theme.lightIcon | resources.Fingerprint }}
 {{ $darkIcon := resources.Get site.Params.theme.darkIcon | resources.Fingerprint }}

@@ -1,4 +1,4 @@
-{{ $dev := site.IsServer }}
+{{ $dev := hugo.IsServer }}
 
 {{ $asset := resources.Get "img/favicon.svg" }}
 {{ if not $dev }}
