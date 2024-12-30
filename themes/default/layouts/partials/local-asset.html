@@ -1,4 +1,4 @@
-{{ $dev := site.IsServer }}
+{{ $dev := hugo.IsServer }}
 
 {{ $asset := resources.Get . | resources.ExecuteAsTemplate (path.Base .) . }}
 {{ if not $dev }}
