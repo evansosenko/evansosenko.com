@@ -10,10 +10,7 @@
   },
   "extensions": [
     "ms-vsliveshare.vsliveshare",
-    "EditorConfig.EditorConfig",
-    "stylelint.vscode-stylelint",
-    "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode"
+    "EditorConfig.EditorConfig"
   ],
   "forwardPorts": [1313],
   "portsAttributes": {
