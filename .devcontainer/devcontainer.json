@@ -1,24 +1,18 @@
 {
-  "name": "Hugo",
-  "build": {
-    "dockerfile": "Dockerfile",
-    "args": {
-      "VARIANT": "20",
-      "HUGO_VERSION": "0.140.0",
-      "HUGO_ARCH": "64bit"
-    }
+  "name": "mise",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers-extra/features/mise:1": {}
   },
   "extensions": [
     "ms-vsliveshare.vsliveshare",
     "EditorConfig.EditorConfig",
-    "stylelint.vscode-stylelint",
-    "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode"
+    "hverlin.mise-vscode",
+    "biomejs.biome"
   ],
+  "postCreateCommand": "mise install",
   "forwardPorts": [1313],
   "portsAttributes": {
     "1313": { "label": "App" }
-  },
-  "postCreateCommand": "npm install",
-  "remoteUser": "node"
+  }
 }

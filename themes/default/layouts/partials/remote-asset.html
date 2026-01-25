@@ -5,7 +5,7 @@
 
 {{ if $dev }}
   {{ $u := replace $url ".min." "." }}
-  {{ with resources.GetRemote $u }}
+  {{ with try resources.GetRemote $u }}
     {{ with .Err }}
     {{ else }}
       {{ $url = $u }}
