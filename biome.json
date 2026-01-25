@@ -1,7 +1,12 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.3.12/schema.json",
   "files": {
-    "includes": ["**/*.js", "**/*.json", "**/*.css"]
+    "includes": [
+      "**/*.js",
+      "**/*.json",
+      "**/*.css",
+      "!themes/default/assets/css/fontawesome.css"
+    ]
   },
   "vcs": {
     "enabled": true,
