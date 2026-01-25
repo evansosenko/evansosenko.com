@@ -2,6 +2,10 @@
 biome = "2.3.12"
 hugo = "0.154.5"
 
+[tasks.ci]
+description = "Run CI checks"
+run = "biome ci"
+
 [tasks.build]
 description = "Build the site"
 run = "hugo build"

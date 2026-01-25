@@ -5,16 +5,14 @@ on:
   - push
 
 jobs:
-  lint:
-    name: Lint
+  check:
+    name: Check
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-      - name: Setup Biome
-        uses: biomejs/setup-biome@v2
-        with:
-          version: '2.3.12'
-      - name: Lint
-        run: biome ci
+      - name: Setup mise
+        uses: jdx/mise-action@v3
+      - name: Check
+        run: mise ci
