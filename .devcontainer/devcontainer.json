@@ -10,6 +10,7 @@
     "hverlin.mise-vscode",
     "biomejs.biome"
   ],
+  "postCreateCommand": "mise install",
   "forwardPorts": [1313],
   "portsAttributes": {
     "1313": { "label": "App" }
