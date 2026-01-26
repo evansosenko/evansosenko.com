@@ -8,6 +8,7 @@ let activeColorScheme
 const initHandlers = (document) => {
   activeColorScheme = getActiveTheme()
   setTheme(document, activeColorScheme)
+  initPreferredColorSchemeHandler(document)
   const elements = document.querySelectorAll('.toggle-theme')
   for (const element of elements) initHandler(document, element)
 }
@@ -16,6 +17,19 @@ const initHandler = (document, element) => {
   element.addEventListener('click', (event) => {
     event.preventDefault()
     toggleTheme(document)
+  })
+}
+
+const initPreferredColorSchemeHandler = (document) => {
+  const matchMedia = globalThis.matchMedia
+  if (matchMedia == null) return
+  const mediaQuery = matchMedia('(prefers-color-scheme: dark)')
+  mediaQuery.addEventListener('change', () => {
+    const overriddenColorScheme = globalThis.sessionStorage?.getItem(
+      'overriddenColorScheme',
+    )
+    if (overriddenColorScheme != null) return
+    setTheme(document, getPreferredColorScheme())
   })
 }
 
