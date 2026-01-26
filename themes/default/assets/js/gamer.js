@@ -11,8 +11,8 @@ const initHandlers = (document) => {
 }
 
 const initHandler = (element) => {
-  const textEl = element.querySelector('span')
   const iconEl = element.querySelector('[data-icon]')
+  const textEl = element.querySelector('span:not([data-icon])')
 
   if (textEl == null || iconEl == null) return
 
