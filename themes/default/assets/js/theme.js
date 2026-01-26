@@ -7,9 +7,7 @@ globalThis.addEventListener('DOMContentLoaded', () => {
 let activeColorScheme
 const initHandlers = (document) => {
   activeColorScheme = getActiveTheme()
-  if (activeColorScheme !== preferedColorScheme()) {
-    setTheme(document, activeColorScheme)
-  }
+  setTheme(document, activeColorScheme)
   const elements = document.querySelectorAll('.toggle-theme')
   for (const element of elements) initHandler(document, element)
 }
@@ -34,15 +32,19 @@ const toggleTheme = (document) => {
 
 const setTheme = (document, colorScheme) => {
   activeColorScheme = colorScheme
-  globalThis.sessionStorage?.setItem('activeColorScheme', colorScheme)
+  if (colorScheme === getPreferredColorScheme()) {
+    globalThis.sessionStorage?.removeItem('overriddenColorScheme')
+  } else {
+    globalThis.sessionStorage?.setItem('overriddenColorScheme', colorScheme)
+  }
   document.querySelector('html').setAttribute('data-theme', colorScheme)
 }
 
 const getActiveTheme = () =>
-  globalThis.sessionStorage?.getItem('activeColorScheme') ??
-  preferedColorScheme()
+  globalThis.sessionStorage?.getItem('overriddenColorScheme') ??
+  getPreferredColorScheme()
 
-const preferedColorScheme = () => {
+const getPreferredColorScheme = () => {
   const matchMedia = globalThis.matchMedia
   if (matchMedia == null) return
   const isDark = matchMedia('(prefers-color-scheme: dark)').matches
