@@ -1,7 +1,6 @@
 [params]
 remoteCss = [
-  "https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css",
-  "https://cdnjs.cloudflare.com/ajax/libs/picocss/2.1.1/pico.min.css"
+  "https://cdnjs.cloudflare.com/ajax/libs/picocss/2.1.1/pico.classless.min.css"
 ]
 
 remoteJs = []
