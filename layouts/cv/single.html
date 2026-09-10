@@ -1,5 +1,4 @@
 {{ define "main" }}
-{{ $linkIcon := "link-duotone" }}
 <h1>
   {{ .Title }}
   <sup>
@@ -22,24 +21,23 @@
 }}
 
 {{ range $sections }}
-  <article>
+  <article class="cv-section">
     <h2>{{ (index hugo.Data.cv.meta .).title }}</h2>
     {{ range (index hugo.Data.cv . ) }}
-      <h5>
-        {{ .title }}
-        {{ if .url }}
-          <a href="{{ .url }}"
-             alt="link"
-             class="fa"
-             data-icon="{{ site.Params.theme.linkIcon }}"></a>
+      <section class="cv-entry">
+        <h3>
+          {{ .title }}{{ if .url }}&nbsp;<a href="{{ .url }}"
+               aria-label="Link to {{ .title }}"
+               class="fa"
+               data-icon="{{ site.Params.theme.linkIcon }}"></a>{{ end }}
+        </h3>
+        {{ if .date }}
+          <p>{{ .date }}</p>
+        {{ else }}
+          <p>{{ .startDate }}–{{ .endDate | default "present" }}</p>
         {{ end }}
-      </h5>
-      {{ if .date }}
-        <p>{{ .date }}</p>
-      {{ else }}
-        <p>{{ .startDate }}–{{ .endDate | default "present" }}</p>
-      {{ end }}
-      <p>{{ .location }}</p>
+        <p>{{ .location }}</p>
+      </section>
     {{ end }}
   </article>
 {{ end }}

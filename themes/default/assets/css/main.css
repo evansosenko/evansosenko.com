@@ -17,8 +17,63 @@ main {
   flex: 1 0 auto;
 }
 
+body > header,
+body > main,
+body > footer {
+  --pico-block-spacing-vertical: clamp(2rem, 5vw, 4rem);
+}
+
+@media (min-width: 1200px) {
+  body > header,
+  body > main,
+  body > footer {
+    max-width: 1130px;
+  }
+}
+
 body > main > h1 {
+  margin-bottom: 3rem;
   text-align: center;
+}
+
+article {
+  --pico-block-spacing-horizontal: clamp(1rem, 2.5vw, 2rem);
+}
+
+a {
+  --pico-text-decoration: none;
+}
+
+h4,
+h5,
+h6 {
+  --pico-color: var(--pico-h3-color);
+}
+
+.cv-section > h2 {
+  margin-bottom: 2.625rem;
+}
+
+.cv-entry {
+  margin-bottom: 2.5rem;
+}
+
+.cv-entry:last-child {
+  margin-bottom: 0;
+}
+
+.cv-entry > h3 {
+  --pico-font-size: 1.125rem;
+
+  margin-bottom: 0.75rem;
+}
+
+.cv-entry > p {
+  margin-bottom: 0.5rem;
+}
+
+.cv-entry > p:last-child {
+  margin-bottom: 0;
 }
 
 figure {
@@ -89,6 +144,11 @@ figure {
   margin-right: 0.8rem;
 }
 
+.site-title a,
+.site-title a:is(:hover, :active, :focus) {
+  text-decoration: none;
+}
+
 dialog article.email > a {
   cursor: pointer;
 }
@@ -96,10 +156,6 @@ dialog article.email > a {
 .article-grid > article > header > a {
   margin-top: auto;
   display: block;
-}
-
-.site-title a:hover {
-  text-decoration: none;
 }
 
 .site-nav li.active a {
@@ -131,6 +187,7 @@ dialog article.email > a {
   --pico-color: var(--accent);
   --parent-color: var(--pico-color);
 
+  margin-bottom: 3rem;
   font-weight: 200;
   text-transform: lowercase;
 }
@@ -190,10 +247,12 @@ dialog article.email > a {
 
 dialog article.email {
   display: flex;
+  align-items: center;
+  width: auto;
 }
 
 dialog article.email > p {
-  position: relative;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  min-width: 0;
+  margin: 0 1rem;
+  overflow-wrap: anywhere;
 }

@@ -8,6 +8,12 @@
   --pico-block-spacing-vertical: 1rem;
 }
 
+@media (min-width: 1536px) {
+  :root {
+    --pico-font-size: 125%;
+  }
+}
+
 [data-theme='light'],
 :root:not([data-theme='dark']) {
   --pico-primary: #00a2e8;
