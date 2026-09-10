@@ -1,6 +1,6 @@
 [tools]
-biome = "2.3.12"
-hugo = "0.154.5"
+biome = "2.5.12"
+hugo = "0.165.0"
 
 [tasks.ci]
 description = "Run CI checks"

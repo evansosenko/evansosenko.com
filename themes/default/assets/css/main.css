@@ -28,8 +28,9 @@ figure {
 }
 
 .theme-transistion {
-  transition: color var(--transition-speed);
-  transition: background-color var(--transition-speed);
+  transition:
+    color var(--transition-speed),
+    background-color var(--transition-speed);
 }
 
 .site-home > main > div {

@@ -3,11 +3,11 @@
 <h1>
   {{ .Title }}
   <sup>
-    <a href="{{ site.Data.cv.pdf.url }}"
+    <a href="{{ hugo.Data.cv.pdf.url }}"
       title="Download CV as PDF"
       alt="pdf"
       class="fa"
-      data-icon="{{ site.Data.cv.pdf.icon }}"></a>
+      data-icon="{{ hugo.Data.cv.pdf.icon }}"></a>
   </sup>
 </h1>
 
@@ -23,8 +23,8 @@
 
 {{ range $sections }}
   <article>
-    <h2>{{ (index site.Data.cv.meta .).title }}</h2>
-    {{ range (index site.Data.cv . ) }}
+    <h2>{{ (index hugo.Data.cv.meta .).title }}</h2>
+    {{ range (index hugo.Data.cv . ) }}
       <h5>
         {{ .title }}
         {{ if .url }}

@@ -1,5 +1,5 @@
 <div class="article-grid">
-{{ range site.Data.showcase.projects }}
+{{ range hugo.Data.showcase.projects }}
   {{ $url := .url }}
   {{ if hasPrefix $url "/" }}
     {{ $url = $url | relURL }}
