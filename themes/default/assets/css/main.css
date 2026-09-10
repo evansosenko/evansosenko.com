@@ -68,6 +68,16 @@ h6 {
   margin-bottom: 0.75rem;
 }
 
+.cv-entry > h3:has(a) {
+  padding-inline-end: calc(var(--icon-size) + 0.25em);
+}
+
+.cv-entry > :where(h3) > a {
+  position: absolute;
+  margin-inline-start: 0.25em;
+  margin-top: 0.15em;
+}
+
 .cv-entry > p {
   margin-bottom: 0.5rem;
 }
