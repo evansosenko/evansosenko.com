@@ -1,5 +1,5 @@
 baseURL = 'https://evansosenko.com/'
-languageCode = 'en-US'
+locale = 'en-US'
 title = 'Evan Sosenko'
 theme = 'default'
 enableRobotsTXT = true
