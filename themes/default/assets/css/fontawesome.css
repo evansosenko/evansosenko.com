@@ -22,7 +22,7 @@
   display: inline-block;
   min-width: var(--icon-size);
   min-height: var(--icon-size);
-  background-color: var(--color);
+  background-color: var(--pico-color);
   mask-repeat: no-repeat;
   -webkit-mask-repeat: no-repeat;
   mask-position-y: bottom;

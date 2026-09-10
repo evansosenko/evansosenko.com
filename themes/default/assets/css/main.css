@@ -61,7 +61,7 @@ figure {
 }
 
 .site-404 main > h1 {
-  --font-size: 1.5rem;
+  --pico-font-size: 1.5rem;
 
   position: absolute;
   top: 50%;
@@ -128,8 +128,8 @@ dialog article.email > a {
 }
 
 .site-title {
-  --color: var(--accent);
-  --parent-color: var(--color);
+  --pico-color: var(--accent);
+  --parent-color: var(--pico-color);
 
   font-weight: 200;
   text-transform: lowercase;
