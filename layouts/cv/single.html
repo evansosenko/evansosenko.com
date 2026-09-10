@@ -1,7 +1,7 @@
 {{ define "main" }}
 <header>
   <h1>{{ .Title }}</h1>
-  <p><small><a href="{{ hugo.Data.cv.pdf.url }}" aria-label="Download CV as PDF"><span
+  <p><small><a class="download-link" href="{{ hugo.Data.cv.pdf.url }}" aria-label="Download CV as PDF"><span
     class="fa"
     data-icon="{{ hugo.Data.cv.pdf.icon }}"
     aria-hidden="true"></span> PDF</a></small></p>

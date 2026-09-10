@@ -53,7 +53,7 @@ a {
   --pico-text-decoration: none;
 }
 
-body > main > header > p a {
+.download-link {
   --icon-size: 1em;
 
   display: inline-flex;
