@@ -162,13 +162,17 @@ figure {
 }
 
 .site-nav {
+  --icon-size: clamp(0.875rem, 3vw, 1.2rem);
+  --pico-nav-element-spacing-horizontal: clamp(0.25rem, 1vw, 0.5rem);
+
   justify-content: center;
 }
 
 .site-nav a {
-  font-size: calc(1 * var(--icon-size));
+  font-size: var(--icon-size);
+  white-space: nowrap;
   user-select: none;
-  margin-right: 0.8rem;
+  margin-right: clamp(0rem, calc(4vw - 1rem), 0.8rem);
 }
 
 .site-title a,
