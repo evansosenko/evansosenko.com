@@ -283,7 +283,6 @@ dialog article.email {
 }
 
 dialog article.email > p {
-  min-width: 0;
   margin: 0 1rem;
   overflow-wrap: anywhere;
 }

@@ -23,7 +23,9 @@
     {{ range (index hugo.Data.cv . ) }}
       <section class="cv-entry">
         <h3>
-          {{ .title }}{{ if .url }}<a href="{{ .url }}"
+          {{ .title }}
+          {{ if .url }}
+            <a href="{{ .url }}"
                aria-label="Link to {{ .title }}"
                class="fa"
                data-icon="{{ site.Params.theme.linkIcon }}"></a>{{ end }}
