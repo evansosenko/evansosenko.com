@@ -17,8 +17,90 @@ main {
   flex: 1 0 auto;
 }
 
-body > main > h1 {
+body > header,
+body > main,
+body > footer {
+  --pico-block-spacing-vertical: clamp(2rem, 5vw, 4rem);
+}
+
+@media (min-width: 1200px) {
+  body > header,
+  body > main,
+  body > footer {
+    max-width: 1130px;
+  }
+}
+
+body > main > h1,
+body > main > header {
+  margin-bottom: 3rem;
   text-align: center;
+}
+
+body > main > header > h1 {
+  margin-bottom: 0.75rem;
+}
+
+body > main > header > p {
+  margin-bottom: 0;
+}
+
+article {
+  --pico-block-spacing-horizontal: clamp(1rem, 2.5vw, 2rem);
+}
+
+a {
+  --pico-text-decoration: none;
+}
+
+.download-link {
+  --icon-size: 1em;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375em;
+}
+
+h4,
+h5,
+h6 {
+  --pico-color: var(--pico-h3-color);
+}
+
+.cv-section > h2 {
+  margin-bottom: 2.625rem;
+}
+
+.cv-entry {
+  margin-bottom: 2.5rem;
+}
+
+.cv-entry:last-child {
+  margin-bottom: 0;
+}
+
+.cv-entry > h3 {
+  --pico-font-size: 1.125rem;
+
+  margin-bottom: 0.75rem;
+}
+
+.cv-entry > h3:has(a) {
+  padding-inline-end: calc(var(--icon-size) + 0.25em);
+}
+
+.cv-entry > :where(h3) > a {
+  position: absolute;
+  margin-inline-start: 0.25em;
+  margin-top: 0.15em;
+}
+
+.cv-entry > p {
+  margin-bottom: 0.5rem;
+}
+
+.cv-entry > p:last-child {
+  margin-bottom: 0;
 }
 
 figure {
@@ -61,7 +143,7 @@ figure {
 }
 
 .site-404 main > h1 {
-  --font-size: 1.5rem;
+  --pico-font-size: 1.5rem;
 
   position: absolute;
   top: 50%;
@@ -80,13 +162,22 @@ figure {
 }
 
 .site-nav {
+  --icon-size: clamp(0.875rem, 3vw, 1.2rem);
+  --pico-nav-element-spacing-horizontal: clamp(0.25rem, 1vw, 0.5rem);
+
   justify-content: center;
 }
 
 .site-nav a {
-  font-size: calc(1 * var(--icon-size));
+  font-size: var(--icon-size);
+  white-space: nowrap;
   user-select: none;
-  margin-right: 0.8rem;
+  margin-right: clamp(0rem, calc(4vw - 1rem), 0.8rem);
+}
+
+.site-title a,
+.site-title a:is(:hover, :active, :focus) {
+  text-decoration: none;
 }
 
 dialog article.email > a {
@@ -96,10 +187,6 @@ dialog article.email > a {
 .article-grid > article > header > a {
   margin-top: auto;
   display: block;
-}
-
-.site-title a:hover {
-  text-decoration: none;
 }
 
 .site-nav li.active a {
@@ -128,9 +215,10 @@ dialog article.email > a {
 }
 
 .site-title {
-  --color: var(--accent);
-  --parent-color: var(--color);
+  --pico-color: var(--accent);
+  --parent-color: var(--pico-color);
 
+  margin-bottom: 3rem;
   font-weight: 200;
   text-transform: lowercase;
 }
@@ -190,10 +278,11 @@ dialog article.email > a {
 
 dialog article.email {
   display: flex;
+  align-items: center;
+  width: auto;
 }
 
 dialog article.email > p {
-  position: relative;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin: 0 1rem;
+  overflow-wrap: anywhere;
 }

@@ -1,18 +1,12 @@
 {{ $dev := hugo.IsServer }}
 
 {{ $url := . }}
-{{ $asset := resources.GetRemote . }}
 
 {{ if $dev }}
-  {{ $u := replace $url ".min." "." }}
-  {{ with try resources.GetRemote $u }}
-    {{ with .Err }}
-    {{ else }}
-      {{ $url = $u }}
-      {{ $asset = . }}
-    {{ end }}
-  {{ end }}
+  {{ $url = replace $url ".min." "." }}
 {{ end }}
+
+{{ $asset := resources.GetRemote $url }}
 
 {{ if not $dev }}
   {{ $asset = resources.Fingerprint $asset }}
