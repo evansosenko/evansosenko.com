@@ -3,17 +3,17 @@ pdf:
   icon: download-solid
   url: https://github.com/evansosenko/curriculum-vitae/releases/latest/download/evan-sosenko-cv.pdf
 
-meta:
-  awards:
-    title: Awards
-  educations:
-    title: Education
-  occupations:
-    title: Experience
-  publications:
-    title: Publications
-  talks:
-    title: Talks
+sections:
+  - title: Experience
+    section: occupations
+  - title: Education
+    section: educations
+  - title: Publications
+    section: publications
+  - title: Talks
+    section: talks
+  - title: Awards
+    section: awards
 
 awards:
   - title: Chancellor’s Distinguished Fellowship Award

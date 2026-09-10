@@ -9,18 +9,10 @@
 
 {{ .Content }}
 
-{{ $sections := slice
-  "occupations"
-  "educations"
-  "publications"
-  "talks"
-  "awards"
-}}
-
-{{ range $sections }}
+{{ range hugo.Data.cv.sections }}
   <article class="cv-section">
-    <h2>{{ (index hugo.Data.cv.meta .).title }}</h2>
-    {{ range (index hugo.Data.cv . ) }}
+    <h2>{{ .title }}</h2>
+    {{ range (index hugo.Data.cv .section) }}
       <section class="cv-entry">
         <h3>
           {{ .title }}
