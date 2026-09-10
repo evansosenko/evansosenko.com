@@ -31,9 +31,18 @@ body > footer {
   }
 }
 
-body > main > h1 {
+body > main > h1,
+body > main > header {
   margin-bottom: 3rem;
   text-align: center;
+}
+
+body > main > header > h1 {
+  margin-bottom: 0.75rem;
+}
+
+body > main > header > p {
+  margin-bottom: 0;
 }
 
 article {
@@ -42,6 +51,14 @@ article {
 
 a {
   --pico-text-decoration: none;
+}
+
+body > main > header > p a {
+  --icon-size: 1em;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375em;
 }
 
 h4,
