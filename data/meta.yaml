@@ -1,9 +1,11 @@
 ---
 firstName: Evan
 lastName: Sosenko
+copyrightStartYear: 2013
+mastodon: https://mastodon.social/@evansosenko
 
 email:
-  text: 'razorx {at} evansosenko.com'
+  text: &email 'razorx {at} evansosenko.com'
   icon: paper-plane-duotone
 
 nav:
@@ -36,6 +38,6 @@ social:
     url: https://www.linkedin.com/in/evansosenko
     icon: linkedin-in
 
-  - name: 'razorx {at} evansosenko.com'
+  - name: *email
     icon: at-solid
     target: modal-email
