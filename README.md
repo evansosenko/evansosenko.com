@@ -19,6 +19,12 @@ $ hugo server
 [hugo]: https://gohugo.io/
 [git source]: https://github.com/evansosenko/evansosenko.com
 
+### Structure
+
+The local [foundation theme](themes/foundation/README.md) supplies the HTML
+boilerplate, standard metadata, and asset pipeline. Site assets, page layouts,
+header/footer markup, and personal metadata stay at the project root.
+
 ### Linting
 
 You will need [Node.js] with [npm].

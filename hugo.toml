@@ -1,12 +1,14 @@
 baseURL = 'https://evansosenko.com/'
 locale = 'en-US'
 title = 'Evan Sosenko'
+theme = 'foundation'
 enableRobotsTXT = true
 disableKinds = ["rss", "taxonomy", "term"]
 
 [params]
 author = "Evan Sosenko"
 languageDir = 'ltr'
+mainClass = 'container'
 images = ["avatar.png"]
 
 remoteCss = [

@@ -1,14 +1,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="{{ site.Params.theme.color }}">
+{{ with site.Params.theme.color }}
+<meta name="theme-color" content="{{ . }}">
+{{ end }}
 <link rel="canonical" href="{{ .Permalink }}" />
 <title>{{ with .Params.Title }}{{ . }} | {{ end }}{{ site.Title }}</title>
 <meta name="description" content="{{ .Description }}">
 <meta property="og:locale" content="{{ site.Language.Locale | default "en-US" }}"/>
 {{ template "_internal/opengraph.html" . }}
 {{ template "_internal/twitter_cards.html" . }}
-<meta name="copyright"
-  content="Copyright (c) {{ hugo.Data.meta.copyrightStartYear }}-{{ now.Format "2006"}} {{ site.Params.author }}.">
-<meta name="owner" content="{{ site.Params.author }}">
-<link rel="author" href="humans.txt" type="text/plain">
-<link rel="me" href="{{ hugo.Data.meta.mastodon }}">
