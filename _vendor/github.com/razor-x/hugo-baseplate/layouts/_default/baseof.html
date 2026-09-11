@@ -3,6 +3,9 @@
   dir="{{ site.Params.languageDir | default "ltr"}}">
   <head>
     {{ partial "head.html" . }}
+    {{ if templates.Exists "_partials/head-extra.html" }}
+      {{ partial "head-extra.html" . }}
+    {{ end }}
     {{ partial "assets.html" . }}
   </head>
   <body
@@ -10,14 +13,14 @@
       class="{{ delimit .Page.Params.classes " " }}"
     {{ end  }}
   >
-    <header class="site-header">
+    {{ if templates.Exists "_partials/header.html" }}
       {{ partial "header.html" . }}
-    </header>
-    <main class="container">
+    {{ end }}
+    <main{{ with site.Params.mainClass }} class="{{ . }}"{{ end }}>
       {{ block "main" . }}{{ end }}
     </main>
-    <footer class="site-footer">
+    {{ if templates.Exists "_partials/footer.html" }}
       {{ partial "footer.html" . }}
-    </footer>
+    {{ end }}
   </body>
 </html>

@@ -6,6 +6,10 @@ hugo = "0.165.0"
 description = "Run CI checks"
 run = "biome ci"
 
+[tasks.update-baseplate]
+description = "Update Hugo Baseplate"
+run = "hugo mod get github.com/razor-x/hugo-baseplate@latest && hugo mod vendor"
+
 [tasks.build]
 description = "Build the site"
 run = "hugo build"

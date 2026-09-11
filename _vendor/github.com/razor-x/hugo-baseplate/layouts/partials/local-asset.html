@@ -1,19 +1,11 @@
 {{ $dev := hugo.IsServer }}
 
-{{ $url := . }}
-
-{{ if $dev }}
-  {{ $url = replace $url ".min." "." }}
-{{ end }}
-
-{{ $asset := resources.GetRemote $url }}
-
+{{ $asset := resources.Get . | resources.ExecuteAsTemplate . . }}
 {{ if not $dev }}
+  {{ if ne site.Params.minify false }}
+    {{ $asset = resources.Minify $asset }}
+  {{ end }}
   {{ $asset = resources.Fingerprint $asset }}
-{{ else }}
-  {{ $content := $asset.Content |  }}
-  {{ $target := path.Base $url }}
-  {{ $asset = $asset.Content | resources.FromString $target }}
 {{ end }}
 
 {{ if strings.HasSuffix $asset.RelPermalink ".css" }}
@@ -24,15 +16,9 @@
 
 {{ if strings.HasSuffix $asset.RelPermalink ".js" }}
   <script
-    defer
+    type="module"
     src="{{ $asset.RelPermalink }}"
     {{ if not $dev }}integrity="{{ $asset.Data.Integrity }}"{{ end }}
     crossorigin="anonymous">
   </script>
-{{ end }}
-
-{{ if $dev }}
-  {{ if strings.HasSuffix $asset.RelPermalink ".map" }}
-    {{ $asset.Publish }}
-  {{ end }}
 {{ end }}

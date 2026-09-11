@@ -1,0 +1,37 @@
+{{ $dev := hugo.IsServer }}
+
+{{ with resources.Get "img/favicon.svg" }}
+  {{ $asset := . }}
+  {{ if not $dev }}
+    {{ $asset = resources.Fingerprint $asset }}
+  {{ end }}
+  <link rel="icon" type="image/svg+xml"
+    {{ if not $dev }}integrity="{{ $asset.Data.Integrity }}"{{ end }}
+    href="{{ $asset.RelPermalink }}">
+{{ end }}
+
+{{ with resources.Get "img/favicon.png" }}
+  {{ $asset := . }}
+  {{ if not $dev }}
+    {{ $asset = resources.Fingerprint $asset }}
+  {{ end }}
+  <link rel="icon" type="image/png"
+    {{ if not $dev }}integrity="{{ $asset.Data.Integrity }}"{{ end }}
+    href="{{ $asset.RelPermalink }}">
+{{ end }}
+
+{{ range site.Params.remoteCss }}
+  {{ partial "remote-asset.html" . }}
+{{ end }}
+
+{{ range site.Params.css}}
+  {{ partial "local-asset.html" . }}
+{{ end }}
+
+{{ range site.Params.remoteJs }}
+  {{ partial "remote-asset.html" . }}
+{{ end }}
+
+{{ range site.Params.js }}
+  {{ partial "local-asset.html" . }}
+{{ end }}

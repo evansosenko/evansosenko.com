@@ -1,0 +1,56 @@
+{{ $dev := hugo.IsServer }}
+
+{{ $url := . }}
+
+{{ if $dev }}
+  {{ $url = replace $url ".min." "." }}
+{{ end }}
+
+{{ $asset := resources.GetRemote $url }}
+{{ if and (not $asset) (ne $url .) }}
+  {{ $url = . }}
+  {{ $asset = resources.GetRemote $url }}
+{{ end }}
+{{ if not $asset }}
+  {{ errorf "Remote asset not found: %s" $url }}
+  {{ return }}
+{{ end }}
+
+{{ if not $dev }}
+  {{ $asset = resources.Fingerprint $asset }}
+{{ else }}
+  {{ $target := path.Base $url }}
+  {{ $content := $asset.Content }}
+  {{ range findRE `sourceMappingURL=[^\s*]+` $content 1 }}
+    {{ $reference := strings.TrimPrefix "sourceMappingURL=" . }}
+    {{ if not (strings.HasPrefix $reference "data:") }}
+      {{ $mapUrl := (urls.Parse $url).ResolveReference (urls.Parse $reference) }}
+      {{ with resources.GetRemote $mapUrl.String }}
+        {{ $map := resources.FromString (printf "%s.map" $target) .Content }}
+        {{ $content = replace $content (printf "sourceMappingURL=%s" $reference) (printf "sourceMappingURL=%s" $map.RelPermalink) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  {{ $asset = $content | resources.FromString $target }}
+{{ end }}
+
+{{ if strings.HasSuffix $asset.RelPermalink ".css" }}
+  <link rel="stylesheet"
+    {{ if not $dev }}integrity="{{ $asset.Data.Integrity }}"{{ end }}
+    href="{{ $asset.RelPermalink }}">
+{{ end }}
+
+{{ if strings.HasSuffix $asset.RelPermalink ".js" }}
+  <script
+    defer
+    src="{{ $asset.RelPermalink }}"
+    {{ if not $dev }}integrity="{{ $asset.Data.Integrity }}"{{ end }}
+    crossorigin="anonymous">
+  </script>
+{{ end }}
+
+{{ if $dev }}
+  {{ if strings.HasSuffix $asset.RelPermalink ".map" }}
+    {{ $asset.Publish }}
+  {{ end }}
+{{ end }}

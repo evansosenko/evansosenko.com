@@ -1,0 +1,8 @@
+<header class="site-header">
+  {{ with hugo.Data.meta }}
+  <h1 class="site-title">
+    <a href="{{ relURL "/" }}">{{ .firstName }}<span></span> {{ .lastName }}</a>
+  </h1>
+  {{ end }}
+  {{ partial "site-nav.html" . }}
+</header>

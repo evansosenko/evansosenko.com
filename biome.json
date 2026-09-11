@@ -5,7 +5,7 @@
       "**/*.js",
       "**/*.json",
       "**/*.css",
-      "!themes/default/assets/css/fontawesome.css"
+      "!assets/css/fontawesome.css"
     ]
   },
   "vcs": {
