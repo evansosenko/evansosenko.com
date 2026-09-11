@@ -1,1 +1,1 @@
-# github.com/razor-x/hugo-baseplate v0.0.0-20260911132348-bb4ac6c0275b
+# github.com/razor-x/hugo-baseplate v0.0.0-20260911135029-045ba81f23b4

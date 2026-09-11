@@ -1,6 +1,6 @@
 {{ $dev := hugo.IsServer }}
 
-{{ $asset := resources.Get . | resources.ExecuteAsTemplate (path.Base .) . }}
+{{ $asset := resources.Get . | resources.ExecuteAsTemplate . . }}
 {{ if not $dev }}
   {{ if ne site.Params.minify false }}
     {{ $asset = resources.Minify $asset }}
