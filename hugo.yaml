@@ -1,0 +1,47 @@
+baseURL: https://evansosenko.com/
+locale: en-US
+title: Evan Sosenko
+enableRobotsTXT: true
+disableKinds:
+  - rss
+  - taxonomy
+  - term
+params:
+  author: Evan Sosenko
+  languageDir: ltr
+  mainClass: container
+  images:
+    - avatar.png
+  remoteCss:
+    - https://cdnjs.cloudflare.com/ajax/libs/picocss/2.1.1/pico.classless.min.css
+  remoteJs: []
+  css:
+    - css/theme.css
+    - css/fontawesome.css
+    - css/main.css
+  js:
+    - js/theme.js
+    - js/modal.js
+    - js/gamer.js
+  theme:
+    color: '#00a2e8'
+    lightIcon: img/fa/sparkles-duotone.svg
+    darkIcon: img/fa/moon-stars-duotone.svg
+    notfoundIcon: galaxy-duotone
+    linkIcon: link-duotone
+    extLinkIcon: arrow-up-right-from-square-duotone
+    modalCloseIcon: circle-xmark-duotone
+  minify: false
+security:
+  funcs:
+    getenv:
+      - CONTEXT
+markup:
+  goldmark:
+    parser:
+      wrapStandAloneImageWithinParagraph: false
+      attribute:
+        block: true
+module:
+  imports:
+    - path: github.com/razor-x/hugo-baseplate

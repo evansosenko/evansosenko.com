@@ -9,45 +9,46 @@
 
 ## Development
 
-Install the latest version of [Hugo].
-Then clone from the [Git source] and serve locally with
+Install [mise](https://mise.jdx.dev/), clone the repository, and start locally:
 
+```sh
+mise install
+mise run dev
 ```
-$ hugo server
+
+Build the site:
+
+```sh
+mise run build
 ```
 
-[hugo]: https://gohugo.io/
-[git source]: https://github.com/evansosenko/evansosenko.com
+### Updating Hugo Baseplate
 
-### Structure
+To update [Hugo Baseplate](https://github.com/razor-x/hugo-baseplate):
 
-The local [foundation theme](themes/foundation/README.md) supplies the HTML
-boilerplate, standard metadata, and asset pipeline. Site assets, page layouts,
-header/footer markup, and personal metadata stay at the project root.
+```sh
+mise run update-baseplate
+```
 
 ### Linting
 
-You will need [Node.js] with [npm].
-Install the linters with
+Check with [Biome](https://biomejs.dev/):
 
-```
-$ npm install
-```
-
-Lint all files with
-
-```
-$ npm run lint
+```sh
+mise run check
 ```
 
-Format all files with
+Apply fixes:
 
-```
-$ npm run format
+```sh
+mise run fix
 ```
 
-[node.js]: https://nodejs.org/
-[npm]: https://www.npmjs.com/
+Run CI checks:
+
+```sh
+mise run ci
+```
 
 ## License
 
